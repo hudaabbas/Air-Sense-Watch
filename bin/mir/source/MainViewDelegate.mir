@@ -1,0 +1,102 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 7; ]
+import Toybox.Lang;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 8; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 9; ]
+import WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 12; ]
+class MainViewDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 12; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 14; @position = 16; ]
+    private
+    var _deviceDataModel as DeviceDataModel;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 15; @position = 8; ]
+    var progressBar;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 16; @position = 8; ]
+    var myCount = 0.0;
+    //! Constructor
+    //! @param deviceDataModel The device data model
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 21; ]
+    public
+    function initialize(deviceDataModel as DeviceDataModel, theView as MainView) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_22_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 23 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 25 8 ]
+        %tmp.5 = lgetv %deviceDataModel;
+        putv self :_deviceDataModel %tmp.5;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 26 8 ]
+        %tmp.7 = getv ? :_deviceDataModel;
+        %tmp.8 = getv function %tmp.7 :pair;
+        invoke %tmp.7 %tmp.8();
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_22_4_stop:
+    }
+    //! Handle the back behavior
+    //! @return true if handled, false otherwise
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 32; ]
+    public
+    function onBack() as Boolean {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_33_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 35 8 ]
+        %tmp.2 = getv ? :_deviceDataModel;
+        %tmp.3 = getv function %tmp.2 :unpair;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 36 8 ]
+        %tmp.4 = getm $.WatchUi;
+        %tmp.5 = getv function %tmp.4 :popView;
+        %tmp.6 = getm $.WatchUi;
+        %tmp.7 = getv %tmp.6 :SLIDE_IMMEDIATE;
+        invoke %tmp.4 %tmp.5(%tmp.7);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 38 8 ]
+        %tmp.8 = true;
+        ret %tmp.8;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_33_4_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 41; ]
+    public
+    function onSelect() as Boolean {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_42_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 45 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_42_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_42_4_stop" ]
+        %profile.1 = local;
+        %tmp.2 = getv ? :_deviceDataModel;
+        %tmp.3 = getv function %tmp.2 :getActiveProfile;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %profile.1 %tmp.4;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 46 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_12_begin:
+        %tmp.6 = getv ? :_deviceDataModel;
+        %tmp.7 = getv function %tmp.6 :isConnected;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = dup %tmp.8;
+        bf %tmp.9 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_46_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_46_true:
+        %tmp.11 = lgetv %profile.1;
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        %tmp.14 = and %tmp.8 %tmp.13;
+        push %tmp.14;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_46_end:
+        %tmp.15 = phi [%tmp.9 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_12_begin] [%tmp.14 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_46_true] [%tmp.15 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_46_end];
+        bf %tmp.15 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_8_if_true:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_46_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc" 52 8 ]
+        %tmp.16 = true;
+        ret %tmp.16;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainViewDelegate_mc_42_4_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainViewDelegate.mc"; @line = 7; ]
+<init> {
+}

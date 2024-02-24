@@ -1,0 +1,1466 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 15; ]
+    module JsonData {
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 15; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 18; ]
+    module Layouts {
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 21; ]
+    module Menus {
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 21; ]
+        <init> {
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 22; ]
+        class MainMenu extends WatchUi.Menu{
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 22; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 22; ]
+            static
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 23; ]
+            function initialize() as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_bin_gen_006_B4261_00_source_Rez_mcgen_23_34_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 24 16 ]
+                %tmp.2 = getv ? :Menu;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 25 16 ]
+                %tmp.4 = self;
+                %tmp.5 = getv function %tmp.4 :addItem;
+                %tmp.6 = getm $.Toybox.WatchUi;
+                %tmp.7 = getv function %tmp.6 :loadResource;
+                %tmp.8 = getm $;
+                %tmp.9 = getv %tmp.8 :Rez;
+                %tmp.10 = getv %tmp.9 :Strings;
+                %tmp.11 = getv %tmp.10 :menu_label_1;
+                %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+                %tmp.13 = as %tmp.12 String;
+                %tmp.15 = const :item_1;
+                invoke %tmp.4 %tmp.5(%tmp.13, %tmp.15);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 26 16 ]
+                %tmp.16 = self;
+                %tmp.17 = getv function %tmp.16 :addItem;
+                %tmp.18 = getm $.Toybox.WatchUi;
+                %tmp.19 = getv function %tmp.18 :loadResource;
+                %tmp.20 = getm $;
+                %tmp.21 = getv %tmp.20 :Rez;
+                %tmp.22 = getv %tmp.21 :Strings;
+                %tmp.23 = getv %tmp.22 :menu_label_2;
+                %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+                %tmp.25 = as %tmp.24 String;
+                %tmp.27 = const :item_2;
+                invoke %tmp.16 %tmp.17(%tmp.25, %tmp.27);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_bin_gen_006_B4261_00_source_Rez_mcgen_23_34_stop:
+            }
+        }
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 31; ]
+    module Strings {
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 31; ]
+        <init> {
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 32; @position = 27; initialized = true; ]
+        var menu_label_1 as Symbol;
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 33; @position = 27; initialized = true; ]
+        var menu_label_2 as Symbol;
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 34; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 37; ]
+    module Styles {
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 37; ]
+        <init> {
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 38; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 38; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 39 18 ]
+                %tmp.28 = getm $.Toybox.Graphics;
+                %tmp.29 = getv %tmp.28 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.29;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 40 18 ]
+                %tmp.30 = getm $.Toybox.Graphics;
+                %tmp.31 = getv %tmp.30 :FONT_SMALL;
+                putv self :font %tmp.31;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 39; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 40; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 43; ]
+        module system_size__menu_header {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 43; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 44; @position = 18; ]
+            const width as Number = 390;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 45; @position = 18; ]
+            const height as Number = 90;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 48; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 48; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 49; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 52; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 52; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 53 18 ]
+                %tmp.32 = getm $.Toybox.Graphics;
+                %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
+                %tmp.34 = getm $.Toybox.Graphics;
+                %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_VCENTER;
+                %tmp.36 = bitor %tmp.33 %tmp.35;
+                putv self :justification %tmp.36;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 54 18 ]
+                %tmp.37 = getm $.Toybox.Graphics;
+                %tmp.38 = getv %tmp.37 :FONT_SMALL;
+                putv self :font %tmp.38;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 53; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 54; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 57; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 57; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 58; @position = 18; ]
+            const x as Number = 39;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 59; @position = 18; ]
+            const y as Number = 58;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 62; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 62; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 63; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__about.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 64; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 65; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 66; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 67; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 70; ]
+        module system_icon_light__question {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 70; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 71; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__question.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 72; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 73; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 74; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 75; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 78; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 78; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 79; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 82; ]
+        module prompt_font__title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 82; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 83 18 ]
+                %tmp.39 = getm $.Toybox.Graphics;
+                %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+                %tmp.41 = getm $.Toybox.Graphics;
+                %tmp.42 = getv %tmp.41 :TEXT_JUSTIFY_VCENTER;
+                %tmp.43 = bitor %tmp.40 %tmp.42;
+                putv self :justification %tmp.43;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 84 18 ]
+                %tmp.44 = getm $.Toybox.Graphics;
+                %tmp.45 = getv %tmp.44 :FONT_XTINY;
+                putv self :font %tmp.45;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 83; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 84; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 87; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 87; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 88; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__discard.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 89; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 90; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 91; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 92; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 95; ]
+        module system_size__menu_item {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 95; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 96; @position = 18; ]
+            const width as Number = 390;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 97; @position = 18; ]
+            const height as Number = 100;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 100; ]
+        module system_color_dark__text {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 100; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 102 18 ]
+                %tmp.46 = getm $.Toybox.Graphics;
+                %tmp.47 = getv %tmp.46 :COLOR_TRANSPARENT;
+                putv self :background %tmp.47;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 101; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 102; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 105; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 105; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 106; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_destructive__discard.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 107; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 108; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 111; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 111; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 112; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__hint_action_menu.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 113; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 114; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 117; ]
+        module prompt_size__title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 117; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 118; @position = 18; ]
+            const width as Number = 165;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 119; @position = 18; ]
+            const height as Number = 70;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 122; ]
+        module confirmation_font__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 122; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 123 18 ]
+                %tmp.48 = getm $.Toybox.Graphics;
+                %tmp.49 = getv %tmp.48 :TEXT_JUSTIFY_CENTER;
+                %tmp.50 = getm $.Toybox.Graphics;
+                %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_VCENTER;
+                %tmp.52 = bitor %tmp.49 %tmp.51;
+                putv self :justification %tmp.52;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 124 18 ]
+                %tmp.53 = getm $.Toybox.Graphics;
+                %tmp.54 = getv %tmp.53 :FONT_TINY;
+                putv self :font %tmp.54;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 123; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 124; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 127; ]
+        module system_color_dark__background {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 127; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 128; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 129; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 132; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 132; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 133; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 136; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 136; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 137; @position = 18; ]
+            const scaleX as Number = 70;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 138; @position = 18; ]
+            const scaleY as Number = 70;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 139; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 142; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 142; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 143; @position = 18; ]
+            const y1 as Number = 297;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 144; @position = 18; ]
+            const x1 as Number = 72;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 145; @position = 18; ]
+            const y2 as Number = 390;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 146; @position = 18; ]
+            const x2 as Number = 318;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 149; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 149; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 150 18 ]
+                %tmp.55 = getm $.Toybox.Graphics;
+                %tmp.56 = getv %tmp.55 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.56;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 151 18 ]
+                %tmp.57 = getm $.Toybox.Graphics;
+                %tmp.58 = getv %tmp.57 :FONT_TINY;
+                putv self :font %tmp.58;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 150; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 151; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 154; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 154; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 155; @position = 18; ]
+            const x as Number = 80;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 156; @position = 18; ]
+            const y as Number = 78;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 159; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 159; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 160; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 163; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 163; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 164; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 165; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 168; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 168; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 169; @position = 18; ]
+            const x as Number = 195;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 170; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 171; @position = 18; ]
+            const y as Number = 318;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 174; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 174; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 175; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 176; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 177; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 180; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 180; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 181; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 184; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 184; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 185; @position = 18; ]
+            const width as Number = 312;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 186; @position = 18; ]
+            const height as Number = 253;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 189; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 189; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 190; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 193; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 193; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 194; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 195; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 198; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 198; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 199 18 ]
+                %tmp.59 = getm $.Toybox.WatchUi;
+                %tmp.60 = getv %tmp.59 :KEY_ENTER;
+                putv self :button %tmp.60;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 199; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 202; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 202; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 203; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 206; ]
+        module system_input__action_menu {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 206; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 207; @position = 18; ]
+            const y1 as Number = 318;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 208; @position = 18; ]
+            const x1 as Number = 97;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 209; @position = 18; ]
+            const y2 as Number = 390;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 210; @position = 18; ]
+            const x2 as Number = 293;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 213; ]
+        module system_icon_light__save {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 213; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 214; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__save.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 215; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 216; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 217; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 218; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 221; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 221; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 223 18 ]
+                %tmp.61 = getm $.Toybox.Graphics;
+                %tmp.62 = getv %tmp.61 :COLOR_TRANSPARENT;
+                putv self :background %tmp.62;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 222; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 223; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 226; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 226; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 227; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 230; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 230; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 231; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__warning.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 232; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 233; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 234; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 235; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 238; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 238; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 240 18 ]
+                %tmp.63 = getm $.Toybox.Graphics;
+                %tmp.64 = getv %tmp.63 :COLOR_TRANSPARENT;
+                putv self :background %tmp.64;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 239; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 240; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 243; ]
+        module activity_color_light__background {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 243; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 244; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 245; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 248; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 248; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 249; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 252; ]
+        module system_size__screen {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 252; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 253; @position = 18; ]
+            const width as Number = 390;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 254; @position = 18; ]
+            const height as Number = 390;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 257; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 257; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 258; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 261; ]
+        module system_color_light__background {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 261; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 262; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 263; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 266; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 266; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 267; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 270; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 270; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 271; @position = 18; ]
+            const x as Number = 195;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 272; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 273; @position = 18; ]
+            const y as Number = 297;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 276; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 276; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 278 18 ]
+                %tmp.65 = getm $.Toybox.Graphics;
+                %tmp.66 = getv %tmp.65 :COLOR_TRANSPARENT;
+                putv self :background %tmp.66;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 277; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 278; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 281; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 281; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 282 18 ]
+                %tmp.67 = getm $.Toybox.WatchUi;
+                %tmp.68 = getv %tmp.67 :KEY_ESC;
+                putv self :button %tmp.68;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 282; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 285; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 285; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 286; @position = 18; ]
+            const x as Number = 39;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 287; @position = 18; ]
+            const y as Number = 98;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 290; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 290; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 291; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__search.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 292; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 293; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 294; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 295; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 298; ]
+        module activity_color_light__text {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 298; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 300 18 ]
+                %tmp.69 = getm $.Toybox.Graphics;
+                %tmp.70 = getv %tmp.69 :COLOR_TRANSPARENT;
+                putv self :background %tmp.70;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 299; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 300; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 303; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 303; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 304; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 305; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 306; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 309; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 309; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 310; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__save.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 311; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 312; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 313; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 314; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 317; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 317; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 318; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 321; ]
+        module system_icon_light__search {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 321; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 322; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__search.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 323; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 324; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 325; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 326; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 329; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 329; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 330; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 333; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 333; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 334; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 337; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 337; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 338; @position = 18; ]
+            const x as Number = 304;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 339; @position = 18; ]
+            const y as Number = 234;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 342; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 342; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 344 18 ]
+                %tmp.71 = getm $.Toybox.Graphics;
+                %tmp.72 = getv %tmp.71 :COLOR_TRANSPARENT;
+                putv self :background %tmp.72;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 343; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 344; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 347; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 347; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 349 18 ]
+                %tmp.73 = getm $.Toybox.Graphics;
+                %tmp.74 = getv %tmp.73 :COLOR_TRANSPARENT;
+                putv self :background %tmp.74;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 348; @position = 18; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 349; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 352; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 352; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 353; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 354; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 355; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 358; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 358; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 359; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 360; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 363; ]
+        module prompt_loc__title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 363; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 364; @position = 18; ]
+            const x as Number = 113;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 365; @position = 18; ]
+            const y as Number = 19;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 368; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 368; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 369 18 ]
+                %tmp.75 = getm $.Toybox.Graphics;
+                %tmp.76 = getv %tmp.75 :TEXT_JUSTIFY_CENTER;
+                %tmp.77 = getm $.Toybox.Graphics;
+                %tmp.78 = getv %tmp.77 :TEXT_JUSTIFY_VCENTER;
+                %tmp.79 = bitor %tmp.76 %tmp.78;
+                putv self :justification %tmp.79;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 370 18 ]
+                %tmp.80 = getm $.Toybox.Graphics;
+                %tmp.81 = getv %tmp.80 :FONT_SMALL;
+                putv self :font %tmp.81;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 369; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 370; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 373; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 373; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 375 18 ]
+                %tmp.82 = getm $.Toybox.Graphics;
+                %tmp.83 = getv %tmp.82 :COLOR_TRANSPARENT;
+                putv self :background %tmp.83;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 374; @position = 18; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 375; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 378; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 378; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 379; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 380; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 383; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 383; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 384; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 387; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 387; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 388; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__cancel.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 389; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 390; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 391; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 392; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 395; ]
+        module system_icon_light__about {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 395; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 396; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__about.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 397; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 398; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 399; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 400; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 403; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 403; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 404; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 405; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 406; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 409; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 409; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 410; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 413; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 413; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 414; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 415; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 416; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 419; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 419; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 420; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__hint_action_menu.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 421; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 422; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 425; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 425; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 426; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 429; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 429; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 430; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 433; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 433; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 434; @position = 18; ]
+            const x as Number = 195;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 435; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 436; @position = 18; ]
+            const y as Number = 0;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 439; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 440; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 441; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 444; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 445; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 448; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 448; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 449; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 452; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 452; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 453; @position = 18; ]
+            const scaleX as Number = 45;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 454; @position = 18; ]
+            const scaleY as Number = 45;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 455; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 458; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 458; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 459; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_destructive__warning.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 460; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 461; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 464; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 464; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 465; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 468; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 468; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 469; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__cancel.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 470; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 471; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 472; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 473; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 476; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 477; @position = 18; ]
+            const width as Number = 312;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 478; @position = 18; ]
+            const height as Number = 215;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 481; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 481; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 482; @position = 18; ]
+            const x as Number = 318;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 483; @position = 18; ]
+            const y as Number = 59;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 486; ]
+        module system_color_light__text {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 486; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 488 18 ]
+                %tmp.84 = getm $.Toybox.Graphics;
+                %tmp.85 = getv %tmp.84 :COLOR_TRANSPARENT;
+                putv self :background %tmp.85;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 487; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 488; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 491; ]
+        module system_icon_light__check {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 491; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 492; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__check.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 493; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 494; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 495; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 496; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 499; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 499; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 500; @position = 18; ]
+            const y1 as Number = 0;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 501; @position = 18; ]
+            const x1 as Number = 97;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 502; @position = 18; ]
+            const y2 as Number = 76;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 503; @position = 18; ]
+            const x2 as Number = 293;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 506; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 506; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 507; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__revert.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 508; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 509; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 510; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 511; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 514; ]
+        module system_size__subwindow {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 514; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 515; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 518; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 518; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 519; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 522; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 522; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 523; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__check.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 524; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 525; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 526; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 527; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 530; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 530; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 531; @position = 18; ]
+            const x as Number = 285;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 532; @position = 18; ]
+            const y as Number = 234;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 535; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 535; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 536; @position = 18; ]
+            const x as Number = 309;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 537; @position = 18; ]
+            const y as Number = 47;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 540; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 540; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 541; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 544; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 544; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 545; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 548; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 549; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 550; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 553; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 553; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 554; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 557; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 557; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 558; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__revert.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 559; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 560; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 561; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 562; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 565; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 565; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 566; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__question.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 567; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 568; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 569; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 570; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 573; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 573; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 574; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__discard.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 575; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 576; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 577; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 578; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 581; ]
+        module device_info {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 581; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 583 18 ]
+                %tmp.86 = getm $.Toybox.System;
+                %tmp.87 = getv %tmp.86 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.87;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 582; @position = 18; ]
+            const screenWidth as Number = 390;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 583; @position = 18; ]
+            const screenShape;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 584; @position = 18; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 585; @position = 18; ]
+            const screenHeight as Number = 390;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 586; @position = 18; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 587; @position = 18; ]
+            const hasEnhancedReadabilityMode as Boolean = true;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 590; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 590; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 591 18 ]
+                %tmp.88 = getm $.Toybox.Graphics;
+                %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_CENTER;
+                %tmp.90 = getm $.Toybox.Graphics;
+                %tmp.91 = getv %tmp.90 :TEXT_JUSTIFY_VCENTER;
+                %tmp.92 = bitor %tmp.89 %tmp.91;
+                putv self :justification %tmp.92;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 592 18 ]
+                %tmp.93 = getm $.Toybox.Graphics;
+                %tmp.94 = getv %tmp.93 :FONT_TINY;
+                putv self :font %tmp.94;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 591; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 592; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 595; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 595; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 596; @position = 18; ]
+            const scaleX as Float = 0.12;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 597; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 600; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 600; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 601; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_dark__warning.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 602; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 603; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 604; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 605; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 608; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 608; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 609; @position = 18; ]
+            const x as Number = 195;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 610; @position = 18; ]
+            const y as Number = 39;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 611; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 612; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 615; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 615; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 616 18 ]
+                %tmp.95 = getm $.Toybox.Graphics;
+                %tmp.96 = getv %tmp.95 :TEXT_JUSTIFY_CENTER;
+                %tmp.97 = getm $.Toybox.Graphics;
+                %tmp.98 = getv %tmp.97 :TEXT_JUSTIFY_VCENTER;
+                %tmp.99 = bitor %tmp.96 %tmp.98;
+                putv self :justification %tmp.99;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 617 18 ]
+                %tmp.100 = getm $.Toybox.Graphics;
+                %tmp.101 = getv %tmp.100 :FONT_TINY;
+                putv self :font %tmp.101;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 616; @position = 18; ]
+            const justification;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 617; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 620; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 620; ]
+            <init> {
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen" 622 18 ]
+                %tmp.102 = getm $.Toybox.Graphics;
+                %tmp.103 = getv %tmp.102 :COLOR_TRANSPARENT;
+                putv self :background %tmp.103;
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 621; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 622; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 625; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 625; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 626; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 627; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 628; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 631; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 631; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 632; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 633; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 636; ]
+        module confirmation_size__body {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 636; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 637; @position = 18; ]
+            const width as Number = 231;
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 638; @position = 18; ]
+            const height as Number = 234;
+        }
+        [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 641; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 641; ]
+            <init> {
+            }
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 642; @position = 18; ]
+            const filename as String = "/Users/hudaabbas/Library/Application Support/Garmin/ConnectIQ/Devices/venu3s/system_icon_positive__check.svg";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 643; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 644; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/bin/gen/006-B4261-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

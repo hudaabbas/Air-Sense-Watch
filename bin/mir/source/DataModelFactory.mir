@@ -1,0 +1,232 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 7; ]
+import Toybox.BluetoothLowEnergy;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 9; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 11; ]
+class DataModelFactory{
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 13; @position = 16; ]
+    private
+    var _delegate as BLEDelegate;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 14; @position = 16; ]
+    private
+    var _profileManager as ProfileManager;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 17; @position = 16; ]
+    private
+    var _scanDataModel as WeakReference or Null;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 18; @position = 16; ]
+    private
+    var _deviceDataModel as WeakReference or Null;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 19; @position = 16; ]
+    private
+    var _envModel as WeakReference or Null;
+    //! Constructor
+    //! @param delegate The BLE delegate to use for the models
+    //! @param profileManager The profile manager to use for a profile model
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 24; ]
+    public
+    function initialize(delegate as BLEDelegate, profileManager as ProfileManager) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_25_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 26 8 ]
+        %tmp.2 = lgetv %delegate;
+        putv self :_delegate %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 27 8 ]
+        %tmp.4 = lgetv %profileManager;
+        putv self :_profileManager %tmp.4;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_25_4_stop:
+    }
+    //! Get a scan data model instance
+    //! @return The current scan data model or a new one
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 33; ]
+    public
+    function getScanDataModel() as ScanDataModel {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_34_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 35 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_34_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_34_4_stop" ]
+        %scanDataModel.1 = local;
+        %tmp.2 = getv ? :_scanDataModel;
+        lputv %scanDataModel.1 %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 36 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_36_8_if_stmt:
+        %tmp.4 = lgetv %scanDataModel.1;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_36_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_36_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_37_8_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 38 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_38_12_if_stmt:
+        %tmp.7 = lgetv %scanDataModel.1;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = getv function %tmp.8 :stillAlive;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_38_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_38_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_39_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 40 16 ]
+        %tmp.11 = lgetv %scanDataModel.1;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :get;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = as %tmp.14 ScanDataModel;
+        ret %tmp.15;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_39_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_38_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_38_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_37_8_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_36_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_36_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 44 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_34_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_34_4_stop" ]
+        %dataModel.2 = local;
+        %tmp.19 = getm $;
+        %tmp.20 = getv %tmp.19 :ScanDataModel;
+        %tmp.22 = getv ? :_delegate;
+        %tmp.16 = newc %tmp.20 (%tmp.22);
+        lputv %dataModel.2 %tmp.16;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 45 8 ]
+        %tmp.23 = lgetv %dataModel.2;
+        %tmp.24 = getv function %tmp.23 :weak;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        putv self :_scanDataModel %tmp.25;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 47 8 ]
+        %tmp.27 = lgetv %dataModel.2;
+        ret %tmp.27;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_34_4_stop:
+    }
+    //! Get a device data model instance
+    //! @param scanResult The scan result to use for a new model
+    //! @return The current device data model or a new one
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 53; ]
+    public
+    function getDeviceDataModel(scanResult as ScanResult) as DeviceDataModel {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_54_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 55 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_54_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_54_4_stop" ]
+        %deviceDataModel.1 = local;
+        %tmp.2 = getv ? :_deviceDataModel;
+        lputv %deviceDataModel.1 %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 56 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_56_8_if_stmt:
+        %tmp.4 = lgetv %deviceDataModel.1;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_56_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_56_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_57_8_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 58 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_58_12_if_stmt:
+        %tmp.7 = lgetv %deviceDataModel.1;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = getv function %tmp.8 :stillAlive;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_58_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_58_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_58_46_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 59 16 ]
+        %tmp.11 = lgetv %deviceDataModel.1;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :get;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = as %tmp.14 DeviceDataModel;
+        ret %tmp.15;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_58_46_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_58_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_58_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_57_8_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_56_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_56_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 63 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_54_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_54_4_stop" ]
+        %dataModel.2 = local;
+        %tmp.19 = getm $;
+        %tmp.20 = getv %tmp.19 :DeviceDataModel;
+        %tmp.22 = getv ? :_delegate;
+        %tmp.24 = lgetv %self;
+        %tmp.26 = lgetv %scanResult;
+        %tmp.16 = newc %tmp.20 (%tmp.22, %tmp.24, %tmp.26);
+        lputv %dataModel.2 %tmp.16;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 64 8 ]
+        %tmp.27 = lgetv %dataModel.2;
+        %tmp.28 = getv function %tmp.27 :weak;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        putv self :_deviceDataModel %tmp.29;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 66 8 ]
+        %tmp.31 = lgetv %dataModel.2;
+        ret %tmp.31;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_54_4_stop:
+    }
+    //! Get a environment profile model instance
+    //! @param device The device to use for a new model
+    //! @return The current environment profile model or a new one
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 72; ]
+    public
+    function getEnvironmentModel(device as Device) as ProfileModel {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 73 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_stop" ]
+        %envModel.1 = local;
+        %tmp.2 = getv ? :_envModel;
+        lputv %envModel.1 %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 74 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if_stmt:
+        %tmp.4 = lgetv %envModel.1;
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_30_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 75 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_12_if_stmt:
+        %tmp.7 = lgetv %envModel.1;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = getv function %tmp.8 :stillAlive;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_39_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 76 16 ]
+        %tmp.11 = lgetv %envModel.1;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :get;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = as %tmp.14 ProfileModel;
+        ret %tmp.15;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_39_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_30_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 80 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_stop" ]
+        %dataModel.2 = local;
+        %tmp.19 = getm $;
+        %tmp.20 = getv %tmp.19 :ProfileModel;
+        %tmp.22 = getv ? :_delegate;
+        %tmp.24 = getv ? :_profileManager;
+        %tmp.26 = lgetv %device;
+        %tmp.16 = newc %tmp.20 (%tmp.22, %tmp.24, %tmp.26);
+        lputv %dataModel.2 %tmp.16;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 81 8 ]
+        %tmp.27 = lgetv %dataModel.2;
+        %tmp.28 = getv function %tmp.27 :weak;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        putv self :_envModel %tmp.29;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 83 8 ]
+        %tmp.31 = lgetv %dataModel.2;
+        ret %tmp.31;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 7; ]
+<init> {
+}
