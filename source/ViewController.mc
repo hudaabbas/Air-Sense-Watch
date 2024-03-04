@@ -10,6 +10,7 @@ import Toybox.WatchUi;
 
 class ViewController {
     private var _modelFactory as DataModelFactory;
+    var session;
 
     //! Constructor
     //! @param modelFactory Factory to create models
@@ -49,6 +50,25 @@ class ViewController {
     {
         var deviceDataModel = _modelFactory.getDeviceDataModel(scanResult);
         var v = new $.MainView(deviceDataModel);
-        WatchUi.pushView(v, new $.MainViewDelegate(deviceDataModel,v), WatchUi.SLIDE_UP);
+        WatchUi.pushView(v, new $.MainViewDelegate(deviceDataModel,v, self), WatchUi.SLIDE_UP);
     }
+
+    public function pushActivityView(deviceDataModel) as Void
+    {
+        if (Toybox has :ActivityRecording) {                         // check device for activity recording
+            if ((session == null) || (session.isRecording() == false)) { 
+                System.println("Start activity recording!!");
+                session = ActivityRecording.createSession({          // set up recording session
+                        :name=>"Air Sensor Run",                              // set session name
+                        :sport=>Activity.SPORT_GENERIC,                // set sport type
+                        :subSport=>Activity.SUB_SPORT_GENERIC          // set sub sport type SUB_SPORT_INDOOR_CYCLING
+                });
+                session.start();                                             // call start session
+            }
+        }
+
+        var v = new $.AirSenseView(deviceDataModel, session);
+        WatchUi.pushView(v, new $.AirSenseDelegate(deviceDataModel, session, self), WatchUi.SLIDE_UP);
+    }
+
 }

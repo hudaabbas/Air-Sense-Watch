@@ -1,0 +1,456 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 7; ]
+import Toybox.BluetoothLowEnergy;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 9; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 11; ]
+class BLEDelegate extends BluetoothLowEnergy.BleDelegate{
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 12; @position = 16; ]
+    private
+    var _profileManager as ProfileManager;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 14; @position = 16; ]
+    private
+    var _onScanResult as WeakReference or Null;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 15; @position = 16; ]
+    private
+    var _onConnection as WeakReference or Null;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 16; @position = 16; ]
+    private
+    var _onDescriptorWrite as WeakReference or Null;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 17; @position = 16; ]
+    private
+    var _onCharChanged as WeakReference or Null;
+    //! Constructor
+    //! @param profileManager The profile manager
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 21; ]
+    public
+    function initialize(profileManager as ProfileManager) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_21_65_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 22 8 ]
+        %tmp.2 = getv ? :BleDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 23 8 ]
+        %tmp.5 = lgetv %profileManager;
+        putv self :_profileManager %tmp.5;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_21_65_stop:
+    }
+    //! Handle new scan results being received
+    //! @param scanResults An iterator of new scan results
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 28; ]
+    public
+    function onScanResults(scanResults as Iterator) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_28_67_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 29 8 ]
+        for @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_test @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_incr @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_init:
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_begin" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_end" ]
+        %result.1 = local;
+        %tmp.1 = lgetv %scanResults;
+        %tmp.2 = getv function %tmp.1 :next;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %result.1 %tmp.3;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_test:
+        %tmp.5 = lgetv %result.1;
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_begin:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_91_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 30 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_stmt:
+        %tmp.9 = lgetv %result.1;
+        %tmp.10 = as %tmp.9 { (!Null) };
+        %tmp.12 = getv ? :ScanResult;
+        %tmp.13 = isa %tmp.10 %tmp.12;
+        bf %tmp.13 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_31_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 32 16 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_stmt:
+        %tmp.14 = lgetv %result.1;
+        %tmp.15 = as %tmp.14 { (ScanResult) && (!Null) };
+        %tmp.16 = getv function %tmp.15 :getDeviceName;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = null;
+        %tmp.19 = ne %tmp.17 %tmp.18;
+        bf %tmp.19 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 35 20 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_stmt:
+        %tmp.20 = self;
+        %tmp.21 = getv function %tmp.20 :contains;
+        %tmp.22 = lgetv %result.1;
+        %tmp.23 = as %tmp.22 { (ScanResult) && (!Null) };
+        %tmp.24 = getv function %tmp.23 :getServiceUuids;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        %tmp.27 = getv ? :_profileManager;
+        %tmp.28 = getv %tmp.27 :ENVIRONMENTAL_SENSING_SERVICE;
+        %tmp.29 = invoke %tmp.20 %tmp.21(%tmp.25, %tmp.28);
+        bf %tmp.29 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_36_20_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 37 24 ]
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :broadcastScanResult;
+        %tmp.33 = lgetv %result.1;
+        %tmp.34 = as %tmp.33 { (ScanResult) && (!Null) };
+        invoke %tmp.30 %tmp.31(%tmp.34);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_36_20_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 39 25 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_39_25_if_stmt:
+        %tmp.35 = lgetv %result.1;
+        %tmp.36 = as %tmp.35 { (ScanResult) && (!Null) };
+        %tmp.37 = getv function %tmp.36 :getDeviceName;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        %tmp.39 = getv function %tmp.38 :equals;
+        %tmp.40 = "AirSense";
+        %tmp.41 = invoke %tmp.38 %tmp.39(%tmp.40);
+        bf %tmp.41 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_39_25_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_39_25_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_40_20_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 41 24 ]
+        %tmp.42 = self;
+        %tmp.43 = getv function %tmp.42 :broadcastScanResult;
+        %tmp.45 = lgetv %result.1;
+        %tmp.46 = as %tmp.45 { (ScanResult) && (!Null) };
+        invoke %tmp.42 %tmp.43(%tmp.46);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_40_20_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_39_25_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_39_25_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_31_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_91_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_incr:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 29 ]
+        %tmp.47 = lgetv %scanResults;
+        %tmp.48 = getv function %tmp.47 :next;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        lputv %result.1 %tmp.49;
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_test;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_29_8_for_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_28_67_stop:
+    }
+    //! Handle pairing and connecting to a device
+    //! @param device The device state that was changed
+    //! @param state The state of the connection
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 51; ]
+    public
+    function onConnectedStateChanged(device as Device, state as ConnectionState) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_51_96_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 52 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_51_96_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_51_96_stop" ]
+        %onConnection.1 = local;
+        %tmp.2 = getv ? :_onConnection;
+        lputv %onConnection.1 %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 53 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_53_8_if_stmt:
+        %tmp.3 = null;
+        %tmp.5 = lgetv %onConnection.1;
+        %tmp.6 = ne %tmp.3 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_53_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_53_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_53_34_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 54 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_54_12_if_stmt:
+        %tmp.7 = lgetv %onConnection.1;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = getv function %tmp.8 :stillAlive;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_54_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_54_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_54_43_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 55 16 ]
+        %tmp.11 = lgetv %onConnection.1;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :get;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = as %tmp.14 DeviceDataModel;
+        %tmp.16 = getv function %tmp.15 :procConnection;
+        %tmp.18 = lgetv %device;
+        invoke %tmp.15 %tmp.16(%tmp.18);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_54_43_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_54_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_54_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_53_34_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_53_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_53_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_51_96_stop:
+    }
+    //! Handle the completion of a write operation on a descriptor
+    //! @param descriptor The descriptor that was written
+    //! @param status The BluetoothLowEnergy status indicating the result of the operation
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 63; ]
+    public
+    function onDescriptorWrite(descriptor as Descriptor, status as Status) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_63_90_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 64 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_63_90_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_63_90_stop" ]
+        %onDescriptorWrite.1 = local;
+        %tmp.2 = getv ? :_onDescriptorWrite;
+        lputv %onDescriptorWrite.1 %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 65 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_65_8_if_stmt:
+        %tmp.3 = null;
+        %tmp.5 = lgetv %onDescriptorWrite.1;
+        %tmp.6 = ne %tmp.3 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_65_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_65_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_65_39_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 66 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_66_12_if_stmt:
+        %tmp.7 = lgetv %onDescriptorWrite.1;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = getv function %tmp.8 :stillAlive;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_66_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_66_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_66_48_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 67 16 ]
+        %tmp.11 = lgetv %onDescriptorWrite.1;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :get;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = as %tmp.14 ProfileModel;
+        %tmp.16 = getv function %tmp.15 :onDescriptorWrite;
+        %tmp.18 = lgetv %descriptor;
+        %tmp.20 = lgetv %status;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_66_48_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_66_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_66_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_65_39_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_65_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_65_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_63_90_stop:
+    }
+    //! Handle a characteristic being changed
+    //! @param char The characteristic that changed
+    //! @param value The updated value of the characteristic
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 75; ]
+    public
+    function onCharacteristicChanged(char as Characteristic, value as ByteArray) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_75_96_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 76 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_75_96_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_75_96_stop" ]
+        %onCharChanged.1 = local;
+        %tmp.2 = getv ? :_onCharChanged;
+        lputv %onCharChanged.1 %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 77 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_77_8_if_stmt:
+        %tmp.3 = null;
+        %tmp.5 = lgetv %onCharChanged.1;
+        %tmp.6 = ne %tmp.3 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_77_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_77_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_77_35_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 78 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_78_12_if_stmt:
+        %tmp.7 = lgetv %onCharChanged.1;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = getv function %tmp.8 :stillAlive;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_78_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_78_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_78_44_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 79 16 ]
+        %tmp.11 = lgetv %onCharChanged.1;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :get;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = as %tmp.14 ProfileModel;
+        %tmp.16 = getv function %tmp.15 :onCharacteristicChanged;
+        %tmp.18 = lgetv %char;
+        %tmp.20 = lgetv %value;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_78_44_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_78_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_78_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_77_35_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_77_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_77_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_75_96_stop:
+    }
+    //! Store a new model to manage scan results
+    //! @param model The model containing scan results
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 86; ]
+    public
+    function notifyScanResult(model as ScanDataModel) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_86_69_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 87 8 ]
+        %tmp.1 = lgetv %model;
+        %tmp.2 = getv function %tmp.1 :weak;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :_onScanResult %tmp.3;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_86_69_stop:
+    }
+    //! Store a new model to manage device data connections
+    //! @param model The model for device data
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 92; ]
+    public
+    function notifyConnection(model as DeviceDataModel) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_92_71_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 93 8 ]
+        %tmp.1 = lgetv %model;
+        %tmp.2 = getv function %tmp.1 :weak;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :_onConnection %tmp.3;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_92_71_stop:
+    }
+    //! Store a new model to handle descriptor writes
+    //! @param model The model for descriptors
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 98; ]
+    public
+    function notifyDescriptorWrite(model as ProfileModel) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_98_73_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 99 8 ]
+        %tmp.1 = lgetv %model;
+        %tmp.2 = getv function %tmp.1 :weak;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :_onDescriptorWrite %tmp.3;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_98_73_stop:
+    }
+    //! Store a new model to handle characteristic changes
+    //! @param model The model for characteristics
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 104; ]
+    public
+    function notifyCharacteristicChanged(model as ProfileModel) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_104_79_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 105 8 ]
+        %tmp.1 = lgetv %model;
+        %tmp.2 = getv function %tmp.1 :weak;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :_onCharChanged %tmp.3;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_104_79_stop:
+    }
+    //! Broadcast a new scan result
+    //! @param scanResult The new scan result
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 110; ]
+    private
+    function broadcastScanResult(scanResult as ScanResult) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_110_75_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 111 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_110_75_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_110_75_stop" ]
+        %onScanResult.1 = local;
+        %tmp.2 = getv ? :_onScanResult;
+        lputv %onScanResult.1 %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 112 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_112_8_if_stmt:
+        %tmp.3 = null;
+        %tmp.5 = lgetv %onScanResult.1;
+        %tmp.6 = ne %tmp.3 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_112_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_112_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_112_34_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 113 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_113_12_if_stmt:
+        %tmp.7 = lgetv %onScanResult.1;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = getv function %tmp.8 :stillAlive;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_113_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_113_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_113_43_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 114 16 ]
+        %tmp.11 = lgetv %onScanResult.1;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :get;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = as %tmp.14 ScanDataModel;
+        %tmp.16 = getv function %tmp.15 :procScanResult;
+        %tmp.18 = lgetv %scanResult;
+        invoke %tmp.15 %tmp.16(%tmp.18);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_113_43_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_113_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_113_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_112_34_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_112_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_112_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_110_75_stop:
+    }
+    //! Get whether the iterator contains a specific uuid
+    //! @param iter Iterator of uuid objects
+    //! @param obj Uuid to search for
+    //! @return true if object found, false otherwise
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 123; ]
+    private
+    function contains(iter as Iterator, obj as Uuid) as Boolean {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_123_72_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 124 8 ]
+        for @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_test @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_incr @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_init:
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_begin" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_end" ]
+        %uuid.1 = local;
+        %tmp.1 = lgetv %iter;
+        %tmp.2 = getv function %tmp.1 :next;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %uuid.1 %tmp.3;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_test:
+        %tmp.5 = lgetv %uuid.1;
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_begin:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_125_8_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 126 12 ]
+        %tmp.9 = getv ? :System;
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Obj to string is: ";
+        invoke %tmp.9 %tmp.10(%tmp.11);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 127 12 ]
+        %tmp.13 = getv ? :System;
+        %tmp.14 = getv function %tmp.13 :println;
+        %tmp.15 = lgetv %obj;
+        %tmp.16 = getv function %tmp.15 :toString;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        invoke %tmp.13 %tmp.14(%tmp.17);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 128 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_128_12_if_stmt:
+        %tmp.18 = lgetv %uuid.1;
+        %tmp.19 = as %tmp.18 { (!Null) };
+        %tmp.20 = getv function %tmp.19 :equals;
+        %tmp.22 = lgetv %obj;
+        %tmp.23 = invoke %tmp.19 %tmp.20(%tmp.22);
+        bf %tmp.23 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_128_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_128_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_129_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 130 16 ]
+        %tmp.24 = true;
+        ret %tmp.24;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_129_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_128_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_128_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_125_8_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_incr:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 124 ]
+        %tmp.25 = lgetv %iter;
+        %tmp.26 = getv function %tmp.25 :next;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        lputv %uuid.1 %tmp.27;
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_test;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_124_8_for_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 134 8 ]
+        %tmp.28 = false;
+        ret %tmp.28;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_123_72_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc"; @line = 7; ]
+<init> {
+}

@@ -15,7 +15,7 @@ class DataModelFactory{
     }
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 13; @position = 16; ]
     private
-    var _delegate as NitroxBLEDelegate;
+    var _delegate as BLEDelegate;
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 14; @position = 16; ]
     private
     var _profileManager as ProfileManager;
@@ -33,7 +33,7 @@ class DataModelFactory{
     //! @param profileManager The profile manager to use for a profile model
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 24; ]
     public
-    function initialize(delegate as NitroxBLEDelegate, profileManager as ProfileManager) as Void {
+    function initialize(delegate as BLEDelegate, profileManager as ProfileManager) as Void {
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_25_4_start:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 26 8 ]
         %tmp.2 = lgetv %delegate;
@@ -169,10 +169,10 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_54_4_st
     //! @return The current environment profile model or a new one
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 72; ]
     public
-    function getEnvironmentModel(device as Device) as NitroxProfileModel {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_80_start:
+    function getEnvironmentModel(device as Device) as ProfileModel {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_start:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 73 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_80_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_80_stop" ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_stop" ]
         %envModel.1 = local;
         %tmp.2 = getv ? :_envModel;
         lputv %envModel.1 %tmp.2;
@@ -198,7 +198,7 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_39_s
         %tmp.12 = as %tmp.11 { (!Null) };
         %tmp.13 = getv function %tmp.12 :get;
         %tmp.14 = invoke %tmp.12 %tmp.13();
-        %tmp.15 = as %tmp.14 NitroxProfileModel;
+        %tmp.15 = as %tmp.14 ProfileModel;
         ret %tmp.15;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_39_stop:
         goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_75_12_if_end;
@@ -207,10 +207,10 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_30_s
         goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if_end;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if_end:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 80 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_80_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_80_stop" ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_stop" ]
         %dataModel.2 = local;
         %tmp.19 = getm $;
-        %tmp.20 = getv %tmp.19 :NitroxProfileModel;
+        %tmp.20 = getv %tmp.19 :ProfileModel;
         %tmp.22 = getv ? :_delegate;
         %tmp.24 = getv ? :_profileManager;
         %tmp.26 = lgetv %device;
@@ -224,7 +224,7 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_74_8_if
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc" 83 8 ]
         %tmp.31 = lgetv %dataModel.2;
         ret %tmp.31;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_80_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_DataModelFactory_mc_72_74_stop:
     }
 }
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/DataModelFactory.mc"; @line = 7; ]

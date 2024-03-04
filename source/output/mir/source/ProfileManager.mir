@@ -128,7 +128,7 @@ class ProfileManager{
         %tmp.126 = aputv %tmp.125 3 %tmp.124;
         %tmp.127 = dup %tmp.47;
         %tmp.128 = aputv %tmp.127 %tmp.49 %tmp.126;
-        putv self :_nitroxProfileDef %tmp.128;
+        putv self :_airSenseProfileDef %tmp.128;
     }
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ProfileManager.mc"; @line = 9; ]
     static
@@ -154,7 +154,7 @@ class ProfileManager{
     const CARBON_MONOXIDE_CHARACTERISTIC;
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ProfileManager.mc"; @line = 19; @position = 18; ]
     private
-    const _nitroxProfileDef;
+    const _airSenseProfileDef;
     //! Register the bluetooth profile
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ProfileManager.mc"; @line = 41; ]
     public
@@ -163,7 +163,7 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ProfileManager_mc_42_4_star
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ProfileManager.mc" 43 8 ]
         %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.2 = getv function %tmp.1 :registerProfile;
-        %tmp.4 = getv ? :_nitroxProfileDef;
+        %tmp.4 = getv ? :_airSenseProfileDef;
         invoke %tmp.1 %tmp.2(%tmp.4);
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ProfileManager_mc_42_4_stop:
     }

@@ -1,0 +1,433 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 1; ]
+using Toybox.FitContributor as :Fit;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 2; ]
+using Toybox.ActivityRecording;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 3; ]
+using Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 5; ]
+import Toybox.Graphics;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 7; ]
+class AirSenseDataField extends WatchUi.DataField{
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 9; @position = 16; ]
+    private
+    var _dataModel as DeviceDataModel;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 10; @position = 16; ]
+    private
+    var _session;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 12; @position = 10; ]
+    const AIR_TEMP_FIELD_ID = 1;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 13; @position = 15; ]
+    protected
+    var mAirTempField;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 15; @position = 10; ]
+    const CO2_FIELD_ID = 2;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 16; @position = 15; ]
+    protected
+    var mCO2Field;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 18; @position = 10; ]
+    const PM25_FIELD_ID = 3;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 19; @position = 15; ]
+    protected
+    var mPM25Field;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 21; @position = 10; ]
+    const HUMIDITY_FIELD_ID = 4;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 22; @position = 15; ]
+    protected
+    var mHumidityField;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 24; @position = 8; ]
+    var activityRunning = false;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 26; @position = 8; ]
+    var hr = 0;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 27; @position = 8; ]
+    var time = 0;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 28; @position = 8; ]
+    var loc = null;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 29; @position = 8; ]
+    var temp = 0.0f;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 30; @position = 8; ]
+    var pm25 = 0.0f;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 31; @position = 8; ]
+    var co2 = 0.0f;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 32; @position = 8; ]
+    var hum = 0.0f;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 35; ]
+    function initialize(dataModel as DeviceDataModel, session) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_35_63_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 36 8 ]
+        %tmp.2 = lgetv %session;
+        putv self :_session %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 37 8 ]
+        %tmp.4 = lgetv %dataModel;
+        putv self :_dataModel %tmp.4;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 39 8 ]
+        %tmp.6 = getv ? :DataField;
+        %tmp.7 = getv function %tmp.6 :initialize;
+        invoke %tmp.6 %tmp.7();
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 41 8 ]
+        %tmp.8 = self;
+        %tmp.9 = getv function %tmp.8 :setupField;
+        %tmp.11 = getv ? :_session;
+        invoke %tmp.8 %tmp.9(%tmp.11);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_35_63_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 44; ]
+    function setupField(session) {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_44_33_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 46 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_46_8_if_stmt:
+        %tmp.1 = null;
+        %tmp.3 = getv ? :mAirTempField;
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_46_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_46_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_46_36_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 48 12 ]
+        %tmp.5 = lgetv %session;
+        %tmp.6 = getv function %tmp.5 :createField;
+        %tmp.7 = "Temperature";
+        %tmp.9 = getv ? :AIR_TEMP_FIELD_ID;
+        %tmp.11 = getv ? :FitContributor;
+        %tmp.12 = getv %tmp.11 :DATA_TYPE_FLOAT;
+        %tmp.13 = newd 2;
+        %tmp.15 = const :mesgType;
+        %tmp.16 = getm $.Toybox.FitContributor;
+        %tmp.17 = getv %tmp.16 :MESG_TYPE_RECORD;
+        %tmp.18 = dup %tmp.13;
+        %tmp.19 = aputv %tmp.18 %tmp.15 %tmp.17;
+        %tmp.21 = const :units;
+        %tmp.22 = "C";
+        %tmp.23 = dup %tmp.19;
+        %tmp.24 = aputv %tmp.23 %tmp.21 %tmp.22;
+        %tmp.25 = invoke %tmp.5 %tmp.6(%tmp.7, %tmp.9, %tmp.12, %tmp.24);
+        putv self :mAirTempField %tmp.25;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 55 12 ]
+        %tmp.27 = getv ? :mAirTempField;
+        %tmp.28 = getv function %tmp.27 :setData;
+        %tmp.29 = 0.0;
+        invoke %tmp.27 %tmp.28(%tmp.29);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_46_36_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_46_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_46_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 58 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_58_8_if_stmt:
+        %tmp.30 = null;
+        %tmp.32 = getv ? :mCO2Field;
+        %tmp.33 = eq %tmp.30 %tmp.32;
+        bf %tmp.33 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_58_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_58_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_58_32_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 60 12 ]
+        %tmp.34 = lgetv %session;
+        %tmp.35 = getv function %tmp.34 :createField;
+        %tmp.36 = "Carbon Dioxide";
+        %tmp.38 = getv ? :CO2_FIELD_ID;
+        %tmp.40 = getv ? :FitContributor;
+        %tmp.41 = getv %tmp.40 :DATA_TYPE_FLOAT;
+        %tmp.42 = newd 2;
+        %tmp.44 = const :mesgType;
+        %tmp.45 = getm $.Toybox.FitContributor;
+        %tmp.46 = getv %tmp.45 :MESG_TYPE_RECORD;
+        %tmp.47 = dup %tmp.42;
+        %tmp.48 = aputv %tmp.47 %tmp.44 %tmp.46;
+        %tmp.50 = const :units;
+        %tmp.51 = "ppm";
+        %tmp.52 = dup %tmp.48;
+        %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+        %tmp.54 = invoke %tmp.34 %tmp.35(%tmp.36, %tmp.38, %tmp.41, %tmp.53);
+        putv self :mCO2Field %tmp.54;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 67 12 ]
+        %tmp.56 = getv ? :mCO2Field;
+        %tmp.57 = getv function %tmp.56 :setData;
+        %tmp.58 = 0.0;
+        invoke %tmp.56 %tmp.57(%tmp.58);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_58_32_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_58_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_58_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 70 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_70_8_if_stmt:
+        %tmp.59 = null;
+        %tmp.61 = getv ? :mPM25Field;
+        %tmp.62 = eq %tmp.59 %tmp.61;
+        bf %tmp.62 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_70_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_70_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_70_33_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 72 12 ]
+        %tmp.63 = lgetv %session;
+        %tmp.64 = getv function %tmp.63 :createField;
+        %tmp.65 = "PM 2.5";
+        %tmp.67 = getv ? :PM25_FIELD_ID;
+        %tmp.69 = getv ? :FitContributor;
+        %tmp.70 = getv %tmp.69 :DATA_TYPE_FLOAT;
+        %tmp.71 = newd 2;
+        %tmp.73 = const :mesgType;
+        %tmp.74 = getm $.Toybox.FitContributor;
+        %tmp.75 = getv %tmp.74 :MESG_TYPE_RECORD;
+        %tmp.76 = dup %tmp.71;
+        %tmp.77 = aputv %tmp.76 %tmp.73 %tmp.75;
+        %tmp.79 = const :units;
+        %tmp.80 = "ppm";
+        %tmp.81 = dup %tmp.77;
+        %tmp.82 = aputv %tmp.81 %tmp.79 %tmp.80;
+        %tmp.83 = invoke %tmp.63 %tmp.64(%tmp.65, %tmp.67, %tmp.70, %tmp.82);
+        putv self :mPM25Field %tmp.83;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 79 12 ]
+        %tmp.85 = getv ? :mPM25Field;
+        %tmp.86 = getv function %tmp.85 :setData;
+        %tmp.87 = 0.0;
+        invoke %tmp.85 %tmp.86(%tmp.87);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_70_33_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_70_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_70_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 82 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_82_8_if_stmt:
+        %tmp.88 = null;
+        %tmp.90 = getv ? :mHumidityField;
+        %tmp.91 = eq %tmp.88 %tmp.90;
+        bf %tmp.91 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_82_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_82_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_82_37_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 84 12 ]
+        %tmp.92 = lgetv %session;
+        %tmp.93 = getv function %tmp.92 :createField;
+        %tmp.94 = "Humidity";
+        %tmp.96 = getv ? :HUMIDITY_FIELD_ID;
+        %tmp.98 = getv ? :FitContributor;
+        %tmp.99 = getv %tmp.98 :DATA_TYPE_FLOAT;
+        %tmp.100 = newd 2;
+        %tmp.102 = const :mesgType;
+        %tmp.103 = getm $.Toybox.FitContributor;
+        %tmp.104 = getv %tmp.103 :MESG_TYPE_RECORD;
+        %tmp.105 = dup %tmp.100;
+        %tmp.106 = aputv %tmp.105 %tmp.102 %tmp.104;
+        %tmp.108 = const :units;
+        %tmp.109 = "%";
+        %tmp.110 = dup %tmp.106;
+        %tmp.111 = aputv %tmp.110 %tmp.108 %tmp.109;
+        %tmp.112 = invoke %tmp.92 %tmp.93(%tmp.94, %tmp.96, %tmp.99, %tmp.111);
+        putv self :mHumidityField %tmp.112;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 91 12 ]
+        %tmp.114 = getv ? :mHumidityField;
+        %tmp.115 = getv function %tmp.114 :setData;
+        %tmp.116 = 0.0;
+        invoke %tmp.114 %tmp.115(%tmp.116);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_82_37_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_82_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_82_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_44_33_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 95; ]
+    function refreshActivityStats() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_95_36_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 96 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_95_36_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_95_36_stop" ]
+        %activityInfo.1 = local;
+        %tmp.2 = getv ? :Activity;
+        %tmp.3 = getv function %tmp.2 :getActivityInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %activityInfo.1 %tmp.4;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 97 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_97_8_if_stmt:
+        %tmp.6 = lgetv %activityInfo.1;
+        %tmp.7 = null;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_97_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_97_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_97_34_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 98 12 ]
+        ret ?;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_97_34_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_97_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_97_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 101 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_101_8_if_stmt:
+        %tmp.9 = lgetv %activityInfo.1;
+        %tmp.10 = getv %tmp.9 :currentHeartRate;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_101_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_101_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_101_52_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 102 12 ]
+        %tmp.13 = lgetv %activityInfo.1;
+        %tmp.14 = getv %tmp.13 :currentHeartRate;
+        putv self :hr %tmp.14;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_101_52_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_101_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_101_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 105 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_105_8_if_stmt:
+        %tmp.15 = lgetv %activityInfo.1;
+        %tmp.16 = getv %tmp.15 :currentLocation;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_105_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_105_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_105_48_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 106 12 ]
+        %tmp.19 = lgetv %activityInfo.1;
+        %tmp.20 = getv %tmp.19 :currentLocation;
+        %tmp.21 = getv function %tmp.20 :toDegrees;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        putv self :loc %tmp.22;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_105_48_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_105_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_105_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 109 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_109_8_if_stmt:
+        %tmp.23 = lgetv %activityInfo.1;
+        %tmp.24 = getv %tmp.23 :elapsedTime;
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        bf %tmp.26 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_109_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_109_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_109_44_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 110 12 ]
+        %tmp.27 = lgetv %activityInfo.1;
+        %tmp.28 = getv %tmp.27 :elapsedTime;
+        putv self :time %tmp.28;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_109_44_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_109_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_109_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_95_36_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 129; ]
+    function compute(info) {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_129_27_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 130 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_129_27_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_129_27_stop" ]
+        %profile.1 = local;
+        %tmp.2 = getv ? :_dataModel;
+        %tmp.3 = getv function %tmp.2 :getActiveProfile;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %profile.1 %tmp.4;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 132 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_12_begin:
+        %tmp.6 = getv ? :_dataModel;
+        %tmp.7 = getv function %tmp.6 :isConnected;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = dup %tmp.8;
+        bf %tmp.9 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_40_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_40_true:
+        %tmp.11 = lgetv %profile.1;
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        %tmp.14 = and %tmp.8 %tmp.13;
+        push %tmp.14;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_40_end:
+        %tmp.15 = phi [%tmp.9 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_12_begin] [%tmp.14 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_40_true] [%tmp.15 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_40_end];
+        bf %tmp.15 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_60_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 133 12 ]
+        %tmp.16 = lgetv %profile.1;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        %tmp.18 = getv function %tmp.17 :getTemp;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        putv self :temp %tmp.19;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 135 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_135_12_if_stmt:
+        %tmp.21 = getv ? :temp;
+        %tmp.22 = null;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        bf %tmp.23 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_135_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_135_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_136_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 138 16 ]
+        %tmp.25 = getv ? :mAirTempField;
+        %tmp.26 = getv function %tmp.25 :setData;
+        %tmp.28 = getv ? :temp;
+        %tmp.29 = as %tmp.28 { (!Null) };
+        invoke %tmp.25 %tmp.26(%tmp.29);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_136_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_135_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_135_12_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 141 12 ]
+        %tmp.30 = lgetv %profile.1;
+        %tmp.31 = as %tmp.30 { (!Null) };
+        %tmp.32 = getv function %tmp.31 :getPM25;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        putv self :pm25 %tmp.33;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 142 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_142_12_if_stmt:
+        %tmp.35 = getv ? :pm25;
+        %tmp.36 = null;
+        %tmp.37 = ne %tmp.35 %tmp.36;
+        bf %tmp.37 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_142_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_142_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_143_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 145 16 ]
+        %tmp.39 = getv ? :mPM25Field;
+        %tmp.40 = getv function %tmp.39 :setData;
+        %tmp.42 = getv ? :pm25;
+        %tmp.43 = as %tmp.42 { (!Null) };
+        invoke %tmp.39 %tmp.40(%tmp.43);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_143_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_142_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_142_12_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 148 12 ]
+        %tmp.44 = lgetv %profile.1;
+        %tmp.45 = as %tmp.44 { (!Null) };
+        %tmp.46 = getv function %tmp.45 :getCO2;
+        %tmp.47 = invoke %tmp.45 %tmp.46();
+        putv self :co2 %tmp.47;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 149 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_149_12_if_stmt:
+        %tmp.49 = getv ? :co2;
+        %tmp.50 = null;
+        %tmp.51 = ne %tmp.49 %tmp.50;
+        bf %tmp.51 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_149_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_149_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_150_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 151 16 ]
+        %tmp.53 = getv ? :mCO2Field;
+        %tmp.54 = getv function %tmp.53 :setData;
+        %tmp.56 = getv ? :co2;
+        %tmp.57 = as %tmp.56 { (!Null) };
+        invoke %tmp.53 %tmp.54(%tmp.57);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_150_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_149_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_149_12_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 154 12 ]
+        %tmp.58 = lgetv %profile.1;
+        %tmp.59 = as %tmp.58 { (!Null) };
+        %tmp.60 = getv function %tmp.59 :getHumidity;
+        %tmp.61 = invoke %tmp.59 %tmp.60();
+        putv self :hum %tmp.61;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 155 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_155_12_if_stmt:
+        %tmp.63 = getv ? :hum;
+        %tmp.64 = null;
+        %tmp.65 = ne %tmp.63 %tmp.64;
+        bf %tmp.65 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_155_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_155_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_156_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 157 16 ]
+        %tmp.67 = getv ? :mHumidityField;
+        %tmp.68 = getv function %tmp.67 :setData;
+        %tmp.70 = getv ? :hum;
+        %tmp.71 = as %tmp.70 { (!Null) };
+        invoke %tmp.67 %tmp.68(%tmp.71);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_156_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_155_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_155_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_60_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_132_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc" 161 8 ]
+        %tmp.72 = self;
+        %tmp.73 = getv function %tmp.72 :refreshActivityStats;
+        invoke %tmp.72 %tmp.73();
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDataField_mc_129_27_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDataField.mc"; @line = 1; ]
+<init> {
+}

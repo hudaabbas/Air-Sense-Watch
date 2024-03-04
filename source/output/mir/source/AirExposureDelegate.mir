@@ -1,0 +1,49 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 2; ]
+import Toybox.System;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 5; ]
+class AirExposureDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 7; ]
+    function initialize() as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_7_26_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc" 8 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_7_26_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 11; ]
+    public
+    function onBack() as Boolean {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_12_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc" 13 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :popView;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc" 14 8 ]
+        %tmp.5 = getm $.Toybox.WatchUi;
+        %tmp.6 = getv function %tmp.5 :popView;
+        %tmp.7 = getm $.Toybox.WatchUi;
+        %tmp.8 = getv %tmp.7 :SLIDE_IMMEDIATE;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc" 15 8 ]
+        %tmp.9 = true;
+        ret %tmp.9;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_12_4_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 1; ]
+<init> {
+}

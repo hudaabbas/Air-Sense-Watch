@@ -23,8 +23,8 @@ class ScanDataModel{
     //! @param bleDelegate The BLE delegate for this model
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDataModel.mc"; @line = 18; ]
     public
-    function initialize(bleDelegate as NitroxBLEDelegate) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDataModel_mc_18_65_start:
+    function initialize(bleDelegate as BLEDelegate) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDataModel_mc_18_59_start:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDataModel.mc" 19 8 ]
         %tmp.1 = lgetv %bleDelegate;
         %tmp.2 = getv function %tmp.1 :notifyScanResult;
@@ -36,7 +36,7 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDataModel_mc_18_65_star
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDataModel.mc" 22 8 ]
         %tmp.6 = 0;
         putv self :_displayResult %tmp.6;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDataModel_mc_18_65_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDataModel_mc_18_59_stop:
     }
     //! Process a new scan result
     //! @param scanResult The new scan result

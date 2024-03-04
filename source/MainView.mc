@@ -13,13 +13,7 @@ import Toybox.Application.Storage;
 class MainView extends WatchUi.View 
 {
     private var _dataModel as DeviceDataModel;
-    var ppo2 = 1.4;
     var lastConnected = false;
-    
-    
-    var myTimer;
-    var lastCalibrating = false;
-    var calibratingMillis = 0;
 
     //! Constructor
     //! @param dataModel The data to show
@@ -33,7 +27,7 @@ class MainView extends WatchUi.View
     //! Update the view
     //! @param dc Device Context
 
-    function timerCallback() as Void 
+    /*function timerCallback() as Void 
     {
         var millis = System.getTimer() - calibratingMillis;
        
@@ -45,7 +39,7 @@ class MainView extends WatchUi.View
            
         }
         WatchUi.requestUpdate();
-    }
+    }*/
 
     public function onUpdate(dc as Dc) as Void {
        

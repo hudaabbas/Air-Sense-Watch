@@ -29,9 +29,24 @@ module Rez {
     } // Menus
 
     module Strings {
+        (:initialized) var CO2_label as Symbol;
+        (:initialized) var PM25_graph_label as Symbol;
+        (:initialized) var temp_units as Symbol;
+        (:initialized) var CO2_graph_label as Symbol;
+        (:initialized) var CO2_units as Symbol;
+        (:initialized) var humidity_units as Symbol;
+        (:initialized) var air_exposure_label as Symbol;
+        (:initialized) var humidity_label as Symbol;
+        (:initialized) var air_exposure_graph_label as Symbol;
+        (:initialized) var air_exposure_units as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var temp_label as Symbol;
         (:initialized) var menu_label_1 as Symbol;
         (:initialized) var menu_label_2 as Symbol;
-        (:initialized) var AppName as Symbol;
+        (:initialized) var PM25_label as Symbol;
+        (:initialized) var temp_graph_label as Symbol;
+        (:initialized) var PM25_units as Symbol;
+        (:initialized) var humidity_graph_label as Symbol;
     } // Strings
 
     module Styles {

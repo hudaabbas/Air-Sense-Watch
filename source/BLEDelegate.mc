@@ -28,10 +28,10 @@ class BLEDelegate extends BluetoothLowEnergy.BleDelegate {
     public function onScanResults(scanResults as Iterator) as Void {
         for (var result = scanResults.next(); result != null; result = scanResults.next()) {
             if (result instanceof ScanResult) 
-            {   
-                
+            {                   
                 if (result.getDeviceName() != null)
                 {           
+                    //System.println("result: " + result.getDeviceName());
                     if (contains(result.getServiceUuids(), _profileManager.ENVIRONMENTAL_SENSING_SERVICE))
                     {
                         broadcastScanResult(result);
