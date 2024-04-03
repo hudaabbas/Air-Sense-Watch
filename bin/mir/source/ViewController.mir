@@ -16,37 +16,39 @@ class ViewController{
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 12; @position = 16; ]
     private
     var _modelFactory as DataModelFactory;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 13; @position = 8; ]
+    var session;
     //! Constructor
     //! @param modelFactory Factory to create models
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 16; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 17; ]
     public
     function initialize(modelFactory as DataModelFactory) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_16_65_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 17 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_17_65_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 18 8 ]
         %tmp.2 = lgetv %modelFactory;
         putv self :_modelFactory %tmp.2;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_16_65_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_17_65_stop:
     }
     //! Return the initial views for the app
     //! @return Array Pair [View, InputDelegate]
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 22; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 23; ]
     public
     function getInitialView() as Array<ScanView or ScanDelegate> {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_23_4_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 24 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_23_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_23_4_stop" ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_24_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 25 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_24_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_24_4_stop" ]
         %scanDataModel.1 = local;
         %tmp.2 = getv ? :_modelFactory;
         %tmp.3 = getv function %tmp.2 :getScanDataModel;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         lputv %scanDataModel.1 %tmp.4;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 25 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 26 8 ]
         %tmp.5 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.6 = getv function %tmp.5 :setScanState;
         %tmp.7 = getm $.Toybox.BluetoothLowEnergy;
         %tmp.8 = getv %tmp.7 :SCAN_STATE_SCANNING;
         invoke %tmp.5 %tmp.6(%tmp.8);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 26 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 27 8 ]
         %tmp.9 = newa Array<ScanView or ScanDelegate> 2;
         %tmp.13 = getm $;
         %tmp.14 = getv %tmp.13 :ScanView;
@@ -62,83 +64,31 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_23_4_star
         %tmp.28 = dup %tmp.18;
         %tmp.29 = aputv %tmp.28 1 %tmp.19;
         ret %tmp.29;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_23_4_stop:
-    }
-    //! Push the scan menu view
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 30; ]
-    public
-    function pushScanMenu() as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_31_4_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 34 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_31_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_31_4_stop" ]
-        %menu.1 = local;
-        %tmp.3 = getm $.Toybox.WatchUi;
-        %tmp.4 = getv function ? %tmp.3 :Menu;
-        %tmp.1 = newc %tmp.4 ();
-        lputv %menu.1 %tmp.1;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 35 8 ]
-        %tmp.5 = lgetv %menu.1;
-        %tmp.6 = getv function %tmp.5 :setTitle;
-        %tmp.7 = "Main Menu";
-        invoke %tmp.5 %tmp.6(%tmp.7);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 36 8 ]
-        %tmp.8 = lgetv %menu.1;
-        %tmp.9 = getv function %tmp.8 :addItem;
-        %tmp.10 = "Scan";
-        %tmp.12 = const :search;
-        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.12);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 37 8 ]
-        %tmp.13 = lgetv %menu.1;
-        %tmp.14 = getv function %tmp.13 :addItem;
-        %tmp.15 = "Stop";
-        %tmp.17 = const :stop;
-        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.17);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 38 8 ]
-        %tmp.18 = lgetv %menu.1;
-        %tmp.19 = getv function %tmp.18 :addItem;
-        %tmp.20 = "Max PPO2";
-        %tmp.22 = const :maxPPO2;
-        invoke %tmp.18 %tmp.19(%tmp.20, %tmp.22);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 41 5 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_31_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_31_4_stop" ]
-        %mmd.2 = local;
-        %tmp.26 = getm $;
-        %tmp.27 = getv %tmp.26 :MainMenuDelegate;
-        %tmp.23 = newc %tmp.27 ();
-        lputv %mmd.2 %tmp.23;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 43 5 ]
-        %tmp.28 = getm $.Toybox.WatchUi;
-        %tmp.29 = getv function %tmp.28 :pushView;
-        %tmp.31 = lgetv %menu.1;
-        %tmp.33 = lgetv %mmd.2;
-        %tmp.34 = getm $.Toybox.WatchUi;
-        %tmp.35 = getv %tmp.34 :SLIDE_UP;
-        invoke %tmp.28 %tmp.29(%tmp.31, %tmp.33, %tmp.35);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_31_4_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_24_4_stop:
     }
     //! Push the device view
     //! @param scanResult The scan result for the device view to push
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 48; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 32; ]
     public
     function pushDeviceView(scanResult as ScanResult) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_49_4_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 50 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_49_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_49_4_stop" ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_33_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 34 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_33_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_33_4_stop" ]
         %deviceDataModel.1 = local;
         %tmp.2 = getv ? :_modelFactory;
         %tmp.3 = getv function %tmp.2 :getDeviceDataModel;
         %tmp.5 = lgetv %scanResult;
         %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.5);
         lputv %deviceDataModel.1 %tmp.6;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 51 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_49_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_49_4_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 35 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_33_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_33_4_stop" ]
         %v.2 = local;
         %tmp.10 = getm $;
         %tmp.11 = getv %tmp.10 :MainView;
         %tmp.13 = lgetv %deviceDataModel.1;
         %tmp.7 = newc %tmp.11 (%tmp.13);
         lputv %v.2 %tmp.7;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 52 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 36 8 ]
         %tmp.14 = getm $.Toybox.WatchUi;
         %tmp.15 = getv function %tmp.14 :pushView;
         %tmp.17 = lgetv %v.2;
@@ -146,11 +96,122 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_49_4_star
         %tmp.22 = getv %tmp.21 :MainViewDelegate;
         %tmp.24 = lgetv %deviceDataModel.1;
         %tmp.26 = lgetv %v.2;
-        %tmp.18 = newc %tmp.22 (%tmp.24, %tmp.26);
-        %tmp.27 = getm $.Toybox.WatchUi;
-        %tmp.28 = getv %tmp.27 :SLIDE_UP;
-        invoke %tmp.14 %tmp.15(%tmp.17, %tmp.18, %tmp.28);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_49_4_stop:
+        %tmp.28 = lgetv %self;
+        %tmp.18 = newc %tmp.22 (%tmp.24, %tmp.26, %tmp.28);
+        %tmp.29 = getm $.Toybox.WatchUi;
+        %tmp.30 = getv %tmp.29 :SLIDE_UP;
+        invoke %tmp.14 %tmp.15(%tmp.17, %tmp.18, %tmp.30);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_33_4_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 39; ]
+    public
+    function getDeviceDataModel(scanResult as ScanResult) as DeviceDataModel {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_40_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 41 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_40_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_40_4_stop" ]
+        %deviceDataModel.1 = local;
+        %tmp.2 = getv ? :_modelFactory;
+        %tmp.3 = getv function %tmp.2 :getDeviceDataModel;
+        %tmp.5 = lgetv %scanResult;
+        %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.5);
+        lputv %deviceDataModel.1 %tmp.6;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 42 8 ]
+        %tmp.8 = lgetv %deviceDataModel.1;
+        ret %tmp.8;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_40_4_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 45; ]
+    public
+    function pushActivityView(deviceDataModel) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_46_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 47 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_47_8_if_stmt:
+        %tmp.2 = getv ? :Toybox;
+        %tmp.4 = const :ActivityRecording;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_47_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_47_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_47_43_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 48 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_12_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_16_begin:
+        %tmp.7 = getv ? :session;
+        %tmp.8 = null;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        %tmp.10 = dup %tmp.9;
+        bt %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_37_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_37_false:
+        %tmp.12 = getv ? :session;
+        %tmp.13 = as %tmp.12 { (!Null) };
+        %tmp.14 = getv function %tmp.13 :isRecording;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        %tmp.16 = false;
+        %tmp.17 = eq %tmp.15 %tmp.16;
+        %tmp.18 = or %tmp.9 %tmp.17;
+        push %tmp.18;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_37_end:
+        %tmp.19 = phi [%tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_16_begin] [%tmp.18 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_37_false] [%tmp.19 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_37_end];
+        bf %tmp.19 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_71_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 49 16 ]
+        %tmp.21 = getv ? :System;
+        %tmp.22 = getv function %tmp.21 :println;
+        %tmp.23 = "Start activity recording!!";
+        invoke %tmp.21 %tmp.22(%tmp.23);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 50 16 ]
+        %tmp.25 = getv ? :ActivityRecording;
+        %tmp.26 = getv function %tmp.25 :createSession;
+        %tmp.27 = newd 3;
+        %tmp.29 = const :name;
+        %tmp.30 = "Air Sensor Run";
+        %tmp.31 = dup %tmp.27;
+        %tmp.32 = aputv %tmp.31 %tmp.29 %tmp.30;
+        %tmp.34 = const :sport;
+        %tmp.36 = getv ? :Activity;
+        %tmp.37 = getv %tmp.36 :SPORT_GENERIC;
+        %tmp.38 = dup %tmp.32;
+        %tmp.39 = aputv %tmp.38 %tmp.34 %tmp.37;
+        %tmp.41 = const :subSport;
+        %tmp.43 = getv ? :Activity;
+        %tmp.44 = getv %tmp.43 :SUB_SPORT_GENERIC;
+        %tmp.45 = dup %tmp.39;
+        %tmp.46 = aputv %tmp.45 %tmp.41 %tmp.44;
+        %tmp.47 = invoke %tmp.25 %tmp.26(%tmp.46);
+        putv self :session %tmp.47;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 55 16 ]
+        %tmp.49 = getv ? :session;
+        %tmp.50 = getv function %tmp.49 :start;
+        invoke %tmp.49 %tmp.50();
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_71_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_48_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_47_43_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_47_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_47_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 59 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_46_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_46_4_stop" ]
+        %v.1 = local;
+        %tmp.54 = getm $;
+        %tmp.55 = getv %tmp.54 :AirSenseView;
+        %tmp.57 = lgetv %deviceDataModel;
+        %tmp.59 = getv ? :session;
+        %tmp.51 = newc %tmp.55 (%tmp.57, %tmp.59);
+        lputv %v.1 %tmp.51;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc" 60 8 ]
+        %tmp.60 = getm $.Toybox.WatchUi;
+        %tmp.61 = getv function %tmp.60 :pushView;
+        %tmp.63 = lgetv %v.1;
+        %tmp.67 = getm $;
+        %tmp.68 = getv %tmp.67 :AirSenseDelegate;
+        %tmp.70 = lgetv %deviceDataModel;
+        %tmp.72 = getv ? :session;
+        %tmp.74 = lgetv %self;
+        %tmp.64 = newc %tmp.68 (%tmp.70, %tmp.72, %tmp.74);
+        %tmp.75 = getm $.Toybox.WatchUi;
+        %tmp.76 = getv %tmp.75 :SLIDE_UP;
+        invoke %tmp.60 %tmp.61(%tmp.63, %tmp.64, %tmp.76);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ViewController_mc_46_4_stop:
     }
 }
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ViewController.mc"; @line = 7; ]

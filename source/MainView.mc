@@ -14,36 +14,21 @@ class MainView extends WatchUi.View
 {
     private var _dataModel as DeviceDataModel;
     var lastConnected = false;
+    var button;
 
     //! Constructor
     //! @param dataModel The data to show
     public function initialize(dataModel as DeviceDataModel) {
         View.initialize();
+        button = WatchUi.loadResource(Rez.Drawables.topRight);
 
         _dataModel = dataModel;
         _dataModel._view = self;
     }
 
-    //! Update the view
-    //! @param dc Device Context
-
-    /*function timerCallback() as Void 
-    {
-        var millis = System.getTimer() - calibratingMillis;
-       
-        if (millis > 5000)
-        {
-            
-            myTimer.stop();
-            calibratingMillis = 0;
-           
-        }
-        WatchUi.requestUpdate();
-    }*/
-
     public function onUpdate(dc as Dc) as Void {
        
-        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();            
         var midX = dc.getWidth()/2;
         var midY = dc.getHeight()/2;
@@ -64,34 +49,48 @@ class MainView extends WatchUi.View
         if (_dataModel.isConnected() && (profile != null)) 
         {
             System.println("Connected and profile is present!");
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-            var temp = profile.getTemp();
-            if (temp != null)
-            {
-                dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(midX, midY-20, Graphics.FONT_SMALL, Lang.format("Temp: $1$ C",[temp.format("%.2f")]), Graphics.TEXT_JUSTIFY_CENTER);
-            }
-
-            var cO2 = profile.getCO2();
-            if (cO2 != null)
-            {
-                dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(midX, midY+20, Graphics.FONT_SMALL, Lang.format("CO2: $1$ ppm",[cO2.format("%.2f")]), Graphics.TEXT_JUSTIFY_CENTER);
-            }
-            
+            dc.drawText(midX, midY-150, Graphics.FONT_XTINY, "Humidity", Graphics.TEXT_JUSTIFY_CENTER);
             var humidity = profile.getHumidity();
             if (humidity != null)
             {
-                dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(midX, midY-60, Graphics.FONT_SMALL, Lang.format("Humidity: $1$ %",[humidity.format("%.2f")]), Graphics.TEXT_JUSTIFY_CENTER);
+                dc.drawText(midX, midY-125, Graphics.FONT_SMALL, Lang.format("$1$ %",[humidity.format("%.2f")]), Graphics.TEXT_JUSTIFY_CENTER);
+            } else {
+                dc.drawText(midX, midY-125, Graphics.FONT_SMALL, "--", Graphics.TEXT_JUSTIFY_CENTER);
             }
 
+            dc.drawText(midX, midY-65, Graphics.FONT_XTINY, "PM 2.5", Graphics.TEXT_JUSTIFY_CENTER);
             var pm25 = profile.getPM25();
             if (pm25 != null)
             {
-                dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(midX, midY+80, Graphics.FONT_SMALL, Lang.format("PM 2.5: $1$ ppm",[pm25.format("%.2f")]), Graphics.TEXT_JUSTIFY_CENTER); 
+                dc.drawText(midX, midY-40, Graphics.FONT_SMALL, Lang.format("$1$ µg/m3",[pm25.format("%.2f")]), Graphics.TEXT_JUSTIFY_CENTER); 
+            } else {
+                dc.drawText(midX, midY-40, Graphics.FONT_SMALL, "--", Graphics.TEXT_JUSTIFY_CENTER);
             }
+
+            dc.drawText(midX, midY+20, Graphics.FONT_XTINY, "CO2", Graphics.TEXT_JUSTIFY_CENTER);
+            var cO2 = profile.getCO2();
+            if (cO2 != null)
+            {
+                dc.drawText(midX, midY+45, Graphics.FONT_SMALL, Lang.format("$1$ ppm",[cO2.format("%.0f")]), Graphics.TEXT_JUSTIFY_CENTER);
+            } else {
+                dc.drawText(midX, midY+45, Graphics.FONT_SMALL, "--", Graphics.TEXT_JUSTIFY_CENTER);
+            }
+
+            dc.drawText(midX, midY+105, Graphics.FONT_XTINY, "Temperature", Graphics.TEXT_JUSTIFY_CENTER);
+            var temp = profile.getTemp();
+            if (temp != null)
+            {
+                dc.drawText(midX, midY+130, Graphics.FONT_SMALL, Lang.format("$1$ C",[temp.format("%.1f")]), Graphics.TEXT_JUSTIFY_CENTER);
+            } else {
+                dc.drawText(midX, midY+130, Graphics.FONT_SMALL, "--", Graphics.TEXT_JUSTIFY_CENTER);
+            }
+
+            if(temp != null && cO2 !=  null && pm25 != null && humidity != null){
+                dc.drawBitmap(305, 60, button);
+            }
+            
         }
     
     }

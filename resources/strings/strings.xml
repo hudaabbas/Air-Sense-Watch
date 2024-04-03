@@ -1,5 +1,31 @@
 <strings>
-    <string id="AppName">AirSense</string>
-    <string id="menu_label_1">Start Scanning</string>
-    <string id="menu_label_2">Stop Scanning</string>
+    <string id="AppName">Air Sense</string>
+    <string id="titleLabel">Four Week\nSummary</string>
+    <string id="hrLabel">HEART RATE</string>
+    <string id="pm25Label">PM 2.5</string>
+    <string id="co2Label">CO2</string>
+    <string id="tempLabel">TEMP.</string>
+    <string id="humLabel">HUMIDITY</string>
+    <string id="timeLabel">TIMER</string>
+    <string id="ppmLabel">ppm</string>
+    <string id="microLabel">µg/m3</string>
+    <string id="tempUnits">Celsius</string>
+    <string id="humUnits">%</string>
+
+    <string id="timeLbl">Time</string>
+    <string id="maxpm25">Avg PM 2.5</string>
+    <string id="AQHILabel">Local AQHI</string>
+    <string id="personalAQHIabel">Personal AQHI</string>
+    <string id="summary">Summary</string>
+
+    <string id="blurb">This is a user prompt</string> 
+
+    <string id="connectString1">Please connect your</string>
+    <string id="connectString2">phone and open the</string>
+    <string id="connectString3">Connect Mobile App</string>
+    
+    <string id="goToPhone">Open the</string>   
+    
+    <string id="loading">--</string>
+    <string id="error">Error: </string>
 </strings>

@@ -1,0 +1,46 @@
+<resources>
+	<property id="showHeartRate" type="boolean">true</property>
+	<property id="avgHeartRate" type="number">255</property>
+	<strings>
+        <string id="air_exposure_label">Personal AQHI</string>
+        <string id="aqhi_label">AQHI</string>
+        <string id="air_exposure_graph_label">Air Exposure Risk</string>
+        <string id="air_exposure_units"></string>
+        <string id="temp_graph_label">Temperature</string>
+        <string id="temp_label">Temp</string>
+        <string id="temp_units">C</string>
+        <string id="CO2_graph_label">Carbon Dioxide</string>
+        <string id="CO2_label">CO2</string>
+        <string id="CO2_units">ppm</string>
+        <string id="PM25_graph_label">Particulate Matter 2.5</string>
+        <string id="PM25_label">PM2.5</string>
+        <string id="PM25_units">ppm</string>
+        <string id="humidity_label">Humidity</string>
+        <string id="humidity_graph_label">Humidity</string>
+        <string id="humidity_units">%</string>
+    </strings>
+    <fitContributions>
+        <fitField id="0" displayInChart="false" sortOrder = "0" precision="2"
+        dataLabel="@Strings.air_exposure_label" unitLabel="@Strings.air_exposure_units"
+		displayInActivitySummary = "true"/>
+        <fitField id="1" displayInChart="true" sortOrder = "2" precision="2"
+        chartTitle="@Strings.temp_graph_label" dataLabel="@Strings.temp_label"
+        unitLabel="@Strings.temp_units" fillColor="#48BBDB" 
+		displayInActivitySummary = "true"/>
+        <fitField id="2" displayInChart="true" sortOrder = "3" precision="2"
+        chartTitle="@Strings.CO2_graph_label" dataLabel="@Strings.CO2_label"
+        unitLabel="@Strings.CO2_units" fillColor="#FDA50F" 
+		displayInActivitySummary = "true"/>
+        <fitField id="3" displayInChart="true" sortOrder = "1" precision="2"
+        chartTitle="@Strings.PM25_graph_label" dataLabel="@Strings.PM25_label"
+        unitLabel="@Strings.PM25_units" fillColor="#92664A" 
+		displayInActivitySummary = "true"/>
+        <fitField id="4" displayInChart="true" sortOrder = "4" precision="2"
+        chartTitle="@Strings.humidity_label" dataLabel="@Strings.humidity_label"
+        unitLabel="@Strings.humidity_units" fillColor="#FCD12A" 
+		displayInActivitySummary = "true"/>
+        <fitField id="5" displayInChart="false" sortOrder = "1" precision="0"
+        dataLabel="@Strings.aqhi_label" unitLabel="@Strings.air_exposure_units"
+		displayInActivitySummary = "true"/>
+    </fitContributions>
+</resources>

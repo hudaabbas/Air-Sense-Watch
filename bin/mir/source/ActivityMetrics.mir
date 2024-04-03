@@ -1,0 +1,386 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 4; ]
+using Toybox.System;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 5; ]
+using Toybox.ActivityMonitor as :Act;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 6; ]
+using Toybox.Activity as :Activity;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 7; ]
+using Toybox.UserProfile;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 8; ]
+using Toybox.Time;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 9; ]
+using Toybox.Time.Gregorian;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 11; ]
+module ActivityMetrics {
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 16; ]
+    function getHeartRate() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_16_27_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 17 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_16_27_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_16_27_stop" ]
+        %heartRate.1 = local;
+        %tmp.1 = 0;
+        lputv %heartRate.1 %tmp.1;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 18 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_8_if_stmt:
+        %tmp.3 = getm $.Toybox.ActivityMonitor;
+        %tmp.5 = const :getHeartRateHistory;
+        %tmp.6 = canhazplz %tmp.3 %tmp.5;
+        bf %tmp.6 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_42_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 19 12 ]
+        %tmp.7 = getm $.Toybox.Activity;
+        %tmp.8 = getv function %tmp.7 :getActivityInfo;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = getv %tmp.9 :currentHeartRate;
+        lputv %heartRate.1 %tmp.10;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 21 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_12_if_stmt:
+        %tmp.12 = lgetv %heartRate.1;
+        %tmp.13 = null;
+        %tmp.14 = eq %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_34_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 22 16 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_34_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_34_stop" ]
+        %HRH.2 = local;
+        %tmp.15 = getm $.Toybox.ActivityMonitor;
+        %tmp.16 = getv function %tmp.15 :getHeartRateHistory;
+        %tmp.17 = 1;
+        %tmp.18 = true;
+        %tmp.19 = invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18);
+        lputv %HRH.2 %tmp.19;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 23 16 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_34_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_34_stop" ]
+        %HRS.3 = local;
+        %tmp.20 = lgetv %HRH.2;
+        %tmp.21 = getv function %tmp.20 :next;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        lputv %HRS.3 %tmp.22;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 24 16 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_16_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_19_begin:
+        %tmp.24 = lgetv %HRS.3;
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        %tmp.27 = dup %tmp.26;
+        bf %tmp.27 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_34_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_34_true:
+        %tmp.28 = lgetv %HRS.3;
+        %tmp.29 = as %tmp.28 { (!Null) };
+        %tmp.30 = getv %tmp.29 :heartRate;
+        %tmp.31 = getm $.Toybox.ActivityMonitor;
+        %tmp.32 = getv %tmp.31 :INVALID_HR_SAMPLE;
+        %tmp.33 = ne %tmp.30 %tmp.32;
+        %tmp.34 = and %tmp.26 %tmp.33;
+        push %tmp.34;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_34_end:
+        %tmp.35 = phi [%tmp.27 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_19_begin] [%tmp.34 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_34_true] [%tmp.35 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_34_end];
+        bf %tmp.35 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_16_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_16_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_73_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 25 20 ]
+        %tmp.36 = lgetv %HRS.3;
+        %tmp.37 = as %tmp.36 { (!Null) };
+        %tmp.38 = getv %tmp.37 :heartRate;
+        lputv %heartRate.1 %tmp.38;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_73_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_16_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_24_16_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_34_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_21_12_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 29 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_42_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_42_stop" ]
+        %heartRateStr.4 = local;
+        %tmp.39 = "--";
+        lputv %heartRateStr.4 %tmp.39;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 30 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_30_12_if_stmt:
+        %tmp.41 = lgetv %heartRate.1;
+        %tmp.42 = null;
+        %tmp.43 = ne %tmp.41 %tmp.42;
+        bf %tmp.43 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_30_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_30_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_30_34_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 31 16 ]
+        %tmp.44 = lgetv %heartRate.1;
+        %tmp.45 = as %tmp.44 { (!Null) };
+        %tmp.46 = getv function %tmp.45 :toString;
+        %tmp.47 = invoke %tmp.45 %tmp.46();
+        lputv %heartRateStr.4 %tmp.47;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_30_34_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_30_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_30_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_42_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_18_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 35 8 ]
+        %tmp.49 = lgetv %heartRate.1;
+        ret %tmp.49;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_16_27_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 38; ]
+    function getRespirationRate() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_38_33_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 39 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_38_33_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_38_33_stop" ]
+        %info.1 = local;
+        %tmp.1 = getm $.Toybox.ActivityMonitor;
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 40 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_38_33_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_38_33_stop" ]
+        %respRate.2 = local;
+        %tmp.4 = lgetv %info.1;
+        %tmp.5 = getv %tmp.4 :respirationRate;
+        lputv %respRate.2 %tmp.5;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 42 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_8_if_stmt:
+        %tmp.7 = lgetv %respRate.2;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_8_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_29_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 43 12 ]
+        %tmp.10 = lgetv %respRate.2;
+        %tmp.11 = as %tmp.10 { (!Null) };
+        %tmp.12 = getv function %tmp.11 :toString;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        lputv %respRate.2 %tmp.13;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_29_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_8_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_45_13_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 46 12 ]
+        %tmp.14 = "--";
+        lputv %respRate.2 %tmp.14;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_45_13_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_42_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 49 8 ]
+        %tmp.16 = lgetv %respRate.2;
+        ret %tmp.16;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_38_33_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 52; ]
+    function getIntensityMinutes() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_52_34_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 53 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_52_34_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_52_34_stop" ]
+        %info.1 = local;
+        %tmp.1 = getm $.Toybox.ActivityMonitor;
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 54 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_52_34_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_52_34_stop" ]
+        %intensityMin.2 = local;
+        %tmp.4 = lgetv %info.1;
+        %tmp.5 = getv %tmp.4 :activeMinutesDay;
+        %tmp.6 = getv %tmp.5 :total;
+        lputv %intensityMin.2 %tmp.6;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 60 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_8_if_stmt:
+        %tmp.8 = lgetv %intensityMin.2;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_8_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_33_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 61 12 ]
+        %tmp.11 = lgetv %intensityMin.2;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :toString;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %intensityMin.2 %tmp.14;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_33_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_8_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_63_13_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 64 12 ]
+        %tmp.15 = "--";
+        lputv %intensityMin.2 %tmp.15;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_63_13_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_60_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 66 8 ]
+        %tmp.16 = getm $.Toybox.System;
+        %tmp.17 = getv function %tmp.16 :println;
+        %tmp.18 = "Total intensity: ";
+        %tmp.20 = lgetv %intensityMin.2;
+        %tmp.21 = add %tmp.18 %tmp.20;
+        %tmp.22 = " minutes";
+        %tmp.23 = add %tmp.21 %tmp.22;
+        invoke %tmp.16 %tmp.17(%tmp.23);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_52_34_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 69; ]
+    function getAverageHeartRate() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_69_35_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 70 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_69_35_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_69_35_stop" ]
+        %profile.1 = local;
+        %tmp.1 = getm $.Toybox.UserProfile;
+        %tmp.2 = getv function %tmp.1 :getProfile;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %profile.1 %tmp.3;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 71 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_69_35_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_69_35_stop" ]
+        %avgHR.2 = local;
+        %tmp.4 = lgetv %profile.1;
+        %tmp.5 = getv %tmp.4 :averageRestingHeartRate;
+        lputv %avgHR.2 %tmp.5;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 73 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_8_if_stmt:
+        %tmp.7 = lgetv %avgHR.2;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_8_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_27_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 74 12 ]
+        %tmp.11 = lgetv %avgHR.2;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        lputv %avgHR.2 %tmp.12;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_27_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_8_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_75_15_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 76 12 ]
+        %tmp.13 = 0;
+        lputv %avgHR.2 %tmp.13;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_75_15_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_73_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 80 8 ]
+        %tmp.15 = lgetv %avgHR.2;
+        ret %tmp.15;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_69_35_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 83; ]
+    function getSex() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_83_22_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 84 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_83_22_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_83_22_stop" ]
+        %profile.1 = local;
+        %tmp.1 = getm $.Toybox.UserProfile;
+        %tmp.2 = getv function %tmp.1 :getProfile;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %profile.1 %tmp.3;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 85 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_83_22_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_83_22_stop" ]
+        %sex.2 = local;
+        %tmp.4 = lgetv %profile.1;
+        %tmp.5 = getv %tmp.4 :gender;
+        lputv %sex.2 %tmp.5;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 87 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_8_if_stmt:
+        %tmp.7 = lgetv %sex.2;
+        %tmp.8 = getm $.Toybox.UserProfile;
+        %tmp.9 = getv %tmp.8 :GENDER_FEMALE;
+        %tmp.10 = eq %tmp.7 %tmp.9;
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_8_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_46_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 88 12 ]
+        %tmp.11 = "Female";
+        lputv %sex.2 %tmp.11;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_46_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_8_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 89 15 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_15_if_stmt:
+        %tmp.13 = lgetv %sex.2;
+        %tmp.14 = getm $.Toybox.UserProfile;
+        %tmp.15 = getv %tmp.14 :GENDER_MALE;
+        %tmp.16 = eq %tmp.13 %tmp.15;
+        bf %tmp.16 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_15_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_15_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_51_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 90 12 ]
+        %tmp.17 = "Male";
+        lputv %sex.2 %tmp.17;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_51_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_15_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_15_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_91_15_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 92 12 ]
+        %tmp.18 = "--";
+        lputv %sex.2 %tmp.18;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_91_15_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_89_15_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_87_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 96 8 ]
+        %tmp.20 = lgetv %sex.2;
+        ret %tmp.20;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_83_22_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 99; ]
+    function getAge() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 100 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_stop" ]
+        %profile.1 = local;
+        %tmp.1 = getm $.Toybox.UserProfile;
+        %tmp.2 = getv function %tmp.1 :getProfile;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %profile.1 %tmp.3;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 101 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_stop" ]
+        %birth.2 = local;
+        %tmp.4 = lgetv %profile.1;
+        %tmp.5 = getv %tmp.4 :birthYear;
+        lputv %birth.2 %tmp.5;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 102 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_stop" ]
+        %age.3 = local;
+        %tmp.6 = "--";
+        lputv %age.3 %tmp.6;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 104 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_8_if_stmt:
+        %tmp.8 = lgetv %birth.2;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_27_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 105 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_27_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_27_stop" ]
+        %now.4 = local;
+        %tmp.11 = getm $.Toybox.Time;
+        %tmp.12 = getv function %tmp.11 :now;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        lputv %now.4 %tmp.13;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 106 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_27_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_27_stop" ]
+        %info.5 = local;
+        %tmp.14 = getm $.Toybox.Time.Gregorian;
+        %tmp.15 = getv function %tmp.14 :info;
+        %tmp.17 = lgetv %now.4;
+        %tmp.18 = getm $.Toybox.Time;
+        %tmp.19 = getv %tmp.18 :FORMAT_LONG;
+        %tmp.20 = invoke %tmp.14 %tmp.15(%tmp.17, %tmp.19);
+        lputv %info.5 %tmp.20;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 107 12 ]
+        %tmp.21 = lgetv %info.5;
+        %tmp.22 = getv %tmp.21 :year;
+        %tmp.24 = lgetv %birth.2;
+        %tmp.25 = as %tmp.24 { (!Null) };
+        %tmp.26 = sub %tmp.22 %tmp.25;
+        lputv %age.3 %tmp.26;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_27_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_104_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc" 111 8 ]
+        %tmp.28 = lgetv %age.3;
+        ret %tmp.28;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ActivityMetrics_mc_99_22_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ActivityMetrics.mc"; @line = 4; ]
+<init> {
+}

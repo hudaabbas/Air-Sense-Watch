@@ -6,6 +6,12 @@ using Toybox.Graphics as Gfx;
 
 module Rez {
     module Drawables {
+        (:initialized) var Background as Symbol;
+        (:initialized) var Bg as Symbol;
+        (:initialized) var Icon as Symbol;
+        (:initialized) var topRight as Symbol;
+        (:initialized) var actionMenu as Symbol;
+        (:initialized) var rightTop as Symbol;
         (:initialized) var LauncherIcon as Symbol;
     } // Drawables
 
@@ -16,37 +22,152 @@ module Rez {
     } // JsonData
 
     module Layouts {
+        function Summary(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_Title = new WatchUi.Text({:identifier=>"Title", :color=>Graphics.COLOR_BLACK, :locX=>(390 * 0.5), :locY=>0, :text=>$.Rez.Strings.titleLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_TINY});
+
+            var rez_cmp_local_text_hrLabel = new WatchUi.Text({:identifier=>"hrLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>280, :text=>$.Rez.Strings.hrLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_pmLabel = new WatchUi.Text({:identifier=>"pmLabel", :color=>Graphics.COLOR_WHITE, :locX=>100, :locY=>140, :text=>$.Rez.Strings.pm25Label, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_co2Label = new WatchUi.Text({:identifier=>"co2Label", :color=>Graphics.COLOR_WHITE, :locX=>280, :locY=>140, :text=>$.Rez.Strings.co2Label, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_timeLabel = new WatchUi.Text({:identifier=>"timeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>30, :text=>$.Rez.Strings.timeLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_hr = new WatchUi.Text({:identifier=>"hr", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>310, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            var rez_cmp_local_text_pm25 = new WatchUi.Text({:identifier=>"pm25", :color=>Graphics.COLOR_WHITE, :locX=>110, :locY=>165, :text=>$.Rez.Strings.loading, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_MILD});
+
+            var rez_cmp_local_text_co2 = new WatchUi.Text({:identifier=>"co2", :color=>Graphics.COLOR_WHITE, :locX=>290, :locY=>165, :text=>$.Rez.Strings.loading, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_MILD});
+
+            var rez_cmp_local_text_timer = new WatchUi.Text({:identifier=>"timer", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>60, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            var rez_cmp_local_text_pm25Units = new WatchUi.Text({:identifier=>"pm25Units", :color=>Graphics.COLOR_WHITE, :locX=>100, :locY=>230, :text=>$.Rez.Strings.microLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_co2Units = new WatchUi.Text({:identifier=>"co2Units", :color=>Graphics.COLOR_WHITE, :locX=>280, :locY=>230, :text=>$.Rez.Strings.ppmLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            return [rez_cmp_local_text_Title, rez_cmp_local_text_hrLabel, rez_cmp_local_text_pmLabel, rez_cmp_local_text_co2Label, rez_cmp_local_text_timeLabel, rez_cmp_local_text_hr, rez_cmp_local_text_pm25, rez_cmp_local_text_co2, rez_cmp_local_text_timer, rez_cmp_local_text_pm25Units, rez_cmp_local_text_co2Units] as Array<WatchUi.Drawable>;
+        }
+
+        function Data(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_temp = new WatchUi.Text({:identifier=>"temp", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>60, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            var rez_cmp_local_text_hum = new WatchUi.Text({:identifier=>"hum", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>310, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            var rez_cmp_local_text_pm25 = new WatchUi.Text({:identifier=>"pm25", :color=>Graphics.COLOR_WHITE, :locX=>110, :locY=>165, :text=>$.Rez.Strings.loading, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_MILD});
+
+            var rez_cmp_local_text_co2 = new WatchUi.Text({:identifier=>"co2", :color=>Graphics.COLOR_WHITE, :locX=>290, :locY=>165, :text=>$.Rez.Strings.loading, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_MILD});
+
+            var rez_cmp_local_text_co2Label = new WatchUi.Text({:identifier=>"co2Label", :color=>Graphics.COLOR_WHITE, :locX=>100, :locY=>140, :text=>$.Rez.Strings.co2Label, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_humLabel = new WatchUi.Text({:identifier=>"humLabel", :color=>Graphics.COLOR_WHITE, :locX=>280, :locY=>140, :text=>$.Rez.Strings.humLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_pm25Label = new WatchUi.Text({:identifier=>"pm25Label", :color=>Graphics.COLOR_WHITE, :locX=>280, :locY=>140, :text=>$.Rez.Strings.pm25Label, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_tempLabel = new WatchUi.Text({:identifier=>"tempLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>30, :text=>$.Rez.Strings.tempLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_pm25Units = new WatchUi.Text({:identifier=>"pm25Units", :color=>Graphics.COLOR_WHITE, :locX=>100, :locY=>230, :text=>$.Rez.Strings.ppmLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_co2Units = new WatchUi.Text({:identifier=>"co2Units", :color=>Graphics.COLOR_WHITE, :locX=>280, :locY=>230, :text=>$.Rez.Strings.ppmLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_tempUnits = new WatchUi.Text({:identifier=>"tempUnits", :color=>Graphics.COLOR_WHITE, :locX=>100, :locY=>230, :text=>$.Rez.Strings.tempUnits, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_humUnits = new WatchUi.Text({:identifier=>"humUnits", :color=>Graphics.COLOR_WHITE, :locX=>280, :locY=>230, :text=>$.Rez.Strings.humUnits, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            return [rez_cmp_local_text_temp, rez_cmp_local_text_hum, rez_cmp_local_text_pm25, rez_cmp_local_text_co2, rez_cmp_local_text_co2Label, rez_cmp_local_text_humLabel, rez_cmp_local_text_pm25Label, rez_cmp_local_text_tempLabel, rez_cmp_local_text_pm25Units, rez_cmp_local_text_co2Units, rez_cmp_local_text_tempUnits, rez_cmp_local_text_humUnits] as Array<WatchUi.Drawable>;
+        }
+
+        function Score(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_summaryLabel = new WatchUi.Text({:identifier=>"summaryLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>40, :text=>$.Rez.Strings.summary, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_timeLabel = new WatchUi.Text({:identifier=>"timeLabel", :color=>Graphics.COLOR_WHITE, :locX=>190, :locY=>100, :text=>$.Rez.Strings.timeLbl, :justification=>Graphics.TEXT_JUSTIFY_RIGHT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_maxPM25Label = new WatchUi.Text({:identifier=>"maxPM25Label", :color=>Graphics.COLOR_WHITE, :locX=>190, :locY=>140, :text=>$.Rez.Strings.maxpm25, :justification=>Graphics.TEXT_JUSTIFY_RIGHT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_AQHILabel = new WatchUi.Text({:identifier=>"AQHILabel", :color=>Graphics.COLOR_WHITE, :locX=>190, :locY=>180, :text=>$.Rez.Strings.AQHILabel, :justification=>Graphics.TEXT_JUSTIFY_RIGHT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_personalAQHILabel = new WatchUi.Text({:identifier=>"personalAQHILabel", :color=>Graphics.COLOR_WHITE, :locX=>190, :locY=>220, :text=>$.Rez.Strings.personalAQHIabel, :justification=>Graphics.TEXT_JUSTIFY_RIGHT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_time = new WatchUi.Text({:identifier=>"time", :color=>Graphics.COLOR_WHITE, :locX=>210, :locY=>100, :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_maxPM25 = new WatchUi.Text({:identifier=>"maxPM25", :color=>Graphics.COLOR_WHITE, :locX=>210, :locY=>140, :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_AQHI = new WatchUi.Text({:identifier=>"AQHI", :color=>Graphics.COLOR_WHITE, :locX=>210, :locY=>180, :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_personalAQHI = new WatchUi.Text({:identifier=>"personalAQHI", :color=>Graphics.COLOR_WHITE, :locX=>210, :locY=>220, :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_microLabel = new WatchUi.Text({:identifier=>"microLabel", :color=>Graphics.COLOR_WHITE, :locX=>275, :locY=>140, :text=>$.Rez.Strings.microLabel, :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_bitmap_actionMenu = new WatchUi.Bitmap({:identifier=>"actionMenu", :rezId=>$.Rez.Drawables.actionMenu, :locX=>195, :locY=>318});
+            rez_cmp_local_bitmap_actionMenu.setLocation((rez_cmp_local_bitmap_actionMenu.locX - ((rez_cmp_local_bitmap_actionMenu.width + 0) / 2)), rez_cmp_local_bitmap_actionMenu.locY);
+
+            return [rez_cmp_local_text_summaryLabel, rez_cmp_local_text_timeLabel, rez_cmp_local_text_maxPM25Label, rez_cmp_local_text_AQHILabel, rez_cmp_local_text_personalAQHILabel, rez_cmp_local_text_time, rez_cmp_local_text_maxPM25, rez_cmp_local_text_AQHI, rez_cmp_local_text_personalAQHI, rez_cmp_local_text_microLabel, rez_cmp_local_bitmap_actionMenu] as Array<WatchUi.Drawable>;
+        }
+
+        function Start(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_bitmap_rightTop = new WatchUi.Bitmap({:identifier=>"rightTop", :rezId=>$.Rez.Drawables.rightTop, :locX=>318, :locY=>59});
+
+            return [rez_cmp_local_bitmap_rightTop] as Array<WatchUi.Drawable>;
+        }
+
+        function UserPrompt(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_pAQHI = new WatchUi.Text({:identifier=>"pAQHI", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>150, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_blurb = new WatchUi.Text({:identifier=>"blurb", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>200, :text=>$.Rez.Strings.blurb, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+
+            return [rez_cmp_local_text_pAQHI, rez_cmp_local_text_blurb] as Array<WatchUi.Drawable>;
+        }
+
+        function ErrorLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_Message = new WatchUi.Text({:identifier=>"Message", :color=>0xFFFFFF, :locX=>(390 * 0.5), :locY=>((390 - dc.getFontHeight(Graphics.FONT_MEDIUM)) * 0.5), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
+
+            return [rez_cmp_local_text_Message] as Array<WatchUi.Drawable>;
+        }
     } // Layouts
 
     module Menus {
-        class MainMenu extends WatchUi.Menu {
-            function initialize() {
-                Menu.initialize();
-                addItem((WatchUi.loadResource($.Rez.Strings.menu_label_1) as String), :item_1);
-                addItem((WatchUi.loadResource($.Rez.Strings.menu_label_2) as String), :item_2);
-            }
-        }
     } // Menus
 
     module Strings {
+        (:initialized) var connectString1 as Symbol;
+        (:initialized) var pm25Label as Symbol;
+        (:initialized) var connectString2 as Symbol;
+        (:initialized) var titleLabel as Symbol;
+        (:initialized) var humLabel as Symbol;
+        (:initialized) var CO2_graph_label as Symbol;
+        (:initialized) var timeLbl as Symbol;
+        (:initialized) var aqhi_label as Symbol;
+        (:initialized) var blurb as Symbol;
+        (:initialized) var error as Symbol;
+        (:initialized) var AQHILabel as Symbol;
+        (:initialized) var air_exposure_units as Symbol;
+        (:initialized) var connectString3 as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var goToPhone as Symbol;
+        (:initialized) var temp_label as Symbol;
+        (:initialized) var co2Label as Symbol;
+        (:initialized) var tempLabel as Symbol;
+        (:initialized) var tempUnits as Symbol;
+        (:initialized) var humUnits as Symbol;
+        (:initialized) var PM25_label as Symbol;
+        (:initialized) var temp_graph_label as Symbol;
+        (:initialized) var ppmLabel as Symbol;
+        (:initialized) var PM25_units as Symbol;
+        (:initialized) var humidity_graph_label as Symbol;
+        (:initialized) var summary as Symbol;
         (:initialized) var CO2_label as Symbol;
         (:initialized) var PM25_graph_label as Symbol;
         (:initialized) var temp_units as Symbol;
-        (:initialized) var CO2_graph_label as Symbol;
+        (:initialized) var hrLabel as Symbol;
+        (:initialized) var microLabel as Symbol;
         (:initialized) var CO2_units as Symbol;
         (:initialized) var humidity_units as Symbol;
         (:initialized) var air_exposure_label as Symbol;
         (:initialized) var humidity_label as Symbol;
+        (:initialized) var loading as Symbol;
+        (:initialized) var personalAQHIabel as Symbol;
         (:initialized) var air_exposure_graph_label as Symbol;
-        (:initialized) var air_exposure_units as Symbol;
-        (:initialized) var AppName as Symbol;
-        (:initialized) var temp_label as Symbol;
-        (:initialized) var menu_label_1 as Symbol;
-        (:initialized) var menu_label_2 as Symbol;
-        (:initialized) var PM25_label as Symbol;
-        (:initialized) var temp_graph_label as Symbol;
-        (:initialized) var PM25_units as Symbol;
-        (:initialized) var humidity_graph_label as Symbol;
+        (:initialized) var maxpm25 as Symbol;
+        (:initialized) var timeLabel as Symbol;
     } // Strings
 
     module Styles {

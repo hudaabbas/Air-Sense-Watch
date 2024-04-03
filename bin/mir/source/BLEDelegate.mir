@@ -74,17 +74,17 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_stm
         bf %tmp.13 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_end;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_true:
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_31_12_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 33 16 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_if_stmt:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 32 16 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_stmt:
         %tmp.14 = lgetv %result.1;
         %tmp.15 = as %tmp.14 { (ScanResult) && (!Null) };
         %tmp.16 = getv function %tmp.15 :getDeviceName;
         %tmp.17 = invoke %tmp.15 %tmp.16();
         %tmp.18 = null;
         %tmp.19 = ne %tmp.17 %tmp.18;
-        bf %tmp.19 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_34_16_start:
+        bf %tmp.19 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_start:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/BLEDelegate.mc" 35 20 ]
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_stmt:
         %tmp.20 = self;
@@ -130,9 +130,9 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_40_20_stop:
         goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_39_25_if_end;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_39_25_if_end:
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_35_20_if_end:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_34_16_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_33_16_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_32_16_if_end:
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_31_12_stop:
         goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_end;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_BLEDelegate_mc_30_12_if_end:

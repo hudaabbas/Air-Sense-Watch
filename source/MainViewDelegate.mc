@@ -5,6 +5,7 @@
 //
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Rez.Styles;
 
 class MainViewDelegate extends WatchUi.BehaviorDelegate 
 {
@@ -45,5 +46,7 @@ class MainViewDelegate extends WatchUi.BehaviorDelegate
             return true;                                                 // return true for onSelect function
         }
         return false;
-    }
+    } 
+
+   
 }

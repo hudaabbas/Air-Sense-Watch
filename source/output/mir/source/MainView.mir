@@ -20,45 +20,53 @@ class MainView extends WatchUi.View{
     var _dataModel as DeviceDataModel;
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc"; @line = 16; @position = 8; ]
     var lastConnected = false;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc"; @line = 17; @position = 8; ]
+    var button;
     //! Constructor
     //! @param dataModel The data to show
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc"; @line = 20; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc"; @line = 21; ]
     public
     function initialize(dataModel as DeviceDataModel) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_20_61_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 21 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_21_61_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 22 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 23 8 ]
-        %tmp.5 = lgetv %dataModel;
-        putv self :_dataModel %tmp.5;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 24 8 ]
-        %tmp.6 = getv self :_dataModel;
-        %tmp.8 = lgetv %self;
-        putv %tmp.6 :_view %tmp.8;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_20_61_stop:
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv function %tmp.4 :loadResource;
+        %tmp.7 = getv ? :Rez;
+        %tmp.8 = getv %tmp.7 :Drawables;
+        %tmp.9 = getv %tmp.8 :topRight;
+        %tmp.10 = invoke %tmp.4 %tmp.5(%tmp.9);
+        putv self :button %tmp.10;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 25 8 ]
+        %tmp.12 = lgetv %dataModel;
+        putv self :_dataModel %tmp.12;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 26 8 ]
+        %tmp.13 = getv self :_dataModel;
+        %tmp.15 = lgetv %self;
+        putv %tmp.13 :_view %tmp.15;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_21_61_stop:
     }
-    //! Update the view
-    //! @param dc Device Context
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc"; @line = 44; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc"; @line = 29; ]
     public
     function onUpdate(dc as Dc) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 46 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 31 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :setColor;
         %tmp.3 = getm $.Toybox.Graphics;
-        %tmp.4 = getv %tmp.3 :COLOR_GREEN;
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
         %tmp.5 = getm $.Toybox.Graphics;
         %tmp.6 = getv %tmp.5 :COLOR_BLACK;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 47 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 32 8 ]
         %tmp.7 = lgetv %dc;
         %tmp.8 = getv function %tmp.7 :clear;
         invoke %tmp.7 %tmp.8();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 48 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 33 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_stop" ]
         %midX.1 = local;
         %tmp.9 = lgetv %dc;
         %tmp.10 = getv function %tmp.9 :getWidth;
@@ -66,8 +74,8 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_start:
         %tmp.12 = 2;
         %tmp.13 = div %tmp.11 %tmp.12;
         lputv %midX.1 %tmp.13;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 49 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 34 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_stop" ]
         %midY.2 = local;
         %tmp.14 = lgetv %dc;
         %tmp.15 = getv function %tmp.14 :getHeight;
@@ -75,16 +83,16 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_start:
         %tmp.17 = 2;
         %tmp.18 = div %tmp.16 %tmp.17;
         lputv %midY.2 %tmp.18;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 51 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_8_if_stmt:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 36 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_36_8_if_stmt:
         %tmp.20 = getv ? :_dataModel;
         %tmp.21 = getv function %tmp.20 :isConnected;
         %tmp.22 = invoke %tmp.20 %tmp.21();
         %tmp.23 = not %tmp.22;
-        bf %tmp.23 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_39_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 52 12 ]
+        bf %tmp.23 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_36_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_36_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_36_39_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 37 12 ]
         %tmp.24 = lgetv %dc;
         %tmp.25 = getv function %tmp.24 :drawText;
         %tmp.27 = lgetv %midX.1;
@@ -97,25 +105,25 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_39_start:
         %tmp.35 = getm $.Toybox.Graphics;
         %tmp.36 = getv %tmp.35 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.24 %tmp.25(%tmp.27, %tmp.31, %tmp.33, %tmp.34, %tmp.36);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_39_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_51_8_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 55 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_stop" ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_36_39_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_36_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_36_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 40 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_stop" ]
         %profile.3 = local;
         %tmp.38 = getv ? :_dataModel;
         %tmp.39 = getv function %tmp.38 :getActiveProfile;
         %tmp.40 = invoke %tmp.38 %tmp.39();
         lputv %profile.3 %tmp.40;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 56 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_8_if_stmt:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_begin:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 41 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_12_begin:
         %tmp.42 = getv ? :lastConnected;
         %tmp.43 = true;
         %tmp.44 = eq %tmp.42 %tmp.43;
         %tmp.45 = dup %tmp.44;
-        bf %tmp.45 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_39_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_39_true:
+        bf %tmp.45 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_39_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_39_true:
         %tmp.47 = getv ? :_dataModel;
         %tmp.48 = getv function %tmp.47 :isConnected;
         %tmp.49 = invoke %tmp.47 %tmp.48();
@@ -123,256 +131,399 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_39_true:
         %tmp.51 = eq %tmp.49 %tmp.50;
         %tmp.52 = and %tmp.44 %tmp.51;
         push %tmp.52;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_39_end:
-        %tmp.53 = phi [%tmp.45 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_begin] [%tmp.52 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_39_true] [%tmp.53 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_39_end];
-        bf %tmp.53 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_57_8_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 58 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_39_end:
+        %tmp.53 = phi [%tmp.45 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_12_begin] [%tmp.52 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_39_true] [%tmp.53 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_39_end];
+        bf %tmp.53 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_42_8_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 43 12 ]
         %tmp.55 = getv ? :System;
         %tmp.56 = getv function %tmp.55 :println;
         %tmp.57 = "last connected is true but not connected";
         invoke %tmp.55 %tmp.56(%tmp.57);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_57_8_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_8_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 63 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_42_8_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_41_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 48 8 ]
         %tmp.59 = getv ? :_dataModel;
         %tmp.60 = getv function %tmp.59 :isConnected;
         %tmp.61 = invoke %tmp.59 %tmp.60();
         putv self :lastConnected %tmp.61;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 64 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_8_if_stmt:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_12_begin:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 49 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_12_begin:
         %tmp.63 = getv ? :_dataModel;
         %tmp.64 = getv function %tmp.63 :isConnected;
         %tmp.65 = invoke %tmp.63 %tmp.64();
         %tmp.66 = dup %tmp.65;
-        bf %tmp.66 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_40_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_40_true:
+        bf %tmp.66 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_40_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_40_true:
         %tmp.68 = lgetv %profile.3;
         %tmp.69 = null;
         %tmp.70 = ne %tmp.68 %tmp.69;
         %tmp.71 = and %tmp.65 %tmp.70;
         push %tmp.71;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_40_end:
-        %tmp.72 = phi [%tmp.66 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_12_begin] [%tmp.71 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_40_true] [%tmp.72 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_40_end];
-        bf %tmp.72 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 66 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_40_end:
+        %tmp.72 = phi [%tmp.66 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_12_begin] [%tmp.71 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_40_true] [%tmp.72 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_40_end];
+        bf %tmp.72 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 51 12 ]
         %tmp.74 = getv ? :System;
         %tmp.75 = getv function %tmp.74 :println;
         %tmp.76 = "Connected and profile is present!";
         invoke %tmp.74 %tmp.75(%tmp.76);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 68 12 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_stop" ]
-        %temp.4 = local;
-        %tmp.77 = lgetv %profile.3;
-        %tmp.78 = as %tmp.77 { (!Null) };
-        %tmp.79 = getv function %tmp.78 :getTemp;
-        %tmp.80 = invoke %tmp.78 %tmp.79();
-        lputv %temp.4 %tmp.80;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 69 12 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_69_12_if_stmt:
-        %tmp.82 = lgetv %temp.4;
-        %tmp.83 = null;
-        %tmp.84 = ne %tmp.82 %tmp.83;
-        bf %tmp.84 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_69_12_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_69_12_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_70_12_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 71 16 ]
-        %tmp.85 = lgetv %dc;
-        %tmp.86 = getv function %tmp.85 :setColor;
-        %tmp.87 = getm $.Toybox.Graphics;
-        %tmp.88 = getv %tmp.87 :COLOR_ORANGE;
-        %tmp.89 = getm $.Toybox.Graphics;
-        %tmp.90 = getv %tmp.89 :COLOR_TRANSPARENT;
-        invoke %tmp.85 %tmp.86(%tmp.88, %tmp.90);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 72 16 ]
-        %tmp.91 = lgetv %dc;
-        %tmp.92 = getv function %tmp.91 :drawText;
-        %tmp.94 = lgetv %midX.1;
-        %tmp.96 = lgetv %midY.2;
-        %tmp.97 = 20;
-        %tmp.98 = sub %tmp.96 %tmp.97;
-        %tmp.99 = getm $.Toybox.Graphics;
-        %tmp.100 = getv %tmp.99 :FONT_SMALL;
-        %tmp.101 = getm $.Toybox.Lang;
-        %tmp.102 = getv function %tmp.101 :format;
-        %tmp.103 = "Temp: $1$ C";
-        %tmp.104 = newa 1;
-        %tmp.105 = lgetv %temp.4;
-        %tmp.106 = as %tmp.105 { (!Null) };
-        %tmp.107 = getv function %tmp.106 :format;
-        %tmp.108 = "%.2f";
-        %tmp.109 = invoke %tmp.106 %tmp.107(%tmp.108);
-        %tmp.110 = dup %tmp.104;
-        %tmp.111 = aputv %tmp.110 0 %tmp.109;
-        %tmp.112 = invoke %tmp.101 %tmp.102(%tmp.103, %tmp.111);
-        %tmp.113 = getm $.Toybox.Graphics;
-        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.91 %tmp.92(%tmp.94, %tmp.98, %tmp.100, %tmp.112, %tmp.114);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_70_12_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_69_12_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_69_12_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 75 12 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_stop" ]
-        %cO2.5 = local;
-        %tmp.115 = lgetv %profile.3;
-        %tmp.116 = as %tmp.115 { (!Null) };
-        %tmp.117 = getv function %tmp.116 :getCO2;
-        %tmp.118 = invoke %tmp.116 %tmp.117();
-        lputv %cO2.5 %tmp.118;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 76 12 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_76_12_if_stmt:
-        %tmp.120 = lgetv %cO2.5;
-        %tmp.121 = null;
-        %tmp.122 = ne %tmp.120 %tmp.121;
-        bf %tmp.122 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_76_12_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_76_12_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_77_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 52 12 ]
+        %tmp.77 = lgetv %dc;
+        %tmp.78 = getv function %tmp.77 :setColor;
+        %tmp.79 = getm $.Toybox.Graphics;
+        %tmp.80 = getv %tmp.79 :COLOR_WHITE;
+        %tmp.81 = getm $.Toybox.Graphics;
+        %tmp.82 = getv %tmp.81 :COLOR_TRANSPARENT;
+        invoke %tmp.77 %tmp.78(%tmp.80, %tmp.82);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 54 12 ]
+        %tmp.83 = lgetv %dc;
+        %tmp.84 = getv function %tmp.83 :drawText;
+        %tmp.86 = lgetv %midX.1;
+        %tmp.88 = lgetv %midY.2;
+        %tmp.89 = 150;
+        %tmp.90 = sub %tmp.88 %tmp.89;
+        %tmp.91 = getm $.Toybox.Graphics;
+        %tmp.92 = getv %tmp.91 :FONT_XTINY;
+        %tmp.93 = "Humidity";
+        %tmp.94 = getm $.Toybox.Graphics;
+        %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.83 %tmp.84(%tmp.86, %tmp.90, %tmp.92, %tmp.93, %tmp.95);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 55 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_stop" ]
+        %humidity.4 = local;
+        %tmp.96 = lgetv %profile.3;
+        %tmp.97 = as %tmp.96 { (!Null) };
+        %tmp.98 = getv function %tmp.97 :getHumidity;
+        %tmp.99 = invoke %tmp.97 %tmp.98();
+        lputv %humidity.4 %tmp.99;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 56 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_if_stmt:
+        %tmp.101 = lgetv %humidity.4;
+        %tmp.102 = null;
+        %tmp.103 = ne %tmp.101 %tmp.102;
+        bf %tmp.103 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_57_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 58 16 ]
+        %tmp.104 = lgetv %dc;
+        %tmp.105 = getv function %tmp.104 :drawText;
+        %tmp.107 = lgetv %midX.1;
+        %tmp.109 = lgetv %midY.2;
+        %tmp.110 = 125;
+        %tmp.111 = sub %tmp.109 %tmp.110;
+        %tmp.112 = getm $.Toybox.Graphics;
+        %tmp.113 = getv %tmp.112 :FONT_SMALL;
+        %tmp.114 = getm $.Toybox.Lang;
+        %tmp.115 = getv function %tmp.114 :format;
+        %tmp.116 = "$1$ %";
+        %tmp.117 = newa 1;
+        %tmp.118 = lgetv %humidity.4;
+        %tmp.119 = as %tmp.118 { (!Null) };
+        %tmp.120 = getv function %tmp.119 :format;
+        %tmp.121 = "%.2f";
+        %tmp.122 = invoke %tmp.119 %tmp.120(%tmp.121);
+        %tmp.123 = dup %tmp.117;
+        %tmp.124 = aputv %tmp.123 0 %tmp.122;
+        %tmp.125 = invoke %tmp.114 %tmp.115(%tmp.116, %tmp.124);
+        %tmp.126 = getm $.Toybox.Graphics;
+        %tmp.127 = getv %tmp.126 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.104 %tmp.105(%tmp.107, %tmp.111, %tmp.113, %tmp.125, %tmp.127);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_57_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_59_19_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 60 16 ]
+        %tmp.128 = lgetv %dc;
+        %tmp.129 = getv function %tmp.128 :drawText;
+        %tmp.131 = lgetv %midX.1;
+        %tmp.133 = lgetv %midY.2;
+        %tmp.134 = 125;
+        %tmp.135 = sub %tmp.133 %tmp.134;
+        %tmp.136 = getm $.Toybox.Graphics;
+        %tmp.137 = getv %tmp.136 :FONT_SMALL;
+        %tmp.138 = "--";
+        %tmp.139 = getm $.Toybox.Graphics;
+        %tmp.140 = getv %tmp.139 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.128 %tmp.129(%tmp.131, %tmp.135, %tmp.137, %tmp.138, %tmp.140);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_59_19_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_56_12_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 63 12 ]
+        %tmp.141 = lgetv %dc;
+        %tmp.142 = getv function %tmp.141 :drawText;
+        %tmp.144 = lgetv %midX.1;
+        %tmp.146 = lgetv %midY.2;
+        %tmp.147 = 65;
+        %tmp.148 = sub %tmp.146 %tmp.147;
+        %tmp.149 = getm $.Toybox.Graphics;
+        %tmp.150 = getv %tmp.149 :FONT_XTINY;
+        %tmp.151 = "PM 2.5";
+        %tmp.152 = getm $.Toybox.Graphics;
+        %tmp.153 = getv %tmp.152 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.141 %tmp.142(%tmp.144, %tmp.148, %tmp.150, %tmp.151, %tmp.153);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 64 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_stop" ]
+        %pm25.5 = local;
+        %tmp.154 = lgetv %profile.3;
+        %tmp.155 = as %tmp.154 { (!Null) };
+        %tmp.156 = getv function %tmp.155 :getPM25;
+        %tmp.157 = invoke %tmp.155 %tmp.156();
+        lputv %pm25.5 %tmp.157;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 65 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_12_if_stmt:
+        %tmp.159 = lgetv %pm25.5;
+        %tmp.160 = null;
+        %tmp.161 = ne %tmp.159 %tmp.160;
+        bf %tmp.161 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_12_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_66_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 67 16 ]
+        %tmp.162 = lgetv %dc;
+        %tmp.163 = getv function %tmp.162 :drawText;
+        %tmp.165 = lgetv %midX.1;
+        %tmp.167 = lgetv %midY.2;
+        %tmp.168 = 40;
+        %tmp.169 = sub %tmp.167 %tmp.168;
+        %tmp.170 = getm $.Toybox.Graphics;
+        %tmp.171 = getv %tmp.170 :FONT_SMALL;
+        %tmp.172 = getm $.Toybox.Lang;
+        %tmp.173 = getv function %tmp.172 :format;
+        %tmp.174 = "$1$ µg/m3";
+        %tmp.175 = newa 1;
+        %tmp.176 = lgetv %pm25.5;
+        %tmp.177 = as %tmp.176 { (!Null) };
+        %tmp.178 = getv function %tmp.177 :format;
+        %tmp.179 = "%.2f";
+        %tmp.180 = invoke %tmp.177 %tmp.178(%tmp.179);
+        %tmp.181 = dup %tmp.175;
+        %tmp.182 = aputv %tmp.181 0 %tmp.180;
+        %tmp.183 = invoke %tmp.172 %tmp.173(%tmp.174, %tmp.182);
+        %tmp.184 = getm $.Toybox.Graphics;
+        %tmp.185 = getv %tmp.184 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.162 %tmp.163(%tmp.165, %tmp.169, %tmp.171, %tmp.183, %tmp.185);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_66_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_12_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_68_19_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 69 16 ]
+        %tmp.186 = lgetv %dc;
+        %tmp.187 = getv function %tmp.186 :drawText;
+        %tmp.189 = lgetv %midX.1;
+        %tmp.191 = lgetv %midY.2;
+        %tmp.192 = 40;
+        %tmp.193 = sub %tmp.191 %tmp.192;
+        %tmp.194 = getm $.Toybox.Graphics;
+        %tmp.195 = getv %tmp.194 :FONT_SMALL;
+        %tmp.196 = "--";
+        %tmp.197 = getm $.Toybox.Graphics;
+        %tmp.198 = getv %tmp.197 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.186 %tmp.187(%tmp.189, %tmp.193, %tmp.195, %tmp.196, %tmp.198);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_68_19_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_12_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 72 12 ]
+        %tmp.199 = lgetv %dc;
+        %tmp.200 = getv function %tmp.199 :drawText;
+        %tmp.202 = lgetv %midX.1;
+        %tmp.204 = lgetv %midY.2;
+        %tmp.205 = 20;
+        %tmp.206 = add %tmp.204 %tmp.205;
+        %tmp.207 = getm $.Toybox.Graphics;
+        %tmp.208 = getv %tmp.207 :FONT_XTINY;
+        %tmp.209 = "CO2";
+        %tmp.210 = getm $.Toybox.Graphics;
+        %tmp.211 = getv %tmp.210 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.199 %tmp.200(%tmp.202, %tmp.206, %tmp.208, %tmp.209, %tmp.211);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 73 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_stop" ]
+        %cO2.6 = local;
+        %tmp.212 = lgetv %profile.3;
+        %tmp.213 = as %tmp.212 { (!Null) };
+        %tmp.214 = getv function %tmp.213 :getCO2;
+        %tmp.215 = invoke %tmp.213 %tmp.214();
+        lputv %cO2.6 %tmp.215;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 74 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_74_12_if_stmt:
+        %tmp.217 = lgetv %cO2.6;
+        %tmp.218 = null;
+        %tmp.219 = ne %tmp.217 %tmp.218;
+        bf %tmp.219 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_74_12_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_74_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_75_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 76 16 ]
+        %tmp.220 = lgetv %dc;
+        %tmp.221 = getv function %tmp.220 :drawText;
+        %tmp.223 = lgetv %midX.1;
+        %tmp.225 = lgetv %midY.2;
+        %tmp.226 = 45;
+        %tmp.227 = add %tmp.225 %tmp.226;
+        %tmp.228 = getm $.Toybox.Graphics;
+        %tmp.229 = getv %tmp.228 :FONT_SMALL;
+        %tmp.230 = getm $.Toybox.Lang;
+        %tmp.231 = getv function %tmp.230 :format;
+        %tmp.232 = "$1$ ppm";
+        %tmp.233 = newa 1;
+        %tmp.234 = lgetv %cO2.6;
+        %tmp.235 = as %tmp.234 { (!Null) };
+        %tmp.236 = getv function %tmp.235 :format;
+        %tmp.237 = "%.0f";
+        %tmp.238 = invoke %tmp.235 %tmp.236(%tmp.237);
+        %tmp.239 = dup %tmp.233;
+        %tmp.240 = aputv %tmp.239 0 %tmp.238;
+        %tmp.241 = invoke %tmp.230 %tmp.231(%tmp.232, %tmp.240);
+        %tmp.242 = getm $.Toybox.Graphics;
+        %tmp.243 = getv %tmp.242 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.220 %tmp.221(%tmp.223, %tmp.227, %tmp.229, %tmp.241, %tmp.243);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_75_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_74_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_74_12_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_77_19_start:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 78 16 ]
-        %tmp.123 = lgetv %dc;
-        %tmp.124 = getv function %tmp.123 :setColor;
-        %tmp.125 = getm $.Toybox.Graphics;
-        %tmp.126 = getv %tmp.125 :COLOR_ORANGE;
-        %tmp.127 = getm $.Toybox.Graphics;
-        %tmp.128 = getv %tmp.127 :COLOR_TRANSPARENT;
-        invoke %tmp.123 %tmp.124(%tmp.126, %tmp.128);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 79 16 ]
-        %tmp.129 = lgetv %dc;
-        %tmp.130 = getv function %tmp.129 :drawText;
-        %tmp.132 = lgetv %midX.1;
-        %tmp.134 = lgetv %midY.2;
-        %tmp.135 = 20;
-        %tmp.136 = add %tmp.134 %tmp.135;
-        %tmp.137 = getm $.Toybox.Graphics;
-        %tmp.138 = getv %tmp.137 :FONT_SMALL;
-        %tmp.139 = getm $.Toybox.Lang;
-        %tmp.140 = getv function %tmp.139 :format;
-        %tmp.141 = "CO2: $1$ ppm";
-        %tmp.142 = newa 1;
-        %tmp.143 = lgetv %cO2.5;
-        %tmp.144 = as %tmp.143 { (!Null) };
-        %tmp.145 = getv function %tmp.144 :format;
-        %tmp.146 = "%.2f";
-        %tmp.147 = invoke %tmp.144 %tmp.145(%tmp.146);
-        %tmp.148 = dup %tmp.142;
-        %tmp.149 = aputv %tmp.148 0 %tmp.147;
-        %tmp.150 = invoke %tmp.139 %tmp.140(%tmp.141, %tmp.149);
-        %tmp.151 = getm $.Toybox.Graphics;
-        %tmp.152 = getv %tmp.151 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.129 %tmp.130(%tmp.132, %tmp.136, %tmp.138, %tmp.150, %tmp.152);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_77_12_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_76_12_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_76_12_if_end:
+        %tmp.244 = lgetv %dc;
+        %tmp.245 = getv function %tmp.244 :drawText;
+        %tmp.247 = lgetv %midX.1;
+        %tmp.249 = lgetv %midY.2;
+        %tmp.250 = 45;
+        %tmp.251 = add %tmp.249 %tmp.250;
+        %tmp.252 = getm $.Toybox.Graphics;
+        %tmp.253 = getv %tmp.252 :FONT_SMALL;
+        %tmp.254 = "--";
+        %tmp.255 = getm $.Toybox.Graphics;
+        %tmp.256 = getv %tmp.255 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.244 %tmp.245(%tmp.247, %tmp.251, %tmp.253, %tmp.254, %tmp.256);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_77_19_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_74_12_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 81 12 ]
+        %tmp.257 = lgetv %dc;
+        %tmp.258 = getv function %tmp.257 :drawText;
+        %tmp.260 = lgetv %midX.1;
+        %tmp.262 = lgetv %midY.2;
+        %tmp.263 = 105;
+        %tmp.264 = add %tmp.262 %tmp.263;
+        %tmp.265 = getm $.Toybox.Graphics;
+        %tmp.266 = getv %tmp.265 :FONT_XTINY;
+        %tmp.267 = "Temperature";
+        %tmp.268 = getm $.Toybox.Graphics;
+        %tmp.269 = getv %tmp.268 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.257 %tmp.258(%tmp.260, %tmp.264, %tmp.266, %tmp.267, %tmp.269);
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 82 12 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_stop" ]
-        %humidity.6 = local;
-        %tmp.153 = lgetv %profile.3;
-        %tmp.154 = as %tmp.153 { (!Null) };
-        %tmp.155 = getv function %tmp.154 :getHumidity;
-        %tmp.156 = invoke %tmp.154 %tmp.155();
-        lputv %humidity.6 %tmp.156;
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_stop" ]
+        %temp.7 = local;
+        %tmp.270 = lgetv %profile.3;
+        %tmp.271 = as %tmp.270 { (!Null) };
+        %tmp.272 = getv function %tmp.271 :getTemp;
+        %tmp.273 = invoke %tmp.271 %tmp.272();
+        lputv %temp.7 %tmp.273;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 83 12 ]
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_83_12_if_stmt:
-        %tmp.158 = lgetv %humidity.6;
-        %tmp.159 = null;
-        %tmp.160 = ne %tmp.158 %tmp.159;
-        bf %tmp.160 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_83_12_if_end;
+        %tmp.275 = lgetv %temp.7;
+        %tmp.276 = null;
+        %tmp.277 = ne %tmp.275 %tmp.276;
+        bf %tmp.277 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_83_12_if_false;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_83_12_if_true:
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_84_12_start:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 85 16 ]
-        %tmp.161 = lgetv %dc;
-        %tmp.162 = getv function %tmp.161 :setColor;
-        %tmp.163 = getm $.Toybox.Graphics;
-        %tmp.164 = getv %tmp.163 :COLOR_ORANGE;
-        %tmp.165 = getm $.Toybox.Graphics;
-        %tmp.166 = getv %tmp.165 :COLOR_TRANSPARENT;
-        invoke %tmp.161 %tmp.162(%tmp.164, %tmp.166);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 86 16 ]
-        %tmp.167 = lgetv %dc;
-        %tmp.168 = getv function %tmp.167 :drawText;
-        %tmp.170 = lgetv %midX.1;
-        %tmp.172 = lgetv %midY.2;
-        %tmp.173 = 60;
-        %tmp.174 = sub %tmp.172 %tmp.173;
-        %tmp.175 = getm $.Toybox.Graphics;
-        %tmp.176 = getv %tmp.175 :FONT_SMALL;
-        %tmp.177 = getm $.Toybox.Lang;
-        %tmp.178 = getv function %tmp.177 :format;
-        %tmp.179 = "Humidity: $1$ %";
-        %tmp.180 = newa 1;
-        %tmp.181 = lgetv %humidity.6;
-        %tmp.182 = as %tmp.181 { (!Null) };
-        %tmp.183 = getv function %tmp.182 :format;
-        %tmp.184 = "%.2f";
-        %tmp.185 = invoke %tmp.182 %tmp.183(%tmp.184);
-        %tmp.186 = dup %tmp.180;
-        %tmp.187 = aputv %tmp.186 0 %tmp.185;
-        %tmp.188 = invoke %tmp.177 %tmp.178(%tmp.179, %tmp.187);
-        %tmp.189 = getm $.Toybox.Graphics;
-        %tmp.190 = getv %tmp.189 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.167 %tmp.168(%tmp.170, %tmp.174, %tmp.176, %tmp.188, %tmp.190);
+        %tmp.278 = lgetv %dc;
+        %tmp.279 = getv function %tmp.278 :drawText;
+        %tmp.281 = lgetv %midX.1;
+        %tmp.283 = lgetv %midY.2;
+        %tmp.284 = 130;
+        %tmp.285 = add %tmp.283 %tmp.284;
+        %tmp.286 = getm $.Toybox.Graphics;
+        %tmp.287 = getv %tmp.286 :FONT_SMALL;
+        %tmp.288 = getm $.Toybox.Lang;
+        %tmp.289 = getv function %tmp.288 :format;
+        %tmp.290 = "$1$ C";
+        %tmp.291 = newa 1;
+        %tmp.292 = lgetv %temp.7;
+        %tmp.293 = as %tmp.292 { (!Null) };
+        %tmp.294 = getv function %tmp.293 :format;
+        %tmp.295 = "%.1f";
+        %tmp.296 = invoke %tmp.293 %tmp.294(%tmp.295);
+        %tmp.297 = dup %tmp.291;
+        %tmp.298 = aputv %tmp.297 0 %tmp.296;
+        %tmp.299 = invoke %tmp.288 %tmp.289(%tmp.290, %tmp.298);
+        %tmp.300 = getm $.Toybox.Graphics;
+        %tmp.301 = getv %tmp.300 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.278 %tmp.279(%tmp.281, %tmp.285, %tmp.287, %tmp.299, %tmp.301);
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_84_12_stop:
         goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_83_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_83_12_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_86_19_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 87 16 ]
+        %tmp.302 = lgetv %dc;
+        %tmp.303 = getv function %tmp.302 :drawText;
+        %tmp.305 = lgetv %midX.1;
+        %tmp.307 = lgetv %midY.2;
+        %tmp.308 = 130;
+        %tmp.309 = add %tmp.307 %tmp.308;
+        %tmp.310 = getm $.Toybox.Graphics;
+        %tmp.311 = getv %tmp.310 :FONT_SMALL;
+        %tmp.312 = "--";
+        %tmp.313 = getm $.Toybox.Graphics;
+        %tmp.314 = getv %tmp.313 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.302 %tmp.303(%tmp.305, %tmp.309, %tmp.311, %tmp.312, %tmp.314);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_86_19_stop:
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_83_12_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 89 12 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_stop" ]
-        %pm25.7 = local;
-        %tmp.191 = lgetv %profile.3;
-        %tmp.192 = as %tmp.191 { (!Null) };
-        %tmp.193 = getv function %tmp.192 :getPM25;
-        %tmp.194 = invoke %tmp.192 %tmp.193();
-        lputv %pm25.7 %tmp.194;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 90 12 ]
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_12_if_stmt:
-        %tmp.196 = lgetv %pm25.7;
-        %tmp.197 = null;
-        %tmp.198 = ne %tmp.196 %tmp.197;
-        bf %tmp.198 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_15_begin:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_15_begin:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_15_begin:
+        %tmp.316 = lgetv %temp.7;
+        %tmp.317 = null;
+        %tmp.318 = ne %tmp.316 %tmp.317;
+        %tmp.319 = dup %tmp.318;
+        bf %tmp.319 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_31_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_31_true:
+        %tmp.321 = lgetv %cO2.6;
+        %tmp.322 = null;
+        %tmp.323 = ne %tmp.321 %tmp.322;
+        %tmp.324 = and %tmp.318 %tmp.323;
+        push %tmp.324;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_31_end:
+        %tmp.325 = phi [%tmp.319 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_15_begin] [%tmp.324 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_31_true] [%tmp.325 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_31_end];
+        %tmp.326 = dup %tmp.325;
+        bf %tmp.326 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_47_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_47_true:
+        %tmp.328 = lgetv %pm25.5;
+        %tmp.329 = null;
+        %tmp.330 = ne %tmp.328 %tmp.329;
+        %tmp.331 = and %tmp.325 %tmp.330;
+        push %tmp.331;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_47_end:
+        %tmp.332 = phi [%tmp.326 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_15_begin] [%tmp.331 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_47_true] [%tmp.332 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_47_end];
+        %tmp.333 = dup %tmp.332;
+        bf %tmp.333 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_63_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_63_true:
+        %tmp.335 = lgetv %humidity.4;
+        %tmp.336 = null;
+        %tmp.337 = ne %tmp.335 %tmp.336;
+        %tmp.338 = and %tmp.332 %tmp.337;
+        push %tmp.338;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_63_end:
+        %tmp.339 = phi [%tmp.333 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_15_begin] [%tmp.338 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_63_true] [%tmp.339 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_63_end];
+        bf %tmp.339 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_12_if_end;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_12_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_91_12_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 92 16 ]
-        %tmp.199 = lgetv %dc;
-        %tmp.200 = getv function %tmp.199 :setColor;
-        %tmp.201 = getm $.Toybox.Graphics;
-        %tmp.202 = getv %tmp.201 :COLOR_GREEN;
-        %tmp.203 = getm $.Toybox.Graphics;
-        %tmp.204 = getv %tmp.203 :COLOR_TRANSPARENT;
-        invoke %tmp.199 %tmp.200(%tmp.202, %tmp.204);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 93 16 ]
-        %tmp.205 = lgetv %dc;
-        %tmp.206 = getv function %tmp.205 :drawText;
-        %tmp.208 = lgetv %midX.1;
-        %tmp.210 = lgetv %midY.2;
-        %tmp.211 = 80;
-        %tmp.212 = add %tmp.210 %tmp.211;
-        %tmp.213 = getm $.Toybox.Graphics;
-        %tmp.214 = getv %tmp.213 :FONT_SMALL;
-        %tmp.215 = getm $.Toybox.Lang;
-        %tmp.216 = getv function %tmp.215 :format;
-        %tmp.217 = "PM 2.5: $1$ ppm";
-        %tmp.218 = newa 1;
-        %tmp.219 = lgetv %pm25.7;
-        %tmp.220 = as %tmp.219 { (!Null) };
-        %tmp.221 = getv function %tmp.220 :format;
-        %tmp.222 = "%.2f";
-        %tmp.223 = invoke %tmp.220 %tmp.221(%tmp.222);
-        %tmp.224 = dup %tmp.218;
-        %tmp.225 = aputv %tmp.224 0 %tmp.223;
-        %tmp.226 = invoke %tmp.215 %tmp.216(%tmp.217, %tmp.225);
-        %tmp.227 = getm $.Toybox.Graphics;
-        %tmp.228 = getv %tmp.227 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.205 %tmp.206(%tmp.208, %tmp.212, %tmp.214, %tmp.226, %tmp.228);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_91_12_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_80_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc" 91 16 ]
+        %tmp.340 = lgetv %dc;
+        %tmp.341 = getv function %tmp.340 :drawBitmap;
+        %tmp.342 = 305;
+        %tmp.343 = 60;
+        %tmp.345 = getv ? :button;
+        invoke %tmp.340 %tmp.341(%tmp.342, %tmp.343, %tmp.345);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_80_stop:
         goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_12_if_end;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_90_12_if_end:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_65_8_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_64_8_if_end:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_44_47_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_50_8_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_49_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_MainView_mc_29_47_stop:
     }
 }
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/MainView.mc"; @line = 7; ]

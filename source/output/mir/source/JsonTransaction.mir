@@ -1,91 +1,76 @@
-[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 1; ]
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 6; ]
 import Toybox.System;
-[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 2; ]
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 7; ]
 import Toybox.Communications;
-[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 3; ]
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 8; ]
 import Toybox.Lang;
-[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 4; ]
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 9; ]
 using Toybox.WatchUi as :Ui;
-[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 6; ]
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 11; ]
 class JsonTransaction{
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 6; ]
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 11; ]
     <init> {
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 6; ]
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 11; ]
     static
     <init> {
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 8; @position = 8; ]
-    var airExposureScore = 0.0f;
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 10; ]
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 11; ]
     function initialize() as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_10_25_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 11 8 ]
-        %tmp.1 = getm $.Toybox.System;
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "Initialized API request";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_10_25_stop:
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 15; ]
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 13; ]
     function onReceive(responseCode as Number, data as Dictionary or Null) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_15_76_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 16 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_8_if_stmt:
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_13_76_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 14 8 ]
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_8_if_stmt:
         %tmp.2 = lgetv %responseCode;
         %tmp.3 = 200;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_8_if_false;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_33_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 17 12 ]
+        bf %tmp.4 @_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_8_if_false;
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_8_if_true:
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_33_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 15 12 ]
         %tmp.5 = getm $.Toybox.System;
         %tmp.6 = getv function %tmp.5 :println;
         %tmp.7 = "Request Successful";
         invoke %tmp.5 %tmp.6(%tmp.7);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 18 12 ]
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_33_stop:
+        goto @_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_8_if_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_8_if_false:
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_16_15_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 17 12 ]
         %tmp.8 = getm $.Toybox.System;
         %tmp.9 = getv function %tmp.8 :println;
-        %tmp.10 = "Data: ";
-        %tmp.12 = lgetv %data;
+        %tmp.10 = "Response: ";
+        %tmp.12 = lgetv %responseCode;
         %tmp.13 = add %tmp.10 %tmp.12;
         invoke %tmp.8 %tmp.9(%tmp.13);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 19 12 ]
-        %tmp.14 = lgetv %data;
-        %tmp.15 = getv function %tmp.14 :get;
-        %tmp.16 = "air_exposure_score";
-        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
-        putv self :airExposureScore %tmp.17;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_33_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_8_if_false:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_20_15_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 21 12 ]
-        %tmp.18 = getm $.Toybox.System;
-        %tmp.19 = getv function %tmp.18 :println;
-        %tmp.20 = "Response: ";
-        %tmp.22 = lgetv %responseCode;
-        %tmp.23 = add %tmp.20 %tmp.22;
-        invoke %tmp.18 %tmp.19(%tmp.23);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_20_15_stop:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_16_8_if_end:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_15_76_stop:
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_16_15_stop:
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_14_8_if_end:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 20 8 ]
+        %tmp.14 = getm $.Toybox.System;
+        %tmp.15 = getv function %tmp.14 :println;
+        %tmp.16 = "Data: ";
+        %tmp.18 = lgetv %data;
+        %tmp.19 = add %tmp.16 %tmp.18;
+        invoke %tmp.14 %tmp.15(%tmp.19);
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_13_76_stop:
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 25; ]
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 25; ]
     function makeRequest(body) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 26 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_stop" ]
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 26 8 ]
+        [ "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_stop" ]
         %url.1 = local;
         %tmp.1 = "https://azureairsenseapi.azurewebsites.net/api/heartRate/140";
         lputv %url.1 %tmp.1;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 28 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_stop" ]
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 28 8 ]
+        [ "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_stop" ]
         %params.2 = local;
         %tmp.3 = lgetv %body;
         lputv %params.2 %tmp.3;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 30 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_stop" ]
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 30 8 ]
+        [ "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_stop" ]
         %options.3 = local;
         %tmp.4 = newd 3;
         %tmp.6 = const :method;
@@ -108,15 +93,15 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_st
         %tmp.25 = dup %tmp.20;
         %tmp.26 = aputv %tmp.25 %tmp.22 %tmp.24;
         lputv %options.3 %tmp.26;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 38 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_stop" ]
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 38 8 ]
+        [ "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_start" "_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_stop" ]
         %responseCallback.4 = local;
         %tmp.27 = self;
         %tmp.28 = getv function %tmp.27 :method;
         %tmp.30 = const :onReceive;
         %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.30);
         lputv %responseCallback.4 %tmp.31;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc" 40 8 ]
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" 41 8 ]
         %tmp.32 = getm $.Toybox.Communications;
         %tmp.33 = getv function %tmp.32 :makeWebRequest;
         %tmp.35 = lgetv %url.1;
@@ -124,9 +109,9 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_st
         %tmp.39 = lgetv %options.3;
         %tmp.41 = lgetv %responseCallback.4;
         invoke %tmp.32 %tmp.33(%tmp.35, %tmp.37, %tmp.39, %tmp.41);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_JsonTransaction_mc_25_39_stop:
+_Users_hudaabbas_MonkeyC_AirSense_source_JsonTransaction_mc_25_39_stop:
     }
 }
-[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/JsonTransaction.mc"; @line = 1; ]
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc"; @line = 6; ]
 <init> {
 }

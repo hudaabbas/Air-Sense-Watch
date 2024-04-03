@@ -1,0 +1,178 @@
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 7; ]
+import Toybox.Lang;
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 8; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 10; ]
+class InitialDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 11; @position = 8; ]
+    var session = null;
+    //! Constructor
+    //! @param scanDataModel The model containing the scan results
+    //! @param viewController Object that controls pushing new views
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 16; ]
+    public
+    function initialize() as Void {
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_16_33_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 17 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_16_33_stop:
+    }
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 21; ]
+    public
+    function onKey(evt) as Boolean {
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_22_4_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 23 8 ]
+        [ "_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_22_4_start" "_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_22_4_stop" ]
+        %key.1 = local;
+        %tmp.1 = lgetv %evt;
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %key.1 %tmp.3;
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 24 8 ]
+        %tmp.5 = getv ? :System;
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "Key: ";
+        %tmp.8 = lgetv %key.1;
+        %tmp.9 = getv function %tmp.8 :toString;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = add %tmp.7 %tmp.10;
+        invoke %tmp.5 %tmp.6(%tmp.11);
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 25 8 ]
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_8_if_stmt:
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_12_begin:
+        %tmp.12 = getm $.Toybox.WatchUi;
+        %tmp.13 = getv %tmp.12 :KEY_START;
+        %tmp.15 = lgetv %key.1;
+        %tmp.16 = eq %tmp.13 %tmp.15;
+        %tmp.17 = dup %tmp.16;
+        bt %tmp.17 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_40_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_40_false:
+        %tmp.18 = getm $.Toybox.WatchUi;
+        %tmp.19 = getv %tmp.18 :KEY_ENTER;
+        %tmp.21 = lgetv %key.1;
+        %tmp.22 = eq %tmp.19 %tmp.21;
+        %tmp.23 = or %tmp.16 %tmp.22;
+        push %tmp.23;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_40_end:
+        %tmp.24 = phi [%tmp.17 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_12_begin] [%tmp.23 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_40_false] [%tmp.24 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_40_end];
+        bf %tmp.24 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_8_if_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_8_if_true:
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_66_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 26 12 ]
+        %tmp.25 = self;
+        %tmp.26 = getv function %tmp.25 :pushActivityView;
+        invoke %tmp.25 %tmp.26();
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 27 12 ]
+        %tmp.27 = true;
+        ret %tmp.27;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_66_stop:
+        goto @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_8_if_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_25_8_if_end:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 29 8 ]
+        %tmp.28 = false;
+        ret %tmp.28;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_22_4_stop:
+    }
+    [ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 32; ]
+    public
+    function pushActivityView() as Void {
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_33_4_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 34 8 ]
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_34_8_if_stmt:
+        %tmp.2 = getv ? :Toybox;
+        %tmp.4 = const :ActivityRecording;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_34_8_if_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_34_8_if_true:
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_34_43_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 35 12 ]
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_12_if_stmt:
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_16_begin:
+        %tmp.7 = getv ? :session;
+        %tmp.8 = null;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        %tmp.10 = dup %tmp.9;
+        bt %tmp.10 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_37_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_37_false:
+        %tmp.12 = getv ? :session;
+        %tmp.13 = as %tmp.12 { (!Null) };
+        %tmp.14 = getv function %tmp.13 :isRecording;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        %tmp.16 = false;
+        %tmp.17 = eq %tmp.15 %tmp.16;
+        %tmp.18 = or %tmp.9 %tmp.17;
+        push %tmp.18;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_37_end:
+        %tmp.19 = phi [%tmp.10 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_16_begin] [%tmp.18 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_37_false] [%tmp.19 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_37_end];
+        bf %tmp.19 @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_12_if_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_12_if_true:
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_71_start:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 36 16 ]
+        %tmp.21 = getv ? :System;
+        %tmp.22 = getv function %tmp.21 :println;
+        %tmp.23 = "Start activity recording!!";
+        invoke %tmp.21 %tmp.22(%tmp.23);
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 37 16 ]
+        %tmp.25 = getv ? :ActivityRecording;
+        %tmp.26 = getv function %tmp.25 :createSession;
+        %tmp.27 = newd 3;
+        %tmp.29 = const :name;
+        %tmp.30 = "Air Sensor Run";
+        %tmp.31 = dup %tmp.27;
+        %tmp.32 = aputv %tmp.31 %tmp.29 %tmp.30;
+        %tmp.34 = const :sport;
+        %tmp.36 = getv ? :Activity;
+        %tmp.37 = getv %tmp.36 :SPORT_GENERIC;
+        %tmp.38 = dup %tmp.32;
+        %tmp.39 = aputv %tmp.38 %tmp.34 %tmp.37;
+        %tmp.41 = const :subSport;
+        %tmp.43 = getv ? :Activity;
+        %tmp.44 = getv %tmp.43 :SUB_SPORT_GENERIC;
+        %tmp.45 = dup %tmp.39;
+        %tmp.46 = aputv %tmp.45 %tmp.41 %tmp.44;
+        %tmp.47 = invoke %tmp.25 %tmp.26(%tmp.46);
+        putv self :session %tmp.47;
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 42 16 ]
+        %tmp.49 = getv ? :session;
+        %tmp.50 = getv function %tmp.49 :start;
+        invoke %tmp.49 %tmp.50();
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_71_stop:
+        goto @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_12_if_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_35_12_if_end:
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_34_43_stop:
+        goto @_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_34_8_if_end;
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_34_8_if_end:
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 46 8 ]
+        [ "_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_33_4_start" "_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_33_4_stop" ]
+        %v.1 = local;
+        %tmp.54 = getm $;
+        %tmp.55 = getv %tmp.54 :AirSenseView;
+        %tmp.57 = getv ? :session;
+        %tmp.51 = newc %tmp.55 (%tmp.57);
+        lputv %v.1 %tmp.51;
+[ "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" 47 8 ]
+        %tmp.58 = getm $.Toybox.WatchUi;
+        %tmp.59 = getv function %tmp.58 :pushView;
+        %tmp.61 = lgetv %v.1;
+        %tmp.65 = getm $;
+        %tmp.66 = getv %tmp.65 :AirSenseDelegate;
+        %tmp.68 = getv ? :session;
+        %tmp.62 = newc %tmp.66 (%tmp.68);
+        %tmp.69 = getm $.Toybox.WatchUi;
+        %tmp.70 = getv %tmp.69 :SLIDE_UP;
+        invoke %tmp.58 %tmp.59(%tmp.61, %tmp.62, %tmp.70);
+_Users_hudaabbas_MonkeyC_AirSense_source_InitialDelegate_mc_33_4_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc"; @line = 7; ]
+<init> {
+}

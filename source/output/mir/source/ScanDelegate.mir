@@ -3,7 +3,7 @@ import Toybox.Lang;
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 8; ]
 import Toybox.WatchUi;
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 10; ]
-class ScanDelegate extends WatchUi.BehaviorDelegate{
+class MyProgressDelegate extends WatchUi.BehaviorDelegate{
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 10; ]
     <init> {
     }
@@ -11,110 +11,237 @@ class ScanDelegate extends WatchUi.BehaviorDelegate{
     static
     <init> {
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 11; @position = 16; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 11; @position = 8; ]
+    var _deviceDataModel;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 12; @position = 8; ]
+    var _viewController;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 14; ]
+    function initialize(deviceDataModel, viewController) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_14_57_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 15 8 ]
+        %tmp.2 = lgetv %deviceDataModel;
+        putv self :_deviceDataModel %tmp.2;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 16 8 ]
+        %tmp.4 = lgetv %viewController;
+        putv self :_viewController %tmp.4;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 17 8 ]
+        %tmp.6 = getv ? :BehaviorDelegate;
+        %tmp.7 = getv function %tmp.6 :initialize;
+        invoke %tmp.6 %tmp.7();
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_14_57_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 20; ]
+    function onBack() {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_20_22_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 21 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_20_22_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 26; ]
+class ScanDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 26; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 26; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 27; @position = 16; ]
     private
     var _scanDataModel as ScanDataModel;
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 12; @position = 16; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 28; @position = 16; ]
     private
     var _viewController as ViewController;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 29; @position = 8; ]
+    var _deviceDataModel;
     //! Constructor
     //! @param scanDataModel The model containing the scan results
     //! @param viewController Object that controls pushing new views
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 17; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 34; ]
     public
     function initialize(scanDataModel as ScanDataModel, viewController as ViewController) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_17_97_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 18 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_34_97_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 35 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 20 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 37 8 ]
         %tmp.5 = lgetv %scanDataModel;
         putv self :_scanDataModel %tmp.5;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 21 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 38 8 ]
         %tmp.7 = lgetv %viewController;
         putv self :_viewController %tmp.7;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_17_97_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_34_97_stop:
+    }
+    //! Handle the back behavior
+    //! @return true if handled, false otherwise
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 44; ]
+    public
+    function onBack() as Boolean {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_45_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 46 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_46_8_if_stmt:
+        %tmp.1 = null;
+        %tmp.3 = getv ? :_deviceDataModel;
+        %tmp.4 = ne %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_46_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_46_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_46_38_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 47 12 ]
+        %tmp.6 = getv ? :_deviceDataModel;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = getv function %tmp.7 :unpair;
+        invoke %tmp.7 %tmp.8();
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 48 12 ]
+        %tmp.9 = getm $.Toybox.WatchUi;
+        %tmp.10 = getv function %tmp.9 :popView;
+        %tmp.11 = getm $.Toybox.WatchUi;
+        %tmp.12 = getv %tmp.11 :SLIDE_IMMEDIATE;
+        invoke %tmp.9 %tmp.10(%tmp.12);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 49 12 ]
+        %tmp.13 = true;
+        ret %tmp.13;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_46_38_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_46_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_46_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 51 8 ]
+        %tmp.14 = false;
+        ret %tmp.14;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_45_4_stop:
     }
     //! Handle menu button press
     //! @return true if handled, false otherwise
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 26; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 56; ]
     public
     function onMenu() as Boolean {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_26_40_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 27 8 ]
-        %tmp.2 = getv ? :_viewController;
-        %tmp.3 = getv function %tmp.2 :pushScanMenu;
-        invoke %tmp.2 %tmp.3();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 28 8 ]
-        %tmp.4 = true;
-        ret %tmp.4;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_26_40_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_56_40_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 57 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_56_40_stop:
     }
     //! Handle the select action
     //! @return true if handled, false otherwise
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 33; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 62; ]
     public
     function onSelect() as Boolean {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_34_4_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 35 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_34_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_34_4_stop" ]
-        %displayResult.1 = local;
-        %tmp.2 = getv ? :_scanDataModel;
-        %tmp.3 = getv function %tmp.2 :getDisplayResult;
-        %tmp.4 = invoke %tmp.2 %tmp.3();
-        lputv %displayResult.1 %tmp.4;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 36 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_36_8_if_stmt:
-        %tmp.5 = null;
-        %tmp.7 = lgetv %displayResult.1;
-        %tmp.8 = ne %tmp.5 %tmp.7;
-        bf %tmp.8 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_36_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_36_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_37_8_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 38 12 ]
-        %tmp.10 = getv ? :_viewController;
-        %tmp.11 = getv function %tmp.10 :pushDeviceView;
-        %tmp.13 = lgetv %displayResult.1;
-        %tmp.14 = as %tmp.13 { (!Null) };
-        invoke %tmp.10 %tmp.11(%tmp.14);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_37_8_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_36_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_36_8_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 40 8 ]
-        %tmp.15 = true;
-        ret %tmp.15;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_34_4_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_63_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 64 8 ]
+        %tmp.1 = false;
+        ret %tmp.1;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_63_4_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 67; ]
+    public
+    function onKey(evt) as Boolean {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_68_4_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 69 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_68_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_68_4_stop" ]
+        %key.1 = local;
+        %tmp.1 = lgetv %evt;
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %key.1 %tmp.3;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 70 8 ]
+        %tmp.5 = getv ? :System;
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "Key: ";
+        %tmp.8 = lgetv %key.1;
+        %tmp.9 = getv function %tmp.8 :toString;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = add %tmp.7 %tmp.10;
+        invoke %tmp.5 %tmp.6(%tmp.11);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 71 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_12_begin:
+        %tmp.12 = getm $.Toybox.WatchUi;
+        %tmp.13 = getv %tmp.12 :KEY_START;
+        %tmp.15 = lgetv %key.1;
+        %tmp.16 = eq %tmp.13 %tmp.15;
+        %tmp.17 = dup %tmp.16;
+        bt %tmp.17 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_40_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_40_false:
+        %tmp.18 = getm $.Toybox.WatchUi;
+        %tmp.19 = getv %tmp.18 :KEY_ENTER;
+        %tmp.21 = lgetv %key.1;
+        %tmp.22 = eq %tmp.19 %tmp.21;
+        %tmp.23 = or %tmp.16 %tmp.22;
+        push %tmp.23;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_40_end:
+        %tmp.24 = phi [%tmp.17 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_12_begin] [%tmp.23 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_40_false] [%tmp.24 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_40_end];
+        bf %tmp.24 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_66_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 72 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_66_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_66_stop" ]
+        %displayResult.2 = local;
+        %tmp.26 = getv ? :_scanDataModel;
+        %tmp.27 = getv function %tmp.26 :getDisplayResult;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        lputv %displayResult.2 %tmp.28;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 73 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_73_12_if_stmt:
+        %tmp.29 = null;
+        %tmp.31 = lgetv %displayResult.2;
+        %tmp.32 = ne %tmp.29 %tmp.31;
+        bf %tmp.32 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_73_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_73_12_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_74_12_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 75 16 ]
+        %tmp.34 = getv ? :_viewController;
+        %tmp.35 = getv function %tmp.34 :pushDeviceView;
+        %tmp.37 = lgetv %displayResult.2;
+        %tmp.38 = as %tmp.37 { (!Null) };
+        invoke %tmp.34 %tmp.35(%tmp.38);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 76 16 ]
+        %tmp.40 = getv ? :_viewController;
+        %tmp.41 = getv function %tmp.40 :getDeviceDataModel;
+        %tmp.43 = lgetv %displayResult.2;
+        %tmp.44 = as %tmp.43 { (!Null) };
+        %tmp.45 = invoke %tmp.40 %tmp.41(%tmp.44);
+        putv self :_deviceDataModel %tmp.45;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_74_12_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_73_12_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_73_12_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_66_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 86 8 ]
+        %tmp.46 = false;
+        ret %tmp.46;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_68_4_stop:
     }
     //! Handle next page behavior
     //! @return true if handled, false otherwise
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 45; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 91; ]
     public
     function onNextPage() as Boolean {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_45_44_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 46 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_91_44_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 92 8 ]
         %tmp.2 = getv ? :_scanDataModel;
         %tmp.3 = getv function %tmp.2 :nextResult;
         invoke %tmp.2 %tmp.3();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 47 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 93 8 ]
         %tmp.4 = true;
         ret %tmp.4;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_45_44_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_91_44_stop:
     }
     //! Handle previous page behavior
     //! @return true if handled, false otherwise
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 52; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 98; ]
     public
     function onPreviousPage() as Boolean {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_52_48_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 53 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_98_48_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 99 8 ]
         %tmp.2 = getv ? :_scanDataModel;
         %tmp.3 = getv function %tmp.2 :previousResult;
         invoke %tmp.2 %tmp.3();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 54 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 100 8 ]
         %tmp.4 = true;
         ret %tmp.4;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_52_48_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_98_48_stop:
     }
 }
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 7; ]

@@ -51,6 +51,7 @@ class DeviceDataModel {
     {
         BluetoothLowEnergy.setScanState(BluetoothLowEnergy.SCAN_STATE_OFF);
         _device = BluetoothLowEnergy.pairDevice(_scanResult);
+        System.println(_device);
     }
 
     //! Unpair the current device

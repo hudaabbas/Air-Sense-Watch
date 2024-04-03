@@ -159,19 +159,39 @@ class AirSenseDataField extends WatchUi.DataField {
         }
 
         refreshActivityStats();
+        return createActivityJson();
     }
 
-    /*function onTimerStart(){
-        if(!activityRunning){
-            System.println("timer is running");
-            activityRunning = true;
+    public function createActivityJson()
+    {
+        var intake_ppm_rate = Math.ln(Math.pow(Math.E, 1.16 + (0.021 * hr))) / Math.ln(12) * pm25; 
+
+        var activity_body = {};
+
+        if(loc != null) 
+        {
+            activity_body = { 
+                "hr" => hr,
+                "PM2.5" => pm25,
+                "CO2" => co2,
+                "location" => {
+                    "lat" => loc[0],
+                    "long" => loc[1] },
+                "intake_rate"  => intake_ppm_rate
+            };
+        } else { 
+            //user is indoors
+            activity_body = { 
+                "hr" => hr,
+                "PM2.5" => pm25,
+                "CO2" => co2,
+                "intake_rate"  => intake_ppm_rate
+            };
         }
+
+        System.println("current stats: " + activity_body);
+        
+        return activity_body;
     }
-
-    function onTimerStop(){
-        activityRunning = false;
-        System.println("timer is stop");
-    } */
-
 
 }

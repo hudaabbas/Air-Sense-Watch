@@ -9,11 +9,18 @@ import Toybox.WatchUi;
 
 class ScanView extends WatchUi.View {
     private var _scanDataModel as ScanDataModel;
+    var background;
+    var icon;
+    var button;
 
     //! Constructor
     //! @param scanDataModel The model containing the scan results
     public function initialize(scanDataModel as ScanDataModel) {
         View.initialize();
+
+        background = WatchUi.loadResource(Rez.Drawables.Bg);
+        icon = WatchUi.loadResource(Rez.Drawables.Icon);
+        button = WatchUi.loadResource(Rez.Drawables.topRight);
 
         _scanDataModel = scanDataModel;
     }
@@ -22,6 +29,7 @@ class ScanView extends WatchUi.View {
     //! @param dc Device context
     public function onLayout(dc as Dc) as Void 
     {
+        setLayout( Rez.Layouts.Start( dc ) );
     }
 
     //! Called when this View is brought to the foreground. Restore
@@ -35,25 +43,28 @@ class ScanView extends WatchUi.View {
     //! @param dc Device context
     public function onUpdate(dc as Dc) as Void 
     {
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
         dc.clear();
-        dc.drawText(dc.getWidth() / 2, dc.getHeight()/2 - 120, Graphics.FONT_SMALL, "Connect to \nAirSense Device...", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.drawBitmap(-18, -20, background);
        
         var displayResult = _scanDataModel.getDisplayResult();
 
-        var str = "\n"; //Found: " + _scanDataModel.getDisplayIndex() + "/" + _scanDataModel.getResultCount();
-
         if (null != displayResult) 
         {
-            str += "Device Found! \nClick to connect"; //\nName: " + displayResult.getDeviceName() + "\nRSSI: " + displayResult.getRssi() + " dbm";
+            System.println("\nDevice Found! Click to connect"); 
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth() / 2, 170, Graphics.FONT_XTINY, "Ready", Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawBitmap(305, 60, button);
+        } else{
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(dc.getWidth() / 2, 170, Graphics.FONT_XTINY, "Wait for Device", Graphics.TEXT_JUSTIFY_CENTER);
         }
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        dc.fillRectangle(145,205,100,2);
 
-        var strDimen = dc.getTextDimensions(str, Graphics.FONT_SMALL);
-        var textOffset = dc.getHeight() / 2 + 20;
-        textOffset -= strDimen[1] / 2;
-
-        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(dc.getWidth() / 2, textOffset, Graphics.FONT_SMALL, str, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.drawText(dc.getWidth() / 2, 270, Graphics.FONT_XTINY, "Air Sense", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawBitmap(140, 300, icon);
     }
 
     //! Called when this View is removed from the screen. Save the

@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/hudaabbas/MonkeyC/AirSense/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="1" lineNum="7" parent="globals/AirExposureDelegate" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="2" lineNum="15" parent="globals/AirExposureDelegate" pc="268435479" symbol="onBack"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="2" lineNum="18" parent="globals/AirExposureDelegate" pc="268435481" symbol="onBack"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="2" lineNum="20" parent="globals/AirExposureDelegate" pc="268435502" symbol="onBack"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="3" lineNum="49" parent="globals/AirExposureDelegate" pc="268435519" symbol="onAction"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="3" lineNum="50" parent="globals/AirExposureDelegate" pc="268435521" symbol="onAction"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="4" lineNum="41" parent="globals/AirExposureDelegate" pc="268435599" symbol="onSwipe"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="4" lineNum="42" parent="globals/AirExposureDelegate" pc="268435601" symbol="onSwipe"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="4" lineNum="43" parent="globals/AirExposureDelegate" pc="268435621" symbol="onSwipe"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="4" lineNum="44" parent="globals/AirExposureDelegate" pc="268435633" symbol="onSwipe"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="4" lineNum="46" parent="globals/AirExposureDelegate" pc="268435639" symbol="onSwipe"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="5" lineNum="10" parent="globals/AirExposureDelegate" pc="268435642" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="5" lineNum="11" parent="globals/AirExposureDelegate" pc="268435644" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="5" lineNum="12" parent="globals/AirExposureDelegate" pc="268435662" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="6" lineNum="24" parent="globals/AirExposureDelegate" pc="268435673" symbol="isActionButton"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="6" lineNum="26" parent="globals/AirExposureDelegate" pc="268435675" symbol="isActionButton"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="6" lineNum="28" parent="globals/AirExposureDelegate" pc="268435719" symbol="isActionButton"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="6" lineNum="30" parent="globals/AirExposureDelegate" pc="268435725" symbol="isActionButton"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="7" lineNum="33" parent="globals/AirExposureDelegate" pc="268435728" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="7" lineNum="34" parent="globals/AirExposureDelegate" pc="268435730" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="7" lineNum="35" parent="globals/AirExposureDelegate" pc="268435755" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="7" lineNum="36" parent="globals/AirExposureDelegate" pc="268435767" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureDelegate.mc" id="7" lineNum="38" parent="globals/AirExposureDelegate" pc="268435773" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="8" lineNum="28" parent="globals" pc="268435776" symbol="getApp"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="8" lineNum="29" parent="globals" pc="268435786" symbol="getApp"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="9" lineNum="10" parent="globals/InitialDelegate" pc="268435802" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="32" parent="globals/InitialDelegate" pc="268435821" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="34" parent="globals/InitialDelegate" pc="268435825" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="35" parent="globals/InitialDelegate" pc="268435840" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="36" parent="globals/InitialDelegate" pc="268435879" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="37" parent="globals/InitialDelegate" pc="268435902" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="42" parent="globals/InitialDelegate" pc="268435972" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="46" parent="globals/InitialDelegate" pc="268435996" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="10" lineNum="47" parent="globals/InitialDelegate" pc="268436032" symbol="pushActivityView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="11" lineNum="16" parent="globals/InitialDelegate" pc="268436090" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="11" lineNum="17" parent="globals/InitialDelegate" pc="268436092" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="12" lineNum="21" parent="globals/InitialDelegate" pc="268436111" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="12" lineNum="23" parent="globals/InitialDelegate" pc="268436115" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="12" lineNum="24" parent="globals/InitialDelegate" pc="268436128" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="12" lineNum="25" parent="globals/InitialDelegate" pc="268436163" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="12" lineNum="26" parent="globals/InitialDelegate" pc="268436188" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="12" lineNum="27" parent="globals/InitialDelegate" pc="268436200" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialDelegate.mc" id="12" lineNum="29" parent="globals/InitialDelegate" pc="268436206" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="13" lineNum="5" parent="globals/AirSenseApp" pc="268436209" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="14" lineNum="13" parent="globals/AirSenseApp" pc="268436228" symbol="onStart"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="15" lineNum="22" parent="globals/AirSenseApp" pc="268436231" symbol="getInitialView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="15" lineNum="23" parent="globals/AirSenseApp" pc="268436233" symbol="getInitialView"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="16" lineNum="8" parent="globals/AirSenseApp" pc="268436308" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="16" lineNum="9" parent="globals/AirSenseApp" pc="268436310" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseApp.mc" id="17" lineNum="17" parent="globals/AirSenseApp" pc="268436329" symbol="onStop"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="18" lineNum="15" parent="globals/AirSenseDelegate" pc="268436332" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="19" lineNum="78" parent="globals/AirSenseDelegate" pc="268436351" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="19" lineNum="80" parent="globals/AirSenseDelegate" pc="268436355" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="19" lineNum="81" parent="globals/AirSenseDelegate" pc="268436372" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="19" lineNum="82" parent="globals/AirSenseDelegate" pc="268436382" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="19" lineNum="83" parent="globals/AirSenseDelegate" pc="268436389" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="19" lineNum="85" parent="globals/AirSenseDelegate" pc="268436410" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="19" lineNum="87" parent="globals/AirSenseDelegate" pc="268436417" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="20" lineNum="179" parent="globals/AirSenseDelegate" pc="268436429" symbol="getUserRiskScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="20" lineNum="180" parent="globals/AirSenseDelegate" pc="268436433" symbol="getUserRiskScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="20" lineNum="181" parent="globals/AirSenseDelegate" pc="268436440" symbol="getUserRiskScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="20" lineNum="183" parent="globals/AirSenseDelegate" pc="268436453" symbol="getUserRiskScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="20" lineNum="192" parent="globals/AirSenseDelegate" pc="268436524" symbol="getUserRiskScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="20" lineNum="202" parent="globals/AirSenseDelegate" pc="268436611" symbol="getUserRiskScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="20" lineNum="204" parent="globals/AirSenseDelegate" pc="268436629" symbol="getUserRiskScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="91" parent="globals/AirSenseDelegate" pc="268436654" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="93" parent="globals/AirSenseDelegate" pc="268436658" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="94" parent="globals/AirSenseDelegate" pc="268436671" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="95" parent="globals/AirSenseDelegate" pc="268436696" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="97" parent="globals/AirSenseDelegate" pc="268436717" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="99" parent="globals/AirSenseDelegate" pc="268436751" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="106" parent="globals/AirSenseDelegate" pc="268436776" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="107" parent="globals/AirSenseDelegate" pc="268436788" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="21" lineNum="109" parent="globals/AirSenseDelegate" pc="268436794" symbol="onKey"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="125" parent="globals/AirSenseDelegate" pc="268436797" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="126" parent="globals/AirSenseDelegate" pc="268436799" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="127" parent="globals/AirSenseDelegate" pc="268436810" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="128" parent="globals/AirSenseDelegate" pc="268436831" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="129" parent="globals/AirSenseDelegate" pc="268436855" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="130" parent="globals/AirSenseDelegate" pc="268436913" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="131" parent="globals/AirSenseDelegate" pc="268436943" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="22" lineNum="133" parent="globals/AirSenseDelegate" pc="268436958" symbol="onAQHIReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="23" lineNum="53" parent="globals/AirSenseDelegate" pc="268436983" symbol="getDuration"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="23" lineNum="54" parent="globals/AirSenseDelegate" pc="268436987" symbol="getDuration"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="23" lineNum="55" parent="globals/AirSenseDelegate" pc="268437000" symbol="getDuration"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="23" lineNum="56" parent="globals/AirSenseDelegate" pc="268437017" symbol="getDuration"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="23" lineNum="57" parent="globals/AirSenseDelegate" pc="268437024" symbol="getDuration"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="23" lineNum="58" parent="globals/AirSenseDelegate" pc="268437037" symbol="getDuration"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="23" lineNum="61" parent="globals/AirSenseDelegate" pc="268437059" symbol="getDuration"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="24" lineNum="383" parent="globals/AirSenseDelegate" pc="268437068" symbol="setRealAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="24" lineNum="384" parent="globals/AirSenseDelegate" pc="268437070" symbol="setRealAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="24" lineNum="386" parent="globals/AirSenseDelegate" pc="268437083" symbol="setRealAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="24" lineNum="393" parent="globals/AirSenseDelegate" pc="268437223" symbol="setRealAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="24" lineNum="396" parent="globals/AirSenseDelegate" pc="268437249" symbol="setRealAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="24" lineNum="398" parent="globals/AirSenseDelegate" pc="268437273" symbol="setRealAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="24" lineNum="399" parent="globals/AirSenseDelegate" pc="268437280" symbol="setRealAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="159" parent="globals/AirSenseDelegate" pc="268437304" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="160" parent="globals/AirSenseDelegate" pc="268437308" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="161" parent="globals/AirSenseDelegate" pc="268437319" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="162" parent="globals/AirSenseDelegate" pc="268437340" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="163" parent="globals/AirSenseDelegate" pc="268437364" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="164" parent="globals/AirSenseDelegate" pc="268437377" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="165" parent="globals/AirSenseDelegate" pc="268437393" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="166" parent="globals/AirSenseDelegate" pc="268437400" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="170" parent="globals/AirSenseDelegate" pc="268437416" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="172" parent="globals/AirSenseDelegate" pc="268437437" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="173" parent="globals/AirSenseDelegate" pc="268437467" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="25" lineNum="175" parent="globals/AirSenseDelegate" pc="268437482" symbol="onRiskScoreReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="65" parent="globals/AirSenseDelegate" pc="268437507" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="66" parent="globals/AirSenseDelegate" pc="268437511" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="67" parent="globals/AirSenseDelegate" pc="268437518" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="68" parent="globals/AirSenseDelegate" pc="268437535" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="69" parent="globals/AirSenseDelegate" pc="268437542" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="70" parent="globals/AirSenseDelegate" pc="268437555" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="71" parent="globals/AirSenseDelegate" pc="268437565" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="26" lineNum="74" parent="globals/AirSenseDelegate" pc="268437584" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="274" parent="globals/AirSenseDelegate" pc="268437587" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="276" parent="globals/AirSenseDelegate" pc="268437591" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="277" parent="globals/AirSenseDelegate" pc="268437598" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="278" parent="globals/AirSenseDelegate" pc="268437605" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="279" parent="globals/AirSenseDelegate" pc="268437612" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="281" parent="globals/AirSenseDelegate" pc="268437619" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="282" parent="globals/AirSenseDelegate" pc="268437638" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="284" parent="globals/AirSenseDelegate" pc="268437653" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="285" parent="globals/AirSenseDelegate" pc="268437675" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="286" parent="globals/AirSenseDelegate" pc="268437697" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="287" parent="globals/AirSenseDelegate" pc="268437719" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="291" parent="globals/AirSenseDelegate" pc="268437754" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="292" parent="globals/AirSenseDelegate" pc="268437761" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="293" parent="globals/AirSenseDelegate" pc="268437774" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="294" parent="globals/AirSenseDelegate" pc="268437781" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="296" parent="globals/AirSenseDelegate" pc="268437788" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="297" parent="globals/AirSenseDelegate" pc="268437802" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="298" parent="globals/AirSenseDelegate" pc="268437815" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="299" parent="globals/AirSenseDelegate" pc="268437828" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="301" parent="globals/AirSenseDelegate" pc="268437841" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="319" parent="globals/AirSenseDelegate" pc="268438024" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="27" lineNum="321" parent="globals/AirSenseDelegate" pc="268438048" symbol="saveScore"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="238" parent="globals/AirSenseDelegate" pc="268438063" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="239" parent="globals/AirSenseDelegate" pc="268438067" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="240" parent="globals/AirSenseDelegate" pc="268438074" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="241" parent="globals/AirSenseDelegate" pc="268438087" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="243" parent="globals/AirSenseDelegate" pc="268438100" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="253" parent="globals/AirSenseDelegate" pc="268438181" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="263" parent="globals/AirSenseDelegate" pc="268438268" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="28" lineNum="265" parent="globals/AirSenseDelegate" pc="268438286" symbol="getActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="29" lineNum="41" parent="globals/AirSenseDelegate" pc="268438311" symbol="getAverageActivityHr"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="29" lineNum="42" parent="globals/AirSenseDelegate" pc="268438315" symbol="getAverageActivityHr"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="29" lineNum="43" parent="globals/AirSenseDelegate" pc="268438322" symbol="getAverageActivityHr"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="29" lineNum="44" parent="globals/AirSenseDelegate" pc="268438339" symbol="getAverageActivityHr"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="29" lineNum="45" parent="globals/AirSenseDelegate" pc="268438346" symbol="getAverageActivityHr"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="29" lineNum="46" parent="globals/AirSenseDelegate" pc="268438359" symbol="getAverageActivityHr"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="29" lineNum="49" parent="globals/AirSenseDelegate" pc="268438375" symbol="getAverageActivityHr"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="30" lineNum="137" parent="globals/AirSenseDelegate" pc="268438378" symbol="makeAQHIRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="30" lineNum="140" parent="globals/AirSenseDelegate" pc="268438382" symbol="makeAQHIRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="30" lineNum="141" parent="globals/AirSenseDelegate" pc="268438389" symbol="makeAQHIRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="30" lineNum="143" parent="globals/AirSenseDelegate" pc="268438405" symbol="makeAQHIRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="30" lineNum="145" parent="globals/AirSenseDelegate" pc="268438408" symbol="makeAQHIRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="30" lineNum="153" parent="globals/AirSenseDelegate" pc="268438469" symbol="makeAQHIRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="30" lineNum="155" parent="globals/AirSenseDelegate" pc="268438487" symbol="makeAQHIRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="31" lineNum="268" parent="globals/AirSenseDelegate" pc="268438512" symbol="calculatePersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="31" lineNum="271" parent="globals/AirSenseDelegate" pc="268438514" symbol="calculatePersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="32" lineNum="116" parent="globals/AirSenseDelegate" pc="268438540" symbol="stopActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="32" lineNum="118" parent="globals/AirSenseDelegate" pc="268438542" symbol="stopActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="32" lineNum="119" parent="globals/AirSenseDelegate" pc="268438557" symbol="stopActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="32" lineNum="120" parent="globals/AirSenseDelegate" pc="268438593" symbol="stopActivity"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="345" parent="globals/AirSenseDelegate" pc="268438612" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="346" parent="globals/AirSenseDelegate" pc="268438616" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="347" parent="globals/AirSenseDelegate" pc="268438641" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="348" parent="globals/AirSenseDelegate" pc="268438662" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="349" parent="globals/AirSenseDelegate" pc="268438686" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="350" parent="globals/AirSenseDelegate" pc="268438711" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="351" parent="globals/AirSenseDelegate" pc="268438731" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="352" parent="globals/AirSenseDelegate" pc="268438745" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="353" parent="globals/AirSenseDelegate" pc="268438763" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="354" parent="globals/AirSenseDelegate" pc="268438781" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="355" parent="globals/AirSenseDelegate" pc="268438790" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="356" parent="globals/AirSenseDelegate" pc="268438844" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="33" lineNum="358" parent="globals/AirSenseDelegate" pc="268438904" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="34" lineNum="324" parent="globals/AirSenseDelegate" pc="268438929" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="34" lineNum="325" parent="globals/AirSenseDelegate" pc="268438933" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="34" lineNum="327" parent="globals/AirSenseDelegate" pc="268438940" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="34" lineNum="329" parent="globals/AirSenseDelegate" pc="268438944" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="34" lineNum="339" parent="globals/AirSenseDelegate" pc="268439031" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="34" lineNum="341" parent="globals/AirSenseDelegate" pc="268439049" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="35" lineNum="112" parent="globals/AirSenseDelegate" pc="268439074" symbol="onBack"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="35" lineNum="113" parent="globals/AirSenseDelegate" pc="268439076" symbol="onBack"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="362" parent="globals/AirSenseDelegate" pc="268439079" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="363" parent="globals/AirSenseDelegate" pc="268439083" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="365" parent="globals/AirSenseDelegate" pc="268439096" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="372" parent="globals/AirSenseDelegate" pc="268439236" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="375" parent="globals/AirSenseDelegate" pc="268439262" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="376" parent="globals/AirSenseDelegate" pc="268439289" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="378" parent="globals/AirSenseDelegate" pc="268439313" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="36" lineNum="379" parent="globals/AirSenseDelegate" pc="268439320" symbol="setPersonalAQHI"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="207" parent="globals/AirSenseDelegate" pc="268439344" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="208" parent="globals/AirSenseDelegate" pc="268439346" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="209" parent="globals/AirSenseDelegate" pc="268439357" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="210" parent="globals/AirSenseDelegate" pc="268439378" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="211" parent="globals/AirSenseDelegate" pc="268439402" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="212" parent="globals/AirSenseDelegate" pc="268439415" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="213" parent="globals/AirSenseDelegate" pc="268439437" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="214" parent="globals/AirSenseDelegate" pc="268439463" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="220" parent="globals/AirSenseDelegate" pc="268439543" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="222" parent="globals/AirSenseDelegate" pc="268439567" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="224" parent="globals/AirSenseDelegate" pc="268439600" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="230" parent="globals/AirSenseDelegate" pc="268439680" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="232" parent="globals/AirSenseDelegate" pc="268439701" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="37" lineNum="234" parent="globals/AirSenseDelegate" pc="268439716" symbol="onActivityReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="38" lineNum="33" parent="globals/AirSenseDelegate" pc="268439741" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="38" lineNum="35" parent="globals/AirSenseDelegate" pc="268439743" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDelegate.mc" id="38" lineNum="37" parent="globals/AirSenseDelegate" pc="268439761" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="39" lineNum="7" parent="globals/Rez" pc="268439772" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="40" lineNum="4" parent="globals/InitialView" pc="268439796" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="42" lineNum="14" parent="globals/InitialView" pc="268439815" symbol="onLayout"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="43" lineNum="8" parent="globals/InitialView" pc="268439818" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="43" lineNum="9" parent="globals/InitialView" pc="268439820" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="45" lineNum="27" parent="globals/InitialView" pc="268439839" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="45" lineNum="29" parent="globals/InitialView" pc="268439841" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="45" lineNum="30" parent="globals/InitialView" pc="268439863" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/InitialView.mc" id="45" lineNum="31" parent="globals/InitialView" pc="268439875" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="47" lineNum="13" parent="globals/JsonTransaction" pc="268439943" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="47" lineNum="14" parent="globals/JsonTransaction" pc="268439945" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="47" lineNum="15" parent="globals/JsonTransaction" pc="268439956" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="47" lineNum="17" parent="globals/JsonTransaction" pc="268439980" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="47" lineNum="20" parent="globals/JsonTransaction" pc="268440004" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="48" lineNum="25" parent="globals/JsonTransaction" pc="268440029" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="48" lineNum="26" parent="globals/JsonTransaction" pc="268440033" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="48" lineNum="28" parent="globals/JsonTransaction" pc="268440040" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="48" lineNum="30" parent="globals/JsonTransaction" pc="268440044" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="48" lineNum="38" parent="globals/JsonTransaction" pc="268440105" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/JsonTransaction.mc" id="48" lineNum="41" parent="globals/JsonTransaction" pc="268440123" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="49" lineNum="9" parent="globals/AirSenseView" pc="268440148" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="49" lineNum="15" parent="globals/AirSenseView" pc="268440166" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="50" lineNum="24" parent="globals/AirSenseView" pc="268440181" symbol="onLayout"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="50" lineNum="25" parent="globals/AirSenseView" pc="268440183" symbol="onLayout"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="51" lineNum="105" parent="globals/AirSenseView" pc="268440225" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="51" lineNum="107" parent="globals/AirSenseView" pc="268440229" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="51" lineNum="108" parent="globals/AirSenseView" pc="268440246" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="51" lineNum="109" parent="globals/AirSenseView" pc="268440256" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="51" lineNum="110" parent="globals/AirSenseView" pc="268440263" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="51" lineNum="112" parent="globals/AirSenseView" pc="268440284" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="51" lineNum="114" parent="globals/AirSenseView" pc="268440291" symbol="getId"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="52" lineNum="18" parent="globals/AirSenseView" pc="268440303" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="52" lineNum="19" parent="globals/AirSenseView" pc="268440305" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="52" lineNum="21" parent="globals/AirSenseView" pc="268440323" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="53" lineNum="76" parent="globals/AirSenseView" pc="268440360" symbol="onHide"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="53" lineNum="77" parent="globals/AirSenseView" pc="268440362" symbol="onHide"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="92" parent="globals/AirSenseView" pc="268440375" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="93" parent="globals/AirSenseView" pc="268440379" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="94" parent="globals/AirSenseView" pc="268440386" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="95" parent="globals/AirSenseView" pc="268440405" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="96" parent="globals/AirSenseView" pc="268440412" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="97" parent="globals/AirSenseView" pc="268440425" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="98" parent="globals/AirSenseView" pc="268440435" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="54" lineNum="101" parent="globals/AirSenseView" pc="268440454" symbol="getStartTime"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="55" lineNum="82" parent="globals/AirSenseView" pc="268440457" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="55" lineNum="83" parent="globals/AirSenseView" pc="268440459" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="55" lineNum="84" parent="globals/AirSenseView" pc="268440484" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="55" lineNum="85" parent="globals/AirSenseView" pc="268440505" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="55" lineNum="87" parent="globals/AirSenseView" pc="268440532" symbol="onReceive"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="29" parent="globals/AirSenseView" pc="268440557" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="33" parent="globals/AirSenseView" pc="268440561" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="35" parent="globals/AirSenseView" pc="268440585" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="36" parent="globals/AirSenseView" pc="268440602" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="38" parent="globals/AirSenseView" pc="268440676" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="39" parent="globals/AirSenseView" pc="268440736" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="40" parent="globals/AirSenseView" pc="268440760" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="41" parent="globals/AirSenseView" pc="268440834" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="42" parent="globals/AirSenseView" pc="268440858" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="43" parent="globals/AirSenseView" pc="268440932" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="44" parent="globals/AirSenseView" pc="268440956" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="56" lineNum="47" parent="globals/AirSenseView" pc="268440970" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="117" parent="globals/AirSenseView" pc="268440991" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="118" parent="globals/AirSenseView" pc="268440995" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="119" parent="globals/AirSenseView" pc="268441002" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="120" parent="globals/AirSenseView" pc="268441015" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="122" parent="globals/AirSenseView" pc="268441028" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="133" parent="globals/AirSenseView" pc="268441125" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="143" parent="globals/AirSenseView" pc="268441212" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseView.mc" id="57" lineNum="145" parent="globals/AirSenseView" pc="268441230" symbol="makeRequest"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="58" lineNum="3" parent="globals/EndActivityView" pc="268441257" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="59" lineNum="6" parent="globals/EndActivityView" pc="268441276" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="59" lineNum="7" parent="globals/EndActivityView" pc="268441278" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="60" lineNum="11" parent="globals/EndActivityView" pc="268441297" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="60" lineNum="13" parent="globals/EndActivityView" pc="268441299" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="60" lineNum="14" parent="globals/EndActivityView" pc="268441321" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="60" lineNum="16" parent="globals/EndActivityView" pc="268441333" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/EndActivityView.mc" id="60" lineNum="17" parent="globals/EndActivityView" pc="268441355" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="61" lineNum="5" parent="globals/AirSenseMenuDelegate" pc="268441423" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="62" lineNum="11" parent="globals/AirSenseMenuDelegate" pc="268441442" symbol="onMenuItem"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="62" lineNum="12" parent="globals/AirSenseMenuDelegate" pc="268441444" symbol="onMenuItem"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="62" lineNum="13" parent="globals/AirSenseMenuDelegate" pc="268441455" symbol="onMenuItem"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="62" lineNum="14" parent="globals/AirSenseMenuDelegate" pc="268441479" symbol="onMenuItem"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="62" lineNum="15" parent="globals/AirSenseMenuDelegate" pc="268441490" symbol="onMenuItem"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="63" lineNum="7" parent="globals/AirSenseMenuDelegate" pc="268441515" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseMenuDelegate.mc" id="63" lineNum="8" parent="globals/AirSenseMenuDelegate" pc="268441517" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="64" lineNum="4" parent="globals/UserPromptView" pc="268441536" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="65" lineNum="14" parent="globals/UserPromptView" pc="268441555" symbol="onLayout"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="65" lineNum="15" parent="globals/UserPromptView" pc="268441557" symbol="onLayout"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="66" lineNum="8" parent="globals/UserPromptView" pc="268441599" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="66" lineNum="9" parent="globals/UserPromptView" pc="268441601" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="66" lineNum="10" parent="globals/UserPromptView" pc="268441619" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="18" parent="globals/UserPromptView" pc="268441630" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="20" parent="globals/UserPromptView" pc="268441634" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="21" parent="globals/UserPromptView" pc="268441694" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="22" parent="globals/UserPromptView" pc="268441718" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="24" parent="globals/UserPromptView" pc="268441732" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="25" parent="globals/UserPromptView" pc="268441739" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="26" parent="globals/UserPromptView" pc="268441756" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="27" parent="globals/UserPromptView" pc="268441763" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="28" parent="globals/UserPromptView" pc="268441783" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="29" parent="globals/UserPromptView" pc="268441800" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="30" parent="globals/UserPromptView" pc="268441807" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="31" parent="globals/UserPromptView" pc="268441827" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="32" parent="globals/UserPromptView" pc="268441844" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="33" parent="globals/UserPromptView" pc="268441851" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="34" parent="globals/UserPromptView" pc="268441871" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="35" parent="globals/UserPromptView" pc="268441888" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="36" parent="globals/UserPromptView" pc="268441895" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="38" parent="globals/UserPromptView" pc="268441915" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="39" parent="globals/UserPromptView" pc="268441922" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="42" parent="globals/UserPromptView" pc="268441939" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="44" parent="globals/UserPromptView" pc="268441946" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="45" parent="globals/UserPromptView" pc="268441963" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="46" parent="globals/UserPromptView" pc="268441973" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="47" parent="globals/UserPromptView" pc="268441990" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="48" parent="globals/UserPromptView" pc="268442000" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="49" parent="globals/UserPromptView" pc="268442017" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="50" parent="globals/UserPromptView" pc="268442027" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="51" parent="globals/UserPromptView" pc="268442044" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="53" parent="globals/UserPromptView" pc="268442054" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="56" parent="globals/UserPromptView" pc="268442061" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="57" parent="globals/UserPromptView" pc="268442085" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="61" parent="globals/UserPromptView" pc="268442099" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="63" parent="globals/UserPromptView" pc="268442119" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="64" parent="globals/UserPromptView" pc="268442141" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="65" parent="globals/UserPromptView" pc="268442173" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="66" parent="globals/UserPromptView" pc="268442195" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="67" parent="globals/UserPromptView" pc="268442227" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="68" parent="globals/UserPromptView" pc="268442249" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="69" parent="globals/UserPromptView" pc="268442281" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="70" parent="globals/UserPromptView" pc="268442303" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="71" parent="globals/UserPromptView" pc="268442335" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="72" parent="globals/UserPromptView" pc="268442357" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="73" parent="globals/UserPromptView" pc="268442389" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/UserPromptView.mc" id="67" lineNum="74" parent="globals/UserPromptView" pc="268442411" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="68" lineNum="5" parent="globals/AirExposureScoreView" pc="268442441" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="69" lineNum="29" parent="globals/AirExposureScoreView" pc="268442460" symbol="onLayout"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="69" lineNum="30" parent="globals/AirExposureScoreView" pc="268442462" symbol="onLayout"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="12" parent="globals/AirExposureScoreView" pc="268442504" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="13" parent="globals/AirExposureScoreView" pc="268442506" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="15" parent="globals/AirExposureScoreView" pc="268442524" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="16" parent="globals/AirExposureScoreView" pc="268442534" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="17" parent="globals/AirExposureScoreView" pc="268442544" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="18" parent="globals/AirExposureScoreView" pc="268442554" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="20" parent="globals/AirExposureScoreView" pc="268442564" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="21" parent="globals/AirExposureScoreView" pc="268442577" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="24" parent="globals/AirExposureScoreView" pc="268442593" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="70" lineNum="25" parent="globals/AirExposureScoreView" pc="268442606" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="34" parent="globals/AirExposureScoreView" pc="268442623" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="35" parent="globals/AirExposureScoreView" pc="268442627" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="36" parent="globals/AirExposureScoreView" pc="268442651" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="37" parent="globals/AirExposureScoreView" pc="268442721" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="38" parent="globals/AirExposureScoreView" pc="268442745" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="39" parent="globals/AirExposureScoreView" pc="268442761" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="40" parent="globals/AirExposureScoreView" pc="268442771" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="41" parent="globals/AirExposureScoreView" pc="268442781" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="42" parent="globals/AirExposureScoreView" pc="268442845" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="43" parent="globals/AirExposureScoreView" pc="268442859" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="44" parent="globals/AirExposureScoreView" pc="268442883" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="45" parent="globals/AirExposureScoreView" pc="268442953" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="46" parent="globals/AirExposureScoreView" pc="268442977" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="48" parent="globals/AirExposureScoreView" pc="268443047" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="49" parent="globals/AirExposureScoreView" pc="268443054" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="50" parent="globals/AirExposureScoreView" pc="268443071" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="51" parent="globals/AirExposureScoreView" pc="268443078" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="52" parent="globals/AirExposureScoreView" pc="268443098" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="53" parent="globals/AirExposureScoreView" pc="268443115" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="54" parent="globals/AirExposureScoreView" pc="268443122" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="55" parent="globals/AirExposureScoreView" pc="268443142" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="56" parent="globals/AirExposureScoreView" pc="268443159" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="57" parent="globals/AirExposureScoreView" pc="268443166" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="58" parent="globals/AirExposureScoreView" pc="268443186" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="59" parent="globals/AirExposureScoreView" pc="268443203" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="60" parent="globals/AirExposureScoreView" pc="268443210" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="62" parent="globals/AirExposureScoreView" pc="268443230" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="63" parent="globals/AirExposureScoreView" pc="268443237" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="67" parent="globals/AirExposureScoreView" pc="268443254" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="69" parent="globals/AirExposureScoreView" pc="268443274" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="70" parent="globals/AirExposureScoreView" pc="268443296" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="71" parent="globals/AirExposureScoreView" pc="268443333" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="72" parent="globals/AirExposureScoreView" pc="268443355" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="73" parent="globals/AirExposureScoreView" pc="268443387" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="74" parent="globals/AirExposureScoreView" pc="268443409" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="75" parent="globals/AirExposureScoreView" pc="268443441" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="76" parent="globals/AirExposureScoreView" pc="268443463" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="77" parent="globals/AirExposureScoreView" pc="268443495" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="78" parent="globals/AirExposureScoreView" pc="268443517" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="79" parent="globals/AirExposureScoreView" pc="268443549" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="80" parent="globals/AirExposureScoreView" pc="268443571" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="82" parent="globals/AirExposureScoreView" pc="268443603" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirExposureScoreView.mc" id="71" lineNum="83" parent="globals/AirExposureScoreView" pc="268443625" symbol="onUpdate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="72" lineNum="7" parent="globals/AirSenseDataField" pc="268443655" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="93" parent="globals/AirSenseDataField" pc="268443674" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="94" parent="globals/AirSenseDataField" pc="268443678" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="95" parent="globals/AirSenseDataField" pc="268443697" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="96" parent="globals/AirSenseDataField" pc="268443704" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="99" parent="globals/AirSenseDataField" pc="268443708" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="100" parent="globals/AirSenseDataField" pc="268443721" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="103" parent="globals/AirSenseDataField" pc="268443740" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="104" parent="globals/AirSenseDataField" pc="268443753" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="107" parent="globals/AirSenseDataField" pc="268443781" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="73" lineNum="108" parent="globals/AirSenseDataField" pc="268443794" symbol="refreshActivityStats"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="74" lineNum="113" parent="globals/AirSenseDataField" pc="268443814" symbol="compute"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="74" lineNum="115" parent="globals/AirSenseDataField" pc="268443816" symbol="compute"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="74" lineNum="116" parent="globals/AirSenseDataField" pc="268443828" symbol="compute"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="42" parent="globals/AirSenseDataField" pc="268443840" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="44" parent="globals/AirSenseDataField" pc="268443842" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="46" parent="globals/AirSenseDataField" pc="268443855" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="53" parent="globals/AirSenseDataField" pc="268443921" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="56" parent="globals/AirSenseDataField" pc="268443947" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="58" parent="globals/AirSenseDataField" pc="268443960" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="65" parent="globals/AirSenseDataField" pc="268444026" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="68" parent="globals/AirSenseDataField" pc="268444052" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="70" parent="globals/AirSenseDataField" pc="268444065" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="77" parent="globals/AirSenseDataField" pc="268444131" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="80" parent="globals/AirSenseDataField" pc="268444157" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="82" parent="globals/AirSenseDataField" pc="268444170" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="75" lineNum="89" parent="globals/AirSenseDataField" pc="268444236" symbol="setupField"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="76" lineNum="34" parent="globals/AirSenseDataField" pc="268444263" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="76" lineNum="35" parent="globals/AirSenseDataField" pc="268444265" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="76" lineNum="37" parent="globals/AirSenseDataField" pc="268444275" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="76" lineNum="39" parent="globals/AirSenseDataField" pc="268444293" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="119" parent="globals/AirSenseDataField" pc="268444314" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="121" parent="globals/AirSenseDataField" pc="268444318" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="122" parent="globals/AirSenseDataField" pc="268444343" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="124" parent="globals/AirSenseDataField" pc="268444351" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="126" parent="globals/AirSenseDataField" pc="268444364" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="137" parent="globals/AirSenseDataField" pc="268444491" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="145" parent="globals/AirSenseDataField" pc="268444557" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/AirSenseDataField.mc" id="77" lineNum="147" parent="globals/AirSenseDataField" pc="268444583" symbol="createActivityJson"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="100" parent="globals/ActivityMetrics" pc="268444586" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="101" parent="globals/ActivityMetrics" pc="268444598" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="102" parent="globals/ActivityMetrics" pc="268444615" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="103" parent="globals/ActivityMetrics" pc="268444625" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="105" parent="globals/ActivityMetrics" pc="268444632" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="106" parent="globals/ActivityMetrics" pc="268444639" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="107" parent="globals/ActivityMetrics" pc="268444656" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="108" parent="globals/ActivityMetrics" pc="268444680" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="78" lineNum="112" parent="globals/ActivityMetrics" pc="268444696" symbol="getAge"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="79" lineNum="70" parent="globals/ActivityMetrics" pc="268444699" symbol="getAverageHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="79" lineNum="71" parent="globals/ActivityMetrics" pc="268444711" symbol="getAverageHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="79" lineNum="72" parent="globals/ActivityMetrics" pc="268444728" symbol="getAverageHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="79" lineNum="74" parent="globals/ActivityMetrics" pc="268444738" symbol="getAverageHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="79" lineNum="75" parent="globals/ActivityMetrics" pc="268444745" symbol="getAverageHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="79" lineNum="77" parent="globals/ActivityMetrics" pc="268444752" symbol="getAverageHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="79" lineNum="81" parent="globals/ActivityMetrics" pc="268444759" symbol="getAverageHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="80" lineNum="53" parent="globals/ActivityMetrics" pc="268444762" symbol="getIntensityMinutes"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="80" lineNum="54" parent="globals/ActivityMetrics" pc="268444774" symbol="getIntensityMinutes"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="80" lineNum="55" parent="globals/ActivityMetrics" pc="268444791" symbol="getIntensityMinutes"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="80" lineNum="61" parent="globals/ActivityMetrics" pc="268444807" symbol="getIntensityMinutes"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="80" lineNum="62" parent="globals/ActivityMetrics" pc="268444814" symbol="getIntensityMinutes"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="80" lineNum="65" parent="globals/ActivityMetrics" pc="268444830" symbol="getIntensityMinutes"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="80" lineNum="67" parent="globals/ActivityMetrics" pc="268444837" symbol="getIntensityMinutes"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="81" lineNum="39" parent="globals/ActivityMetrics" pc="268444868" symbol="getRespirationRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="81" lineNum="40" parent="globals/ActivityMetrics" pc="268444880" symbol="getRespirationRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="81" lineNum="41" parent="globals/ActivityMetrics" pc="268444897" symbol="getRespirationRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="81" lineNum="43" parent="globals/ActivityMetrics" pc="268444907" symbol="getRespirationRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="81" lineNum="44" parent="globals/ActivityMetrics" pc="268444914" symbol="getRespirationRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="81" lineNum="47" parent="globals/ActivityMetrics" pc="268444930" symbol="getRespirationRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="81" lineNum="50" parent="globals/ActivityMetrics" pc="268444937" symbol="getRespirationRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="84" parent="globals/ActivityMetrics" pc="268444940" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="85" parent="globals/ActivityMetrics" pc="268444952" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="86" parent="globals/ActivityMetrics" pc="268444969" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="88" parent="globals/ActivityMetrics" pc="268444979" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="89" parent="globals/ActivityMetrics" pc="268444990" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="90" parent="globals/ActivityMetrics" pc="268445000" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="91" parent="globals/ActivityMetrics" pc="268445011" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="93" parent="globals/ActivityMetrics" pc="268445021" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="82" lineNum="97" parent="globals/ActivityMetrics" pc="268445028" symbol="getSex"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="16" parent="globals/ActivityMetrics" pc="268445031" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="17" parent="globals/ActivityMetrics" pc="268445043" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="18" parent="globals/ActivityMetrics" pc="268445050" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="19" parent="globals/ActivityMetrics" pc="268445065" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="21" parent="globals/ActivityMetrics" pc="268445088" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="22" parent="globals/ActivityMetrics" pc="268445095" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="23" parent="globals/ActivityMetrics" pc="268445119" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="24" parent="globals/ActivityMetrics" pc="268445132" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="25" parent="globals/ActivityMetrics" pc="268445159" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="29" parent="globals/ActivityMetrics" pc="268445175" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="30" parent="globals/ActivityMetrics" pc="268445182" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="31" parent="globals/ActivityMetrics" pc="268445189" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/MonkeyC/AirSense/source/ActivityMetrics.mc" id="83" lineNum="36" parent="globals/ActivityMetrics" pc="268445208" symbol="getHeartRate"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="72" parent="globals/Rez/Layouts" pc="268445211" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="73" parent="globals/Rez/Layouts" pc="268445223" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="75" parent="globals/Rez/Layouts" pc="268445367" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="77" parent="globals/Rez/Layouts" pc="268445511" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="79" parent="globals/Rez/Layouts" pc="268445655" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="81" parent="globals/Rez/Layouts" pc="268445799" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="83" parent="globals/Rez/Layouts" pc="268445943" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="85" parent="globals/Rez/Layouts" pc="268446055" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="87" parent="globals/Rez/Layouts" pc="268446167" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="89" parent="globals/Rez/Layouts" pc="268446279" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="91" parent="globals/Rez/Layouts" pc="268446391" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="93" parent="globals/Rez/Layouts" pc="268446535" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="94" parent="globals/Rez/Layouts" pc="268446640" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="84" lineNum="96" parent="globals/Rez/Layouts" pc="268446689" symbol="Score"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="85" lineNum="99" parent="globals/Rez/Layouts" pc="268446806" symbol="UserPrompt"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="85" lineNum="100" parent="globals/Rez/Layouts" pc="268446818" symbol="UserPrompt"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="85" lineNum="102" parent="globals/Rez/Layouts" pc="268446930" symbol="UserPrompt"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="85" lineNum="104" parent="globals/Rez/Layouts" pc="268447074" symbol="UserPrompt"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="86" lineNum="107" parent="globals/Rez/Layouts" pc="268447101" symbol="ErrorLayout"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="86" lineNum="108" parent="globals/Rez/Layouts" pc="268447113" symbol="ErrorLayout"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="86" lineNum="110" parent="globals/Rez/Layouts" pc="268447248" symbol="ErrorLayout"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="20" parent="globals/Rez/Layouts" pc="268447265" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="21" parent="globals/Rez/Layouts" pc="268447277" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="23" parent="globals/Rez/Layouts" pc="268447421" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="25" parent="globals/Rez/Layouts" pc="268447565" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="27" parent="globals/Rez/Layouts" pc="268447709" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="29" parent="globals/Rez/Layouts" pc="268447853" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="31" parent="globals/Rez/Layouts" pc="268447965" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="33" parent="globals/Rez/Layouts" pc="268448109" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="35" parent="globals/Rez/Layouts" pc="268448253" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="37" parent="globals/Rez/Layouts" pc="268448365" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="39" parent="globals/Rez/Layouts" pc="268448509" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="87" lineNum="41" parent="globals/Rez/Layouts" pc="268448653" symbol="Summary"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="44" parent="globals/Rez/Layouts" pc="268448760" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="45" parent="globals/Rez/Layouts" pc="268448772" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="47" parent="globals/Rez/Layouts" pc="268448884" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="49" parent="globals/Rez/Layouts" pc="268448996" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="51" parent="globals/Rez/Layouts" pc="268449140" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="53" parent="globals/Rez/Layouts" pc="268449284" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="55" parent="globals/Rez/Layouts" pc="268449428" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="57" parent="globals/Rez/Layouts" pc="268449572" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="59" parent="globals/Rez/Layouts" pc="268449716" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="61" parent="globals/Rez/Layouts" pc="268449860" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="63" parent="globals/Rez/Layouts" pc="268450004" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="65" parent="globals/Rez/Layouts" pc="268450148" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="67" parent="globals/Rez/Layouts" pc="268450292" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="88" lineNum="69" parent="globals/Rez/Layouts" pc="268450436" symbol="Data"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="89" lineNum="115" parent="globals/Rez/Menus/ActionMenu" pc="268450563" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="90" lineNum="116" parent="globals/Rez/Menus/ActionMenu" pc="268450582" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="90" lineNum="117" parent="globals/Rez/Menus/ActionMenu" pc="268450584" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="90" lineNum="118" parent="globals/Rez/Menus/ActionMenu" pc="268450621" symbol="initialize"/>
+        <entry filename="/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/output/gen/006-B4261-00/source/Rez.mcgen" id="90" lineNum="119" parent="globals/Rez/Menus/ActionMenu" pc="268450702" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="101" symbol="co2Label"/>
+        <entry field="true" id="119" symbol="temp_graph_label"/>
+        <entry id="39" method="true" symbol="getUserRiskScore"/>
+        <entry id="8389346" symbol="text"/>
+        <entry field="true" id="23" symbol="_avgHeartRate"/>
+        <entry id="21" object="true" symbol="JsonTransaction"/>
+        <entry field="true" id="118" symbol="tempUnits"/>
+        <entry field="true" id="114" symbol="pm25Label"/>
+        <entry field="true" id="30" symbol="&lt;globals/AirSenseDelegate/&lt;&gt;_session&gt;"/>
+        <entry field="true" id="91" symbol="CO2_label"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="8" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="8389849" symbol="units"/>
+        <entry id="78" method="true" symbol="refreshActivityStats"/>
+        <entry field="true" id="82" symbol="actionMenu"/>
+        <entry field="true" id="80" symbol="temp"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry field="true" id="74" symbol="mCO2Field"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry id="22" object="true" symbol="UserPromptView"/>
+        <entry field="true" id="71" symbol="hum"/>
+        <entry id="8389702" method="true" symbol="getHeartRateHistory"/>
+        <entry field="true" id="112" symbol="microLabel"/>
+        <entry field="true" id="24" symbol="_showHeartRate"/>
+        <entry field="true" id="40" symbol="mAQHIField"/>
+        <entry field="true" id="95" symbol="PM25_units"/>
+        <entry field="true" id="57" symbol="activityRunning"/>
+        <entry id="52" method="true" symbol="setRealAQHI"/>
+        <entry id="8391941" symbol="theme"/>
+        <entry field="true" id="75" symbol="mHumidityField"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry id="8388647" module="true" symbol="UserProfile"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="99" symbol="aqhi_label"/>
+        <entry field="true" id="109" symbol="humidity_units"/>
+        <entry field="true" id="89" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry id="63" method="true" symbol="getIntensityMinutes"/>
+        <entry field="true" id="90" symbol="CO2_graph_label"/>
+        <entry id="26" method="true" symbol="isActionButton"/>
+        <entry id="9" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="62" method="true" symbol="getHeartRate"/>
+        <entry field="true" id="117" symbol="tempLabel"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry field="true" id="96" symbol="air_exposure_graph_label"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="100" symbol="blurb"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="8391935" object="true" symbol="ActionMenu"/>
+        <entry field="true" id="8389138" symbol="label"/>
+        <entry field="true" id="49" symbol="risk_score"/>
+        <entry id="19" object="true" symbol="InitialDelegate"/>
+        <entry id="3" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="116" symbol="summary"/>
+        <entry field="true" id="122" symbol="timeLabel"/>
+        <entry field="true" id="66" symbol="_aqhi"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="18" object="true" symbol="EndActivityView"/>
+        <entry field="true" id="67" symbol="&lt;globals/AirSenseDataField/&lt;&gt;_session&gt;"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry field="true" id="94" symbol="PM25_label"/>
+        <entry field="true" id="98" symbol="air_exposure_units"/>
+        <entry id="128" symbol="item_2"/>
+        <entry id="127" symbol="item_1"/>
+        <entry id="56" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="34" method="true" symbol="calculatePersonalAQHI"/>
+        <entry id="61" method="true" symbol="getAverageHeartRate"/>
+        <entry id="7" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="15" object="true" symbol="AirSenseDelegate"/>
+        <entry field="true" id="93" symbol="PM25_graph_label"/>
+        <entry id="13" object="true" symbol="AirSenseApp"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="83" method="true" symbol="Data"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry field="true" id="54" symbol="time"/>
+        <entry field="true" id="70" symbol="hr"/>
+        <entry id="124" symbol="Styles"/>
+        <entry id="60" method="true" symbol="getAge"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="108" symbol="humidity_label"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry id="14" object="true" symbol="AirSenseDataField"/>
+        <entry id="43" method="true" symbol="makeRequest"/>
+        <entry id="51" method="true" symbol="setPersonalAQHI"/>
+        <entry id="87" method="true" symbol="UserPrompt"/>
+        <entry id="45" method="true" symbol="onActivityReceive"/>
+        <entry id="6" module="true" symbol="globals/Rez/JsonData"/>
+        <entry id="2" module="true" symbol="globals/ActivityMetrics"/>
+        <entry field="true" id="121" symbol="temp_units"/>
+        <entry field="true" id="73" symbol="mAirTempField"/>
+        <entry field="true" id="72" symbol="loc"/>
+        <entry id="20" object="true" symbol="InitialView"/>
+        <entry field="true" id="106" symbol="humUnits"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry field="true" id="77" symbol="pm25"/>
+        <entry id="84" method="true" symbol="ErrorLayout"/>
+        <entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="86" method="true" symbol="Summary"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry id="36" method="true" symbol="getAverageActivityHr"/>
+        <entry field="true" id="104" symbol="hrLabel"/>
+        <entry field="true" id="48" symbol="real_aqhi"/>
+        <entry id="17" object="true" symbol="AirSenseView"/>
+        <entry id="37" method="true" symbol="getDuration"/>
+        <entry field="true" id="102" symbol="dismiss"/>
+        <entry id="12" object="true" symbol="AirExposureScoreView"/>
+        <entry field="true" id="59" symbol="airSensor"/>
+        <entry id="8388786" method="true" symbol="method"/>
+        <entry id="53" method="true" symbol="stopActivity"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="38" method="true" symbol="getStartTime"/>
+        <entry field="true" id="88" symbol="AQHILabel"/>
+        <entry field="true" id="41" symbol="mAirExposureField"/>
+        <entry id="50" method="true" symbol="saveScore"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="58" symbol="activity_array"/>
+        <entry field="true" id="113" symbol="personalAQHIabel"/>
+        <entry id="46" method="true" symbol="onReceive"/>
+        <entry id="65" method="true" symbol="getSex"/>
+        <entry field="true" id="97" symbol="air_exposure_label"/>
+        <entry field="true" id="8388718" method="true" symbol="error"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="110" symbol="loading"/>
+        <entry field="true" id="81" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="25" symbol="_personal_aqhi"/>
+        <entry id="79" method="true" symbol="setupField"/>
+        <entry id="47" method="true" symbol="onRiskScoreReceive"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="111" symbol="maxpm25"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="120" symbol="temp_label"/>
+        <entry field="true" id="105" symbol="humLabel"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="32" symbol="airExposureScore"/>
+        <entry field="true" id="8388891" symbol="subSport"/>
+        <entry id="35" method="true" symbol="getActivity"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry field="true" id="92" symbol="CO2_units"/>
+        <entry field="true" id="76" symbol="mPM25Field"/>
+        <entry id="44" method="true" symbol="onAQHIReceive"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="42" method="true" symbol="makeAQHIRequest"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry id="8389847" symbol="mesgType"/>
+        <entry id="8389347" symbol="color"/>
+        <entry field="true" id="107" symbol="humidity_graph_label"/>
+        <entry id="11" object="true" symbol="AirExposureDelegate"/>
+        <entry field="true" id="33" symbol="avgPM25"/>
+        <entry id="8389097" method="true" symbol="onKey"/>
+        <entry id="64" method="true" symbol="getRespirationRate"/>
+        <entry id="10" module="true" symbol="ActivityMetrics"/>
+        <entry field="true" id="31" symbol="activities"/>
+        <entry id="55" module="true" symbol="Layouts"/>
+        <entry id="28" method="true" symbol="pushActivityView"/>
+        <entry field="true" id="115" symbol="ppmLabel"/>
+        <entry field="true" id="123" symbol="timeLbl"/>
+        <entry id="8389963" method="true" symbol="getId"/>
+        <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+        <entry field="true" id="68" symbol="co2"/>
+        <entry id="27" method="true" symbol="onAction"/>
+        <entry id="16" object="true" symbol="AirSenseMenuDelegate"/>
+        <entry id="85" method="true" symbol="Score"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="29" symbol="session"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="69" method="true" symbol="createActivityJson"/>
+        <entry id="8389101" method="true" symbol="onSwipe"/>
+        <entry field="true" id="103" symbol="edit"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435641" name="swipeEvent" stackId="1" startPc="268435599"/>
+        <entry arg="true" endPc="268435672" name="personal_aqhi" stackId="1" startPc="268435642"/>
+        <entry arg="true" endPc="268435727" name="button" stackId="1" startPc="268435673"/>
+        <entry arg="true" endPc="268435775" name="evt" stackId="1" startPc="268435728"/>
+        <entry endPc="268436088" name="v" stackId="1" startPc="268435825"/>
+        <entry arg="true" endPc="268436208" name="evt" stackId="1" startPc="268436111"/>
+        <entry endPc="268436208" name="key" stackId="2" startPc="268436115"/>
+        <entry endPc="268436428" name="mySettings" stackId="1" startPc="268436355"/>
+        <entry endPc="268436428" name="id" stackId="2" startPc="268436355"/>
+        <entry endPc="268436652" name="url" stackId="1" startPc="268436433"/>
+        <entry endPc="268436652" name="id" stackId="2" startPc="268436433"/>
+        <entry endPc="268436652" name="params" stackId="3" startPc="268436433"/>
+        <entry endPc="268436652" name="options" stackId="4" startPc="268436433"/>
+        <entry endPc="268436652" name="responseCallback" stackId="5" startPc="268436433"/>
+        <entry arg="true" endPc="268436796" name="evt" stackId="1" startPc="268436654"/>
+        <entry endPc="268436796" name="key" stackId="2" startPc="268436658"/>
+        <entry endPc="268436790" name="progressBar" stackId="3" startPc="268436696"/>
+        <entry arg="true" endPc="268436982" name="responseCode" stackId="1" startPc="268436797"/>
+        <entry arg="true" endPc="268436982" name="data" stackId="2" startPc="268436797"/>
+        <entry endPc="268437067" name="activityInfo" stackId="1" startPc="268436987"/>
+        <entry arg="true" endPc="268437303" name="aqhi" stackId="1" startPc="268437068"/>
+        <entry arg="true" endPc="268437506" name="responseCode" stackId="1" startPc="268437304"/>
+        <entry arg="true" endPc="268437506" name="data" stackId="2" startPc="268437304"/>
+        <entry endPc="268437412" name="risk" stackId="3" startPc="268437377"/>
+        <entry endPc="268437586" name="date" stackId="1" startPc="268437511"/>
+        <entry endPc="268437586" name="activityInfo" stackId="2" startPc="268437511"/>
+        <entry endPc="268437577" name="moment" stackId="3" startPc="268437555"/>
+        <entry endPc="268438061" name="totalHr" stackId="1" startPc="268437591"/>
+        <entry endPc="268438061" name="totalPM25" stackId="2" startPc="268437591"/>
+        <entry endPc="268438061" name="totalCO2" stackId="3" startPc="268437591"/>
+        <entry endPc="268438061" name="totalIntakeRate" stackId="4" startPc="268437591"/>
+        <entry endPc="268438061" name="numActivities" stackId="5" startPc="268437591"/>
+        <entry endPc="268437753" name="i" stackId="6" startPc="268437653"/>
+        <entry endPc="268438061" name="avgHr" stackId="7" startPc="268437591"/>
+        <entry endPc="268438061" name="avgCO2" stackId="8" startPc="268437591"/>
+        <entry endPc="268438061" name="avgIntakeRate" stackId="9" startPc="268437591"/>
+        <entry endPc="268438061" name="id" stackId="10" startPc="268437591"/>
+        <entry endPc="268438061" name="time" stackId="11" startPc="268437591"/>
+        <entry endPc="268438061" name="start" stackId="12" startPc="268437591"/>
+        <entry endPc="268438061" name="body" stackId="13" startPc="268437591"/>
+        <entry endPc="268438309" name="url" stackId="1" startPc="268438067"/>
+        <entry endPc="268438309" name="id" stackId="2" startPc="268438067"/>
+        <entry endPc="268438309" name="start" stackId="3" startPc="268438067"/>
+        <entry endPc="268438309" name="params" stackId="4" startPc="268438067"/>
+        <entry endPc="268438309" name="options" stackId="5" startPc="268438067"/>
+        <entry endPc="268438309" name="responseCallback" stackId="6" startPc="268438067"/>
+        <entry endPc="268438377" name="hr" stackId="1" startPc="268438315"/>
+        <entry endPc="268438377" name="activityInfo" stackId="2" startPc="268438315"/>
+        <entry endPc="268438510" name="city" stackId="1" startPc="268438382"/>
+        <entry endPc="268438510" name="url" stackId="2" startPc="268438382"/>
+        <entry endPc="268438510" name="params" stackId="3" startPc="268438382"/>
+        <entry endPc="268438510" name="options" stackId="4" startPc="268438382"/>
+        <entry endPc="268438510" name="responseCallback" stackId="5" startPc="268438382"/>
+        <entry arg="true" endPc="268438539" name="intake_ppm" stackId="1" startPc="268438512"/>
+        <entry arg="true" endPc="268438928" name="responseCode" stackId="1" startPc="268438612"/>
+        <entry arg="true" endPc="268438928" name="data" stackId="2" startPc="268438612"/>
+        <entry endPc="268438900" name="actual_aqhi" stackId="3" startPc="268438641"/>
+        <entry endPc="268438900" name="v" stackId="4" startPc="268438641"/>
+        <entry arg="true" endPc="268439073" name="body" stackId="1" startPc="268438929"/>
+        <entry endPc="268439072" name="url" stackId="2" startPc="268438933"/>
+        <entry endPc="268439072" name="params" stackId="3" startPc="268438933"/>
+        <entry endPc="268439072" name="options" stackId="4" startPc="268438933"/>
+        <entry endPc="268439072" name="responseCallback" stackId="5" startPc="268438933"/>
+        <entry arg="true" endPc="268439343" name="airExposure" stackId="1" startPc="268439079"/>
+        <entry endPc="268439342" name="personal_aqhi" stackId="2" startPc="268439083"/>
+        <entry arg="true" endPc="268439740" name="responseCode" stackId="1" startPc="268439344"/>
+        <entry arg="true" endPc="268439740" name="data" stackId="2" startPc="268439344"/>
+        <entry arg="true" endPc="268439771" name="session" stackId="1" startPc="268439741"/>
+        <entry arg="true" endPc="268439942" name="dc" stackId="1" startPc="268439839"/>
+        <entry arg="true" endPc="268440028" name="responseCode" stackId="1" startPc="268439943"/>
+        <entry arg="true" endPc="268440028" name="data" stackId="2" startPc="268439943"/>
+        <entry arg="true" endPc="268440147" name="body" stackId="1" startPc="268440029"/>
+        <entry endPc="268440146" name="url" stackId="2" startPc="268440033"/>
+        <entry endPc="268440146" name="params" stackId="3" startPc="268440033"/>
+        <entry endPc="268440146" name="options" stackId="4" startPc="268440033"/>
+        <entry endPc="268440146" name="responseCallback" stackId="5" startPc="268440033"/>
+        <entry arg="true" endPc="268440224" name="dc" stackId="1" startPc="268440181"/>
+        <entry endPc="268440302" name="mySettings" stackId="1" startPc="268440229"/>
+        <entry endPc="268440302" name="id" stackId="2" startPc="268440229"/>
+        <entry arg="true" endPc="268440359" name="session" stackId="1" startPc="268440303"/>
+        <entry endPc="268440456" name="date" stackId="1" startPc="268440379"/>
+        <entry endPc="268440456" name="activityInfo" stackId="2" startPc="268440379"/>
+        <entry endPc="268440447" name="moment" stackId="3" startPc="268440425"/>
+        <entry arg="true" endPc="268440556" name="responseCode" stackId="1" startPc="268440457"/>
+        <entry arg="true" endPc="268440556" name="data" stackId="2" startPc="268440457"/>
+        <entry arg="true" endPc="268440990" name="dc" stackId="1" startPc="268440557"/>
+        <entry endPc="268440989" name="view" stackId="2" startPc="268440561"/>
+        <entry endPc="268440989" name="clockTime" stackId="3" startPc="268440561"/>
+        <entry endPc="268440989" name="timeString" stackId="4" startPc="268440561"/>
+        <entry endPc="268441255" name="url" stackId="1" startPc="268440995"/>
+        <entry endPc="268441255" name="id" stackId="2" startPc="268440995"/>
+        <entry endPc="268441255" name="start" stackId="3" startPc="268440995"/>
+        <entry endPc="268441255" name="params" stackId="4" startPc="268440995"/>
+        <entry endPc="268441255" name="options" stackId="5" startPc="268440995"/>
+        <entry endPc="268441255" name="responseCallback" stackId="6" startPc="268440995"/>
+        <entry arg="true" endPc="268441422" name="dc" stackId="1" startPc="268441297"/>
+        <entry arg="true" endPc="268441514" name="item" stackId="1" startPc="268441442"/>
+        <entry arg="true" endPc="268441598" name="dc" stackId="1" startPc="268441555"/>
+        <entry arg="true" endPc="268441629" name="airExposureScore" stackId="1" startPc="268441599"/>
+        <entry arg="true" endPc="268442440" name="dc" stackId="1" startPc="268441630"/>
+        <entry endPc="268442439" name="blurb" stackId="2" startPc="268441634"/>
+        <entry endPc="268442439" name="view" stackId="3" startPc="268441634"/>
+        <entry endPc="268442439" name="pointer" stackId="4" startPc="268441634"/>
+        <entry endPc="268442439" name="prompt" stackId="5" startPc="268441634"/>
+        <entry arg="true" endPc="268442503" name="dc" stackId="1" startPc="268442460"/>
+        <entry arg="true" endPc="268442622" name="airExposureScore" stackId="1" startPc="268442504"/>
+        <entry arg="true" endPc="268442622" name="actual_aqhi" stackId="2" startPc="268442504"/>
+        <entry arg="true" endPc="268442622" name="duration" stackId="3" startPc="268442504"/>
+        <entry arg="true" endPc="268442622" name="avgpm25" stackId="4" startPc="268442504"/>
+        <entry arg="true" endPc="268443654" name="dc" stackId="1" startPc="268442623"/>
+        <entry endPc="268443653" name="view" stackId="2" startPc="268442627"/>
+        <entry endPc="268443653" name="total_seconds" stackId="3" startPc="268442627"/>
+        <entry endPc="268443653" name="minutes" stackId="4" startPc="268442627"/>
+        <entry endPc="268443653" name="seconds" stackId="5" startPc="268442627"/>
+        <entry endPc="268443653" name="timeString" stackId="6" startPc="268442627"/>
+        <entry endPc="268443653" name="pointer" stackId="7" startPc="268442627"/>
+        <entry endPc="268443812" name="activityInfo" stackId="1" startPc="268443678"/>
+        <entry arg="true" endPc="268443839" name="info" stackId="1" startPc="268443814"/>
+        <entry arg="true" endPc="268444262" name="session" stackId="1" startPc="268443840"/>
+        <entry arg="true" endPc="268444313" name="session" stackId="1" startPc="268444263"/>
+        <entry endPc="268444585" name="intake_ppm_rate" stackId="1" startPc="268444318"/>
+        <entry endPc="268444585" name="activity_body" stackId="2" startPc="268444318"/>
+        <entry endPc="268444698" name="profile" stackId="1" startPc="268444598"/>
+        <entry endPc="268444698" name="birth" stackId="2" startPc="268444598"/>
+        <entry endPc="268444698" name="age" stackId="3" startPc="268444598"/>
+        <entry endPc="268444692" name="now" stackId="4" startPc="268444639"/>
+        <entry endPc="268444692" name="info" stackId="5" startPc="268444639"/>
+        <entry endPc="268444761" name="profile" stackId="1" startPc="268444711"/>
+        <entry endPc="268444761" name="avgHR" stackId="2" startPc="268444711"/>
+        <entry endPc="268444866" name="info" stackId="1" startPc="268444774"/>
+        <entry endPc="268444866" name="intensityMin" stackId="2" startPc="268444774"/>
+        <entry endPc="268444939" name="info" stackId="1" startPc="268444880"/>
+        <entry endPc="268444939" name="respRate" stackId="2" startPc="268444880"/>
+        <entry endPc="268445030" name="profile" stackId="1" startPc="268444952"/>
+        <entry endPc="268445030" name="sex" stackId="2" startPc="268444952"/>
+        <entry endPc="268445210" name="heartRate" stackId="1" startPc="268445043"/>
+        <entry endPc="268445171" name="HRH" stackId="2" startPc="268445095"/>
+        <entry endPc="268445171" name="HRS" stackId="3" startPc="268445095"/>
+        <entry endPc="268445204" name="heartRateStr" stackId="4" startPc="268445065"/>
+        <entry arg="true" endPc="268446805" name="dc" stackId="1" startPc="268445211"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_summaryLabel" stackId="2" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_timeLabel" stackId="3" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_maxPM25Label" stackId="4" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_AQHILabel" stackId="5" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_personalAQHILabel" stackId="6" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_time" stackId="7" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_maxPM25" stackId="8" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_AQHI" stackId="9" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_personalAQHI" stackId="10" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_text_microLabel" stackId="11" startPc="268445223"/>
+        <entry endPc="268446805" name="rez_cmp_local_bitmap_actionMenu" stackId="12" startPc="268445223"/>
+        <entry arg="true" endPc="268447100" name="dc" stackId="1" startPc="268446806"/>
+        <entry endPc="268447100" name="rez_cmp_local_text_pAQHI" stackId="2" startPc="268446818"/>
+        <entry endPc="268447100" name="rez_cmp_local_text_blurb" stackId="3" startPc="268446818"/>
+        <entry arg="true" endPc="268447264" name="dc" stackId="1" startPc="268447101"/>
+        <entry endPc="268447264" name="rez_cmp_local_text_Message" stackId="2" startPc="268447113"/>
+        <entry arg="true" endPc="268448759" name="dc" stackId="1" startPc="268447265"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_hrLabel" stackId="2" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_pmLabel" stackId="3" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_co2Label" stackId="4" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_timeLabel" stackId="5" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_hr" stackId="6" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_pm25" stackId="7" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_co2" stackId="8" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_timer" stackId="9" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_pm25Units" stackId="10" startPc="268447277"/>
+        <entry endPc="268448759" name="rez_cmp_local_text_co2Units" stackId="11" startPc="268447277"/>
+        <entry arg="true" endPc="268450562" name="dc" stackId="1" startPc="268448760"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_temp" stackId="2" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_hum" stackId="3" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_pm25" stackId="4" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_co2" stackId="5" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_co2Label" stackId="6" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_humLabel" stackId="7" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_pm25Label" stackId="8" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_tempLabel" stackId="9" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_pm25Units" stackId="10" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_co2Units" stackId="11" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_tempUnits" stackId="12" startPc="268448772"/>
+        <entry endPc="268450562" name="rez_cmp_local_text_humUnits" stackId="13" startPc="268448772"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="timeLabel"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="timeLbl"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="personalAQHIabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="microLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="PM25_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="humidity_graph_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="tempUnits"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="edit"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="PM25_units"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="CO2_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="CO2_units"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AQHILabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="blurb"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="aqhi_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="hrLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="humLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="humidity_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="error"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="tempLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="temp_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="humidity_units"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="dismiss"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="loading"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="summary"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="temp_units"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="pm25Label"/>
+        <annotationEntry annotation="typecheck" class="AirExposureDelegate" module="globals" symbol="isActionButton"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="actionMenu"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="temp_graph_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="air_exposure_graph_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="CO2_graph_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="humUnits"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="maxpm25"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="PM25_graph_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="air_exposure_units"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="co2Label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="air_exposure_label"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ppmLabel"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="95" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/AirExposureDelegate" offset="270" parentId="globals" symbolId="AirExposureDelegate" type="class"/>
+        <dataEntry label="globals/InitialDelegate" offset="365" parentId="globals" symbolId="InitialDelegate" type="class"/>
+        <dataEntry label="globals/AirSenseApp" offset="436" parentId="globals" symbolId="AirSenseApp" type="class"/>
+        <dataEntry label="globals/AirSenseDelegate" offset="507" parentId="globals" symbolId="AirSenseDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="778" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/InitialView" offset="857" parentId="globals" symbolId="InitialView" type="class"/>
+        <dataEntry label="globals/JsonTransaction" offset="936" parentId="globals" symbolId="JsonTransaction" type="class"/>
+        <dataEntry label="globals/AirSenseView" offset="999" parentId="globals" symbolId="AirSenseView" type="class"/>
+        <dataEntry label="globals/EndActivityView" offset="1126" parentId="globals" symbolId="EndActivityView" type="class"/>
+        <dataEntry label="globals/AirSenseMenuDelegate" offset="1181" parentId="globals" symbolId="AirSenseMenuDelegate" type="class"/>
+        <dataEntry label="globals/ActivityMetrics" offset="1236" parentId="globals" symbolId="ActivityMetrics" type="module"/>
+        <dataEntry label="globals/UserPromptView" offset="1315" parentId="globals" symbolId="UserPromptView" type="class"/>
+        <dataEntry label="globals/AirExposureScoreView" offset="1386" parentId="globals" symbolId="AirExposureScoreView" type="class"/>
+        <dataEntry label="globals/AirSenseDataField" offset="1481" parentId="globals" symbolId="AirSenseDataField" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1664" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1711" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="1782" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="1821" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1852" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="2179" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Menus/ActionMenu" offset="2210" parentId="Menus" symbolId="ActionMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="AirExposureDelegate" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435518" name="onBack" parent="AirExposureDelegate" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435598" name="onAction" parent="AirExposureDelegate" startPc="268435519">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435641" name="onSwipe" parent="AirExposureDelegate" startPc="268435599">
+            <param id="swipeEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435672" name="initialize" parent="AirExposureDelegate" startPc="268435642">
+            <param id="personal_aqhi"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435727" name="isActionButton" parent="AirExposureDelegate" startPc="268435673">
+            <param id="button"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435775" name="onKey" parent="AirExposureDelegate" startPc="268435728">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435801" name="getApp" startPc="268435776">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435820" name="&lt;init&gt;" parent="InitialDelegate" startPc="268435802">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436089" name="pushActivityView" parent="InitialDelegate" startPc="268435821">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436110" name="initialize" parent="InitialDelegate" startPc="268436090">
+            <documentation>
+                <![CDATA[<div class="description"> Constructor<br/> <div class="param"> scanDataModel The model containing the scan results</div><br/> <div class="param"> viewController Object that controls pushing new views</div><br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436208" name="onKey" parent="InitialDelegate" startPc="268436111">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436227" name="&lt;init&gt;" parent="AirSenseApp" startPc="268436209">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436230" name="onStart" parent="AirSenseApp" startPc="268436228">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436307" name="getInitialView" parent="AirSenseApp" startPc="268436231">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436328" name="initialize" parent="AirSenseApp" startPc="268436308">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436331" name="onStop" parent="AirSenseApp" startPc="268436329">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436350" name="&lt;init&gt;" parent="AirSenseDelegate" startPc="268436332">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436428" name="getId" parent="AirSenseDelegate" startPc="268436351">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436653" name="getUserRiskScore" parent="AirSenseDelegate" startPc="268436429">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436796" name="onKey" parent="AirSenseDelegate" startPc="268436654">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436982" name="onAQHIReceive" parent="AirSenseDelegate" startPc="268436797">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437067" name="getDuration" parent="AirSenseDelegate" startPc="268436983">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437303" name="setRealAQHI" parent="AirSenseDelegate" startPc="268437068">
+            <param id="aqhi"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437506" name="onRiskScoreReceive" parent="AirSenseDelegate" startPc="268437304">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437586" name="getStartTime" parent="AirSenseDelegate" startPc="268437507">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438062" name="saveScore" parent="AirSenseDelegate" startPc="268437587">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438310" name="getActivity" parent="AirSenseDelegate" startPc="268438063">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438377" name="getAverageActivityHr" parent="AirSenseDelegate" startPc="268438311">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438511" name="makeAQHIRequest" parent="AirSenseDelegate" startPc="268438378">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438539" name="calculatePersonalAQHI" parent="AirSenseDelegate" startPc="268438512">
+            <param id="intake_ppm"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438611" name="stopActivity" parent="AirSenseDelegate" startPc="268438540">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438928" name="onReceive" parent="AirSenseDelegate" startPc="268438612">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439073" name="makeRequest" parent="AirSenseDelegate" startPc="268438929">
+            <param id="body"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439078" name="onBack" parent="AirSenseDelegate" startPc="268439074">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439343" name="setPersonalAQHI" parent="AirSenseDelegate" startPc="268439079">
+            <param id="airExposure"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439740" name="onActivityReceive" parent="AirSenseDelegate" startPc="268439344">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439771" name="initialize" parent="AirSenseDelegate" startPc="268439741">
+            <param id="session"/>
+            <documentation>
+                <![CDATA[<div class="description"> Constructor<br/> <div class="param"> deviceDataModel The device data model</div><br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439795" name="&lt;init&gt;" parent="Rez" startPc="268439772">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439814" name="&lt;init&gt;" parent="InitialView" startPc="268439796">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="InitialView">
+            <documentation>
+                <![CDATA[<div class="description"> Called when this View is brought to the foreground. Restore<br/> the state of this View and prepare it to be shown. This includes<br/> loading resources into memory.<br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439817" name="onLayout" parent="InitialView" startPc="268439815">
+            <param id="dc"/>
+            <documentation>
+                <![CDATA[<div class="description"> Load your resources here<br/> <div class="param"> dc Device context</div><br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439838" name="initialize" parent="InitialView" startPc="268439818">
+            <documentation>
+                <![CDATA[<div class="description"> Constructor<br/> <div class="param"> scanDataModel The model containing the scan results</div><br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="InitialView">
+            <documentation>
+                <![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of this View here. This includes freeing resources from<br/> memory.<br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439942" name="onUpdate" parent="InitialView" startPc="268439839">
+            <param id="dc"/>
+            <documentation>
+                <![CDATA[<div class="description"> Update the view<br/> <div class="param"> dc Device context</div><br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonTransaction">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="JsonTransaction">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440028" name="onReceive" parent="JsonTransaction" startPc="268439943">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440147" name="makeRequest" parent="JsonTransaction" startPc="268440029">
+            <param id="body"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440180" name="&lt;init&gt;" parent="AirSenseView" startPc="268440148">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440224" name="onLayout" parent="AirSenseView" startPc="268440181">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440302" name="getId" parent="AirSenseView" startPc="268440225">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440359" name="initialize" parent="AirSenseView" startPc="268440303">
+            <param id="session"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440374" name="onHide" parent="AirSenseView" startPc="268440360">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440456" name="getStartTime" parent="AirSenseView" startPc="268440375">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440556" name="onReceive" parent="AirSenseView" startPc="268440457">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440990" name="onUpdate" parent="AirSenseView" startPc="268440557">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441256" name="makeRequest" parent="AirSenseView" startPc="268440991">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441275" name="&lt;init&gt;" parent="EndActivityView" startPc="268441257">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441296" name="initialize" parent="EndActivityView" startPc="268441276">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441422" name="onUpdate" parent="EndActivityView" startPc="268441297">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441441" name="&lt;init&gt;" parent="AirSenseMenuDelegate" startPc="268441423">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441514" name="onMenuItem" parent="AirSenseMenuDelegate" startPc="268441442">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441535" name="initialize" parent="AirSenseMenuDelegate" startPc="268441515">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="ActivityMetrics">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441554" name="&lt;init&gt;" parent="UserPromptView" startPc="268441536">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441598" name="onLayout" parent="UserPromptView" startPc="268441555">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441629" name="initialize" parent="UserPromptView" startPc="268441599">
+            <param id="airExposureScore"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442440" name="onUpdate" parent="UserPromptView" startPc="268441630">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442459" name="&lt;init&gt;" parent="AirExposureScoreView" startPc="268442441">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442503" name="onLayout" parent="AirExposureScoreView" startPc="268442460">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442622" name="initialize" parent="AirExposureScoreView" startPc="268442504">
+            <param id="airExposureScore"/>
+            <param id="actual_aqhi"/>
+            <param id="duration"/>
+            <param id="avgpm25"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443654" name="onUpdate" parent="AirExposureScoreView" startPc="268442623">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443673" name="&lt;init&gt;" parent="AirSenseDataField" startPc="268443655">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443813" name="refreshActivityStats" parent="AirSenseDataField" startPc="268443674">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443839" name="compute" parent="AirSenseDataField" startPc="268443814">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444262" name="setupField" parent="AirSenseDataField" startPc="268443840">
+            <param id="session"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444313" name="initialize" parent="AirSenseDataField" startPc="268444263">
+            <param id="session"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444585" name="createActivityJson" parent="AirSenseDataField" startPc="268444314">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444698" name="getAge" parent="ActivityMetrics" startPc="268444586">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444761" name="getAverageHeartRate" parent="ActivityMetrics" startPc="268444699">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444867" name="getIntensityMinutes" parent="ActivityMetrics" startPc="268444762">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268444939" name="getRespirationRate" parent="ActivityMetrics" startPc="268444868">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268445030" name="getSex" parent="ActivityMetrics" startPc="268444940">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268445210" name="getHeartRate" parent="ActivityMetrics" startPc="268445031">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268446805" name="Score" parent="Layouts" startPc="268445211">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268447100" name="UserPrompt" parent="Layouts" startPc="268446806">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268447264" name="ErrorLayout" parent="Layouts" startPc="268447101">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268448759" name="Summary" parent="Layouts" startPc="268447265">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268450562" name="Data" parent="Layouts" startPc="268448760">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268450581" name="&lt;init&gt;" parent="ActionMenu" startPc="268450563">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268450783" name="initialize" parent="ActionMenu" startPc="268450582">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

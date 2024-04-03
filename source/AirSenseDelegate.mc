@@ -13,13 +13,22 @@ using Toybox.Communications;
 
 class AirSenseDelegate extends WatchUi.BehaviorDelegate {
     private var _session;
-    private var _viewController as ViewController;
-    private var _dataModel as DeviceDataModel;
+   // private var _viewController as ViewController;
+   // private var _dataModel as DeviceDataModel;
     
-    var airExposureScore = 0.0f;
+    var airExposureScore = 0.0f; // personal AQHI
+    var risk_score = 1.0f;
+    var real_aqhi = 0.0f;
+    var activities = null;
+    var time;
+    var avgPM25;
 
     const AIR_EXPOSURE_FIELD_ID = 0;  // Field ID from resources.
     hidden var mAirExposureField; //means protected
+
+    const AQHI_FIELD_ID = 5;  // Field ID from resources.
+    hidden var mAQHIField; //means protected
+
 
     //! Constructor
     //! @param deviceDataModel The device data model
@@ -27,99 +36,10 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
     {       
         BehaviorDelegate.initialize();
 
-        _dataModel = dataModel;
+        //_dataModel = dataModel;
         _session = session;
-        _viewController = viewController;
+       // _viewController = viewController;
 
-    }
-
-    public function setAirExposureFactor(airExposure){
-        if( null == mAirExposureField ) {
-            //Create the custom FIT data field we want to record.
-            mAirExposureField = _session.createField(
-            WatchUi.loadResource(Rez.Strings.air_exposure_label), 
-            AIR_EXPOSURE_FIELD_ID,
-            FitContributor.DATA_TYPE_FLOAT, 
-            { :mesgType=>Fit.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.air_exposure_units) }   //    FitContributor.MESG_TYPE_RECORD for graph information (FitContributor.MESG_TYPE_SESSION` for summary information)
-            );
-
-            mAirExposureField.setData(0.0);
-        }
-
-        System.println("Air exposure score: " + airExposure);
-
-        if(airExposure !=null) {
-            mAirExposureField.setData(airExposure);
-        }
-    }
-
-    // The user’s seven-day average resting heart rate (bpm)
-    function getAverageRestingHR() {
-        var profile = UserProfile.getProfile();
-        var avgHR = profile.averageRestingHeartRate; 
-
-        if (avgHR != null) {
-            avgHR = avgHR;
-        } else {
-            avgHR = 0;
-        }
-
-        return avgHR;
-    }
-
-    // The user's gender
-    function getSex() {
-        var profile = UserProfile.getProfile();
-        var sex = profile.gender; 
-
-        if (sex == UserProfile.GENDER_FEMALE) {
-            sex = "Female";
-        } else if (sex == UserProfile.GENDER_MALE) {
-            sex = "Male";
-        } else {
-            sex = "--"; // UserProfile.GENDER_UNSPECIFIED;
-        }
-
-        return sex;
-    }
-
-    // User's current age
-    function getAge() {
-        var profile = UserProfile.getProfile();
-        var birth = profile.birthYear; // Year user was born
-        var age = 0;
-
-        if (birth != null) {
-            var now = Time.now();
-            var info = Gregorian.info(now, Time.FORMAT_LONG);
-            age = info.year - birth;
-        }
-
-        return age;
-    }
-
-    // User's weight in grams
-    function getWeight() {
-        var profile = UserProfile.getProfile();
-        var weight = profile.weight; 
-
-        if (weight == null) {
-            weight = 0;
-        } 
-
-        return weight;
-    }
-
-    // User's height in cm
-    function getHeight() {
-        var profile = UserProfile.getProfile();
-        var height = profile.height; 
-
-        if (height == null) {
-            height = 0;
-        } 
-
-        return height;
     }
 
     // The average heart rate during the current activity in beats per minute (bpm).
@@ -136,7 +56,7 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
 
     // Elapsed time of the current activity in milliseconds (ms).
     function getDuration(){
-        var time = 0;
+        time = 0;
         var activityInfo = Activity.getActivityInfo();
         if (activityInfo != null) {
             if (activityInfo.elapsedTime != null ) {
@@ -146,18 +66,17 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
         return time;
     }
 
-    // Current respiration rate for the user, in breaths per minute
-    function getRespirationRate(){ 
-        var respRate = 0;       
-
-        var monitorInfo = ActivityMonitor.getInfo();
-        if (monitorInfo != null) {
-            if (monitorInfo.respirationRate != null ) {
-                respRate = monitorInfo.respirationRate;
+    // The starting time of the current activity. 
+    function getStartTime(){
+        var date = 0;
+        var activityInfo = Activity.getActivityInfo();
+        if (activityInfo != null) {
+            if (activityInfo.startTime != null ) {
+                var moment = activityInfo.startTime;
+                date = moment.value(); //Get the UTC value of a Moment.
             }
         }
-
-        return respRate;
+        return date;
     }
 
     // A unique alphanumeric device identifier
@@ -166,36 +85,11 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
         var mySettings = System.getDeviceSettings();
         var id = mySettings.uniqueIdentifier;
         if (id != null) {
-            System.println(id); 
+            System.println("ID" + id); 
         } else{
             id = "--";
         }
         return id.toString();
-    }
-
-    public function stopActivity()
-    {
-        var avgRestingHr = getAverageRestingHR();
-        var sex = getSex();
-        var age =  getAge(); 
-        var activityHr = getAverageActivityHr();
-        var rr = getRespirationRate();
-        var id = getId();
-
-        var body = { 
-            "id"  => id,
-            "age"  =>  age,
-            "sex"  =>  sex,
-            "avg_resting_hr"  =>  avgRestingHr,
-            "respiration_rate"  =>  rr,
-            "activity_hr"  =>  activityHr
-        };
-
-        if (Toybox has :ActivityRecording) {                         // check device for activity recording
-            if ((_session != null) && _session.isRecording()) {
-                makeRequest(body);
-            }
-        }
     }
 
     // if the Start/Enter key is pressed
@@ -204,38 +98,267 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
         var key = evt.getKey();
         if (WatchUi.KEY_START == key || WatchUi.KEY_ENTER == key) { 
             System.println("Stop activity recording!!");
+            var progressBar = new WatchUi.ProgressBar("Calculating Air Quality...", null); // null for busy indicator
+            
+            WatchUi.pushView(
+                progressBar,
+                self,
+                WatchUi.SLIDE_DOWN
+            );
+            //var v = new $.EndActivityView();
+            //WatchUi.pushView(v, self, WatchUi.SLIDE_UP);
             stopActivity();
             return true;    
         }
         return false;
     }
-    
+
+    public function stopActivity()
+    {
+        if (Toybox has :ActivityRecording) {                         // check device for activity recording
+            if ((_session != null) && _session.isRecording()) {
+                makeAQHIRequest(); // get real AQHI
+            }
+        }
+    }
+
+    function onAQHIReceive(responseCode as Number, data as Dictionary?) as Void {
+    if (responseCode == 200) {
+        System.println("Request Successful");                   // print success
+        System.println("AQHI Data: " + data);
+        real_aqhi = data.get("features")[0].get("properties").get("aqhi");
+        System.println("AQHI: " + real_aqhi);
+        getUserRiskScore(); // get user risk score
+    } else {
+        System.println("Response: " + responseCode);            // print response code
+    }
+    }
+
+    function makeAQHIRequest() as Void {
+        // geocode to name , but inside location would be null
+        var city = "Calgary";
+        var url = "https://api.weather.gc.ca/collections/aqhi-observations-realtime/items?f=json&location_name_en=" + city + "&latest=true";      
+
+        var params = null; 
+
+        var options = {                                             
+            :method => Communications.HTTP_REQUEST_METHOD_GET,      
+            :headers => {                                           
+                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,
+            },
+            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+        };
+
+        var responseCallback = method(:onAQHIReceive);                  
+
+        Communications.makeWebRequest(url, params, options, responseCallback);
+    }
+
     // set up the response callback function
-    function onReceive(responseCode as Number, data as Dictionary?) as Void {
+    function onRiskScoreReceive(responseCode as Number, data as Dictionary?) as Void {
         if (responseCode == 200) {
             System.println("Request Successful");                   // print success
-            System.println("Data: " + data);
-            airExposureScore = data.get("air_exposure_score");
-            setAirExposureFactor(airExposureScore);
-            _session.stop();                                      // stop the session
-            _session.save();                                      // save the session
-            _session = null;   // set session control variable to null
-            var v = new $.AirExposureScoreView(airExposureScore);
-            WatchUi.pushView(v, new $.AirExposureDelegate(), WatchUi.SLIDE_UP);
+            System.println("User Data: " + data);
+            if(data["document"] != null){ // user found
+                var risk = data["document"]["risk_score"];
+                if(risk != null){
+                    risk_score = risk;
+                }
+            } else {
+                //keep at default of 1
+                System.println("User not found in database. Please fill in questionaire");
+            }
+            System.println("Risk score: " + risk_score);
+            getActivity(); // get the activity stats
         } else {
             System.println("Response: " + responseCode);            // print response code
         }
     }
 
-    function makeRequest(body) as Void {
-        var url = "https://azureairsenseapi.azurewebsites.net/api/heartRate/140";                         // set the url
-
-        var params = body; 
+    function getUserRiskScore() as Void {
+        var url = "https://us-west-2.aws.data.mongodb-api.com/app/data-nbfdj/endpoint/data/v1/action/findOne"; 
+        var id = getId();
+    
+        var params = { 
+            "collection" => "user",
+            "database" => "airsense",
+            "dataSource" => "AirSense",
+            "filter" => {
+                "uid"  => id
+            }
+        }; 
 
         var options = {                                             
             :method => Communications.HTTP_REQUEST_METHOD_POST,      
             :headers => {                                           
-                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON
+                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,
+                "Access-Control-Request-Headers" => "*",
+                "api-key" => "BtY9dwfdxm1o1svQYUbERkov0woXEVmkVTXpJ2Gi1vhTml6Qfiktf5qDUzmYYEay"
+            },
+            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+        };
+
+        var responseCallback = method(:onRiskScoreReceive);                  
+
+        Communications.makeWebRequest(url, params, options, responseCallback);
+    }
+
+    function onActivityReceive(responseCode as Number, data as Dictionary?) as Void {
+        if (responseCode == 200) {
+            System.println("Request Successful");                   // print success
+            System.println("Activity Data: " + data);
+            if(data["document"] != null){ // activity found
+                activities = data["document"]["activity"];
+                if(activities.size() == 0){
+                     activities = [{ 
+                        "hr" => 0,
+                        "PM2.5" => 0,
+                        "CO2" => 0,
+                        "intake_rate"  => 0
+                    }];
+                    System.println("Activity not found");
+                }
+                System.println("Activity: " + activities);
+            } else {
+                activities = [{ 
+                "hr" => 0,
+                "PM2.5" => 0,
+                "CO2" => 0,
+                "intake_rate"  => 0
+                }];
+                System.println("Activity not found");
+            }
+            saveScore(); // calculate risk, save in database and fit file
+        } else {
+            System.println("Response: " + responseCode);            // print response code
+        }
+    }
+
+    function getActivity() as Void {
+        var url = "https://us-west-2.aws.data.mongodb-api.com/app/data-nbfdj/endpoint/data/v1/action/findOne"; 
+        var id = getId();
+        var start = getStartTime();
+    
+        var params = { 
+            "collection" => "activity",
+            "database" => "airsense",
+            "dataSource" => "AirSense",
+            "filter" => {
+                "id"  => id,
+                "start_time"  =>  start
+            }
+        }; 
+
+        var options = {                                             
+            :method => Communications.HTTP_REQUEST_METHOD_POST,      
+            :headers => {                                           
+                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,
+                "Access-Control-Request-Headers" => "*",
+                "api-key" => "BtY9dwfdxm1o1svQYUbERkov0woXEVmkVTXpJ2Gi1vhTml6Qfiktf5qDUzmYYEay"
+            },
+            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+        };
+
+        var responseCallback = method(:onActivityReceive);                  
+
+        Communications.makeWebRequest(url, params, options, responseCallback);
+    }
+
+    // Assuming intake_rate is an array of Numbers and risk, aqhi are Numbers
+    function determineRelativeRisk(intake_rate, risk, aqhi) {
+        System.println("Average intake rate: " + intake_rate); 
+        System.println("Risk score is: " + risk); 
+        System.println("AQHI is: " + aqhi); 
+
+        var lower = [0, 20, 40, 60, 70, 80, 85, 90, 95, 100];
+        var upper = [20, 40, 60, 70, 80, 90, 95, 100, 105, 110];
+
+        var intermediateRisk = intake_rate * risk;
+        
+        var index = (aqhi-1).toNumber();
+        var intermediateLower = lower[index] / risk;
+        var intermediateUpper = upper[index];
+
+        var relativeRisk = (intermediateRisk - intermediateLower) / (intermediateUpper - intermediateLower) / 1.5;
+
+        if (relativeRisk < 0) {
+            relativeRisk = 0;
+        }
+
+        var experiencedRisk = aqhi + relativeRisk;
+
+        experiencedRisk = Math.round(experiencedRisk * 100) / 100;
+
+        if (experiencedRisk > 11) {
+            experiencedRisk = 11;
+        }
+
+        return experiencedRisk;
+    }
+
+    public function saveScore()
+    {
+        var totalHr = 0;
+        var totalPM25 = 0.0f;
+        var totalCO2 = 0.0f;
+        var totalIntakeRate = 0.0f;
+
+        var numActivities = activities.size();
+        System.println("Number of activites" + numActivities);
+        for (var i = 0; i < numActivities; i++) {
+            // Accumulate values
+            totalHr += activities[i]["hr"];
+            totalPM25 += activities[i]["PM2.5"];
+            totalCO2 += activities[i]["CO2"];
+            totalIntakeRate += activities[i]["intake_rate"];
+        }
+
+        // Calculate averages
+        var avgHr = totalHr / numActivities;
+        avgPM25 = totalPM25 / numActivities;
+        var avgCO2 = totalCO2 / numActivities;
+        var avgIntakeRate = totalIntakeRate / numActivities;
+
+        var aqhi = Math.floor(real_aqhi);
+        airExposureScore = determineRelativeRisk(avgIntakeRate, risk_score, aqhi); // calculate the personal risk
+        var id = getId();
+        var time = getDuration();
+        var start = getStartTime();
+
+        var body = { 
+            "collection" => "score",
+            "database" => "airsense",
+            "dataSource" => "AirSense",
+            "document" => {
+            "id"  => id,
+            "activity_avg"  =>  {
+                "hr" => avgHr,
+                "PM2.5" => avgPM25,
+                "CO2" => avgCO2, //TODO: add location?
+                "intake_rate"  => avgIntakeRate},
+            "AQHI"  =>  real_aqhi,
+            "personal_AQHI"  =>  airExposureScore,
+            "duration_ms"  =>  time,
+            "start_time"  =>  start
+            }
+        };
+
+        System.println("Adding to database: " + body);
+
+        makeRequest(body); 
+    }
+
+    function makeRequest(body) as Void {
+       var url = "https://us-west-2.aws.data.mongodb-api.com/app/data-nbfdj/endpoint/data/v1/action/insertOne"; 
+       
+       var params = body; 
+
+        var options = {                                             
+            :method => Communications.HTTP_REQUEST_METHOD_POST,      
+            :headers => {                                           
+                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,
+                "Access-Control-Request-Headers" => "*",
+                "api-key" => "BtY9dwfdxm1o1svQYUbERkov0woXEVmkVTXpJ2Gi1vhTml6Qfiktf5qDUzmYYEay"
             },
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
         };
@@ -243,6 +366,65 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
         var responseCallback = method(:onReceive);                  
 
         Communications.makeWebRequest(url, params, options, responseCallback);
+    }
+
+    // set up the response callback function
+    function onReceive(responseCode as Number, data as Dictionary?) as Void {
+        if (responseCode == 200 || responseCode == 201) {
+            System.println("Request Successful");                   // print success
+            System.println("Data: " + data);
+            var actual_aqhi = Math.floor(real_aqhi);
+            setPersonalAQHI(airExposureScore);
+            setRealAQHI(actual_aqhi);
+            _session.stop();                                      // stop the session
+            _session.save();                                      // save the session
+            _session = null;   // set session control variable to null
+            var v = new $.AirExposureScoreView(airExposureScore, actual_aqhi, time, avgPM25);
+            WatchUi.pushView(v, new $.AirExposureDelegate(airExposureScore), WatchUi.SLIDE_UP);
+        } else {
+            System.println("Response: " + responseCode);            // print response code
+        }
+    }
+
+    public function setPersonalAQHI(airExposure){
+        if( null == mAirExposureField ) {
+            //Create the custom FIT data field we want to record.
+            mAirExposureField = _session.createField(
+            WatchUi.loadResource(Rez.Strings.air_exposure_label), 
+            AIR_EXPOSURE_FIELD_ID,
+            FitContributor.DATA_TYPE_FLOAT, 
+            { :mesgType=>Fit.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.air_exposure_units) }   //    FitContributor.MESG_TYPE_RECORD for graph information (FitContributor.MESG_TYPE_SESSION` for summary information)
+            );
+
+            mAirExposureField.setData(0.0);
+        }
+
+        var personal_aqhi = airExposure.format("%.2f").toFloat();
+        System.println("Personal AQHI: " + personal_aqhi);
+
+        if(airExposure !=null) {
+            mAirExposureField.setData(personal_aqhi);
+        }
+    }
+
+    public function setRealAQHI(aqhi){
+        if( null == mAQHIField ) {
+            //Create the custom FIT data field we want to record.
+            mAQHIField = _session.createField(
+            WatchUi.loadResource(Rez.Strings.aqhi_label), 
+            AQHI_FIELD_ID,
+            FitContributor.DATA_TYPE_FLOAT, 
+            { :mesgType=>Fit.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.air_exposure_units) }   //    FitContributor.MESG_TYPE_RECORD for graph information (FitContributor.MESG_TYPE_SESSION` for summary information)
+            );
+
+            mAQHIField.setData(0.0);
+        }
+
+        System.println("Real AQHI: " + aqhi);
+
+        if(aqhi !=null) {
+            mAQHIField.setData(aqhi);
+        }
     }
 
 }

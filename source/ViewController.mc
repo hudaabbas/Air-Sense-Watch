@@ -23,25 +23,8 @@ class ViewController {
     public function getInitialView() as Array<ScanView or ScanDelegate> 
     {
         var scanDataModel = _modelFactory.getScanDataModel();
-        BluetoothLowEnergy.setScanState(BluetoothLowEnergy.SCAN_STATE_SCANNING);//testing
+        BluetoothLowEnergy.setScanState(BluetoothLowEnergy.SCAN_STATE_SCANNING);
         return [new $.ScanView(scanDataModel), new $.ScanDelegate(scanDataModel, self)] as Array<ScanView or ScanDelegate>;
-    }
-
-    //! Push the scan menu view
-    public function pushScanMenu() as Void 
-    {
-
-        //TODO: look at replacing this view
-        var menu = new WatchUi.Menu();
-        menu.setTitle ("Main Menu");
-        menu.addItem("Scan", :search);
-        menu.addItem("Stop", :stop);
-        menu.addItem("Max PPO2", :maxPPO2);
-		
-		
-	    var mmd = new $.MainMenuDelegate();
-        
-	    WatchUi.pushView(menu, mmd, WatchUi.SLIDE_UP );
     }
 
     //! Push the device view
@@ -51,6 +34,12 @@ class ViewController {
         var deviceDataModel = _modelFactory.getDeviceDataModel(scanResult);
         var v = new $.MainView(deviceDataModel);
         WatchUi.pushView(v, new $.MainViewDelegate(deviceDataModel,v, self), WatchUi.SLIDE_UP);
+    }
+
+    public function getDeviceDataModel(scanResult as ScanResult) as DeviceDataModel 
+    {
+        var deviceDataModel = _modelFactory.getDeviceDataModel(scanResult);
+        return deviceDataModel;
     }
 
     public function pushActivityView(deviceDataModel) as Void

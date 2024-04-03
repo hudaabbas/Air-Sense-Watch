@@ -1,3 +1,7 @@
 <drawables>
-    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
-</drawables>   
+    <bitmap id="LauncherIcon" filename="Custom_Logo_for_AirSense_30x30___2_Balanced.png" />
+    <bitmap id="Background" filename="AirSenseBG.png" scaleX="100%" scaleY="80%" scaleRelativeTo="screen"/>
+    <bitmap id="Bg" filename="AirSense.png" scaleX="110%" scaleY="105%" scaleRelativeTo="screen"/>
+    <bitmap id="Icon" filename="Icon.png" scaleX="30%" scaleRelativeTo="screen"/>
+    <bitmap id="topRight" scaleX="25%" scaleRelativeTo="screen" filename="start.png" />
+   </drawables>   

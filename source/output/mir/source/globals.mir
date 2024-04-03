@@ -1,0 +1,9 @@
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/globals.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/globals.mc"; @line = 3; @position = 4; ]
+var _showHeartRate as Lang.Boolean = true;
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/globals.mc"; @line = 4; @position = 4; ]
+var _avgHeartRate as Lang.Number = 255;
+[ @file = "/Users/hudaabbas/MonkeyC/AirSense/source/globals.mc"; @line = 1; ]
+<init> {
+}

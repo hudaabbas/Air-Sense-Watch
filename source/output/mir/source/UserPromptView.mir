@@ -1,0 +1,363 @@
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 4; ]
+class UserPromptView extends WatchUi.View{
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 6; @position = 9; ]
+    var _personal_aqhi;
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 8; ]
+    function initialize(airExposureScore) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_8_42_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 9 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 10 8 ]
+        %tmp.5 = lgetv %airExposureScore;
+        putv self :_personal_aqhi %tmp.5;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_8_42_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 14; ]
+    function onLayout(dc as Dc) as Void {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_14_40_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 15 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :UserPrompt;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_14_40_stop:
+    }
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 18; ]
+    public
+    function onUpdate(dc) {
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 19 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_stop" ]
+        %blurb.1 = local;
+        %tmp.2 = getv ? :Lang;
+        %tmp.3 = getv function %tmp.2 :format;
+        %tmp.4 = "Your personal AQHI is $1$.";
+        %tmp.5 = newa 1;
+        %tmp.7 = getv ? :_personal_aqhi;
+        %tmp.8 = getv function %tmp.7 :format;
+        %tmp.9 = "%.1f";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        %tmp.11 = dup %tmp.5;
+        %tmp.12 = aputv %tmp.11 0 %tmp.10;
+        %tmp.13 = invoke %tmp.2 %tmp.3(%tmp.4, %tmp.12);
+        lputv %blurb.1 %tmp.13;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 20 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_stop" ]
+        %view.2 = local;
+        %tmp.15 = getv ? :View;
+        %tmp.16 = getv function %tmp.15 :findDrawableById;
+        %tmp.17 = "pAQHI";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = as %tmp.18 Toybox.WatchUi.Text;
+        lputv %view.2 %tmp.19;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 21 8 ]
+        %tmp.20 = lgetv %view.2;
+        %tmp.21 = getv function %tmp.20 :setText;
+        %tmp.23 = lgetv %blurb.1;
+        invoke %tmp.20 %tmp.21(%tmp.23);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 23 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_stop" ]
+        %pointer.3 = local;
+        %tmp.24 = 94;
+        lputv %pointer.3 %tmp.24;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 24 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_8_if_stmt:
+        %tmp.26 = getv ? :_personal_aqhi;
+        %tmp.27 = 2;
+        %tmp.28 = lt %tmp.26 %tmp.27;
+        bf %tmp.28 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_8_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_30_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 25 12 ]
+        %tmp.29 = 115;
+        lputv %pointer.3 %tmp.29;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 26 12 ]
+        %tmp.30 = lgetv %view.2;
+        %tmp.31 = getv function %tmp.30 :setColor;
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :COLOR_GREEN;
+        invoke %tmp.30 %tmp.31(%tmp.33);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_30_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_8_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 27 15 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_15_if_stmt:
+        %tmp.35 = getv ? :_personal_aqhi;
+        %tmp.36 = 4;
+        %tmp.37 = lt %tmp.35 %tmp.36;
+        bf %tmp.37 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_15_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_15_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_38_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 28 12 ]
+        %tmp.38 = 155;
+        lputv %pointer.3 %tmp.38;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 29 12 ]
+        %tmp.39 = lgetv %view.2;
+        %tmp.40 = getv function %tmp.39 :setColor;
+        %tmp.41 = getm $.Toybox.Graphics;
+        %tmp.42 = getv %tmp.41 :COLOR_BLUE;
+        invoke %tmp.39 %tmp.40(%tmp.42);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_38_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_15_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_15_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 30 15 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_15_if_stmt:
+        %tmp.44 = getv ? :_personal_aqhi;
+        %tmp.45 = 6;
+        %tmp.46 = lt %tmp.44 %tmp.45;
+        bf %tmp.46 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_15_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_15_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_38_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 31 12 ]
+        %tmp.47 = 200;
+        lputv %pointer.3 %tmp.47;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 32 12 ]
+        %tmp.48 = lgetv %view.2;
+        %tmp.49 = getv function %tmp.48 :setColor;
+        %tmp.50 = getm $.Toybox.Graphics;
+        %tmp.51 = getv %tmp.50 :COLOR_YELLOW;
+        invoke %tmp.48 %tmp.49(%tmp.51);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_38_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_15_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_15_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 33 15 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_15_if_stmt:
+        %tmp.53 = getv ? :_personal_aqhi;
+        %tmp.54 = 8;
+        %tmp.55 = lt %tmp.53 %tmp.54;
+        bf %tmp.55 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_15_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_15_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_38_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 34 12 ]
+        %tmp.56 = 243;
+        lputv %pointer.3 %tmp.56;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 35 12 ]
+        %tmp.57 = lgetv %view.2;
+        %tmp.58 = getv function %tmp.57 :setColor;
+        %tmp.59 = getm $.Toybox.Graphics;
+        %tmp.60 = getv %tmp.59 :COLOR_ORANGE;
+        invoke %tmp.57 %tmp.58(%tmp.60);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_38_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_15_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_15_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_36_15_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 37 12 ]
+        %tmp.61 = 286;
+        lputv %pointer.3 %tmp.61;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 38 12 ]
+        %tmp.62 = lgetv %view.2;
+        %tmp.63 = getv function %tmp.62 :setColor;
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :COLOR_RED;
+        invoke %tmp.62 %tmp.63(%tmp.65);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_36_15_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_33_15_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_30_15_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_27_15_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_24_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 41 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_stop" ]
+        %prompt.4 = local;
+        %tmp.66 = "";
+        lputv %prompt.4 %tmp.66;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 43 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_8_if_stmt:
+        %tmp.68 = getv ? :_personal_aqhi;
+        %tmp.69 = 2;
+        %tmp.70 = lt %tmp.68 %tmp.69;
+        bf %tmp.70 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_8_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_30_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 44 12 ]
+        %tmp.71 = "Skies are clean and clear.";
+        lputv %prompt.4 %tmp.71;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_30_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_8_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 45 15 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_15_if_stmt:
+        %tmp.73 = getv ? :_personal_aqhi;
+        %tmp.74 = 4;
+        %tmp.75 = lt %tmp.73 %tmp.74;
+        bf %tmp.75 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_15_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_15_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_38_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 46 12 ]
+        %tmp.76 = "Be mindful of the rest \nof your time outdoors.";
+        lputv %prompt.4 %tmp.76;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_38_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_15_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_15_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 47 15 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_15_if_stmt:
+        %tmp.78 = getv ? :_personal_aqhi;
+        %tmp.79 = 6;
+        %tmp.80 = lt %tmp.78 %tmp.79;
+        bf %tmp.80 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_15_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_15_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_38_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 48 12 ]
+        %tmp.81 = "Consider going somewhere \nindoors and well-ventilated.";
+        lputv %prompt.4 %tmp.81;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_38_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_15_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_15_if_false:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 49 15 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_15_if_stmt:
+        %tmp.83 = getv ? :_personal_aqhi;
+        %tmp.84 = 8;
+        %tmp.85 = lt %tmp.83 %tmp.84;
+        bf %tmp.85 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_15_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_15_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_38_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 50 12 ]
+        %tmp.86 = "Take a break from the outdoors \n and go get some rest inside.";
+        lputv %prompt.4 %tmp.86;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_38_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_15_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_15_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_51_15_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 52 12 ]
+        %tmp.87 = "Try to make your way indoors \n as soon as possible. \n Any more exposure could \n cause health side \n effects.";
+        lputv %prompt.4 %tmp.87;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_51_15_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_49_15_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_47_15_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_45_15_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_43_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 55 8 ]
+        %tmp.89 = getv ? :View;
+        %tmp.90 = getv function %tmp.89 :findDrawableById;
+        %tmp.91 = "blurb";
+        %tmp.92 = invoke %tmp.89 %tmp.90(%tmp.91);
+        %tmp.93 = as %tmp.92 Toybox.WatchUi.Text;
+        lputv %view.2 %tmp.93;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 56 8 ]
+        %tmp.94 = lgetv %view.2;
+        %tmp.95 = getv function %tmp.94 :setText;
+        %tmp.97 = lgetv %prompt.4;
+        invoke %tmp.94 %tmp.95(%tmp.97);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 60 8 ]
+        %tmp.99 = getv ? :View;
+        %tmp.100 = getv function %tmp.99 :onUpdate;
+        %tmp.102 = lgetv %dc;
+        invoke %tmp.99 %tmp.100(%tmp.102);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 62 8 ]
+        %tmp.103 = lgetv %dc;
+        %tmp.104 = getv function %tmp.103 :setColor;
+        %tmp.105 = getm $.Toybox.Graphics;
+        %tmp.106 = getv %tmp.105 :COLOR_GREEN;
+        %tmp.107 = getm $.Toybox.Graphics;
+        %tmp.108 = getv %tmp.107 :COLOR_BLACK;
+        invoke %tmp.103 %tmp.104(%tmp.106, %tmp.108);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 63 8 ]
+        %tmp.109 = lgetv %dc;
+        %tmp.110 = getv function %tmp.109 :fillRectangle;
+        %tmp.111 = 94;
+        %tmp.112 = 100;
+        %tmp.113 = 40;
+        %tmp.114 = 8;
+        invoke %tmp.109 %tmp.110(%tmp.111, %tmp.112, %tmp.113, %tmp.114);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 64 8 ]
+        %tmp.115 = lgetv %dc;
+        %tmp.116 = getv function %tmp.115 :setColor;
+        %tmp.117 = getm $.Toybox.Graphics;
+        %tmp.118 = getv %tmp.117 :COLOR_BLUE;
+        %tmp.119 = getm $.Toybox.Graphics;
+        %tmp.120 = getv %tmp.119 :COLOR_BLACK;
+        invoke %tmp.115 %tmp.116(%tmp.118, %tmp.120);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 65 8 ]
+        %tmp.121 = lgetv %dc;
+        %tmp.122 = getv function %tmp.121 :fillRectangle;
+        %tmp.123 = 137;
+        %tmp.124 = 100;
+        %tmp.125 = 40;
+        %tmp.126 = 8;
+        invoke %tmp.121 %tmp.122(%tmp.123, %tmp.124, %tmp.125, %tmp.126);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 66 8 ]
+        %tmp.127 = lgetv %dc;
+        %tmp.128 = getv function %tmp.127 :setColor;
+        %tmp.129 = getm $.Toybox.Graphics;
+        %tmp.130 = getv %tmp.129 :COLOR_YELLOW;
+        %tmp.131 = getm $.Toybox.Graphics;
+        %tmp.132 = getv %tmp.131 :COLOR_BLACK;
+        invoke %tmp.127 %tmp.128(%tmp.130, %tmp.132);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 67 8 ]
+        %tmp.133 = lgetv %dc;
+        %tmp.134 = getv function %tmp.133 :fillRectangle;
+        %tmp.135 = 180;
+        %tmp.136 = 100;
+        %tmp.137 = 40;
+        %tmp.138 = 8;
+        invoke %tmp.133 %tmp.134(%tmp.135, %tmp.136, %tmp.137, %tmp.138);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 68 8 ]
+        %tmp.139 = lgetv %dc;
+        %tmp.140 = getv function %tmp.139 :setColor;
+        %tmp.141 = getm $.Toybox.Graphics;
+        %tmp.142 = getv %tmp.141 :COLOR_ORANGE;
+        %tmp.143 = getm $.Toybox.Graphics;
+        %tmp.144 = getv %tmp.143 :COLOR_BLACK;
+        invoke %tmp.139 %tmp.140(%tmp.142, %tmp.144);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 69 8 ]
+        %tmp.145 = lgetv %dc;
+        %tmp.146 = getv function %tmp.145 :fillRectangle;
+        %tmp.147 = 223;
+        %tmp.148 = 100;
+        %tmp.149 = 40;
+        %tmp.150 = 8;
+        invoke %tmp.145 %tmp.146(%tmp.147, %tmp.148, %tmp.149, %tmp.150);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 70 8 ]
+        %tmp.151 = lgetv %dc;
+        %tmp.152 = getv function %tmp.151 :setColor;
+        %tmp.153 = getm $.Toybox.Graphics;
+        %tmp.154 = getv %tmp.153 :COLOR_RED;
+        %tmp.155 = getm $.Toybox.Graphics;
+        %tmp.156 = getv %tmp.155 :COLOR_BLACK;
+        invoke %tmp.151 %tmp.152(%tmp.154, %tmp.156);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 71 8 ]
+        %tmp.157 = lgetv %dc;
+        %tmp.158 = getv function %tmp.157 :fillRectangle;
+        %tmp.159 = 266;
+        %tmp.160 = 100;
+        %tmp.161 = 40;
+        %tmp.162 = 8;
+        invoke %tmp.157 %tmp.158(%tmp.159, %tmp.160, %tmp.161, %tmp.162);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 72 8 ]
+        %tmp.163 = lgetv %dc;
+        %tmp.164 = getv function %tmp.163 :setColor;
+        %tmp.165 = getm $.Toybox.Graphics;
+        %tmp.166 = getv %tmp.165 :COLOR_WHITE;
+        %tmp.167 = getm $.Toybox.Graphics;
+        %tmp.168 = getv %tmp.167 :COLOR_BLACK;
+        invoke %tmp.163 %tmp.164(%tmp.166, %tmp.168);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc" 73 8 ]
+        %tmp.169 = lgetv %dc;
+        %tmp.170 = getv function %tmp.169 :fillRectangle;
+        %tmp.172 = lgetv %pointer.3;
+        %tmp.173 = 94;
+        %tmp.174 = 8;
+        %tmp.175 = 20;
+        invoke %tmp.169 %tmp.170(%tmp.172, %tmp.173, %tmp.174, %tmp.175);
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_UserPromptView_mc_18_33_stop:
+    }
+}
+[ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/UserPromptView.mc"; @line = 1; ]
+<init> {
+}
