@@ -334,7 +334,7 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
             "activity_avg"  =>  {
                 "hr" => avgHr,
                 "PM2.5" => avgPM25,
-                "CO2" => avgCO2, //TODO: add location?
+                "CO2" => avgCO2,
                 "intake_rate"  => avgIntakeRate},
             "AQHI"  =>  real_aqhi,
             "personal_AQHI"  =>  airExposureScore,

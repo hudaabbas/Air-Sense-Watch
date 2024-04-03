@@ -208,40 +208,40 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_73_12_if_en
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_66_stop:
         goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_8_if_end;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_71_8_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 100 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 86 8 ]
         %tmp.46 = false;
         ret %tmp.46;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_68_4_stop:
     }
     //! Handle next page behavior
     //! @return true if handled, false otherwise
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 105; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 91; ]
     public
     function onNextPage() as Boolean {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_105_44_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 106 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_91_44_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 92 8 ]
         %tmp.2 = getv ? :_scanDataModel;
         %tmp.3 = getv function %tmp.2 :nextResult;
         invoke %tmp.2 %tmp.3();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 107 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 93 8 ]
         %tmp.4 = true;
         ret %tmp.4;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_105_44_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_91_44_stop:
     }
     //! Handle previous page behavior
     //! @return true if handled, false otherwise
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 112; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 98; ]
     public
     function onPreviousPage() as Boolean {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_112_48_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 113 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_98_48_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 99 8 ]
         %tmp.2 = getv ? :_scanDataModel;
         %tmp.3 = getv function %tmp.2 :previousResult;
         invoke %tmp.2 %tmp.3();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 114 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc" 100 8 ]
         %tmp.4 = true;
         ret %tmp.4;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_112_48_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_ScanDelegate_mc_98_48_stop:
     }
 }
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/ScanDelegate.mc"; @line = 7; ]

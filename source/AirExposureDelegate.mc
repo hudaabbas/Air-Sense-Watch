@@ -16,9 +16,9 @@ class AirExposureDelegate extends  WatchUi.BehaviorDelegate {
     {
         // TODO: need clean exit of app
         System.println("Exit app");
-        //_dataModel.unpair();
-        System.exit();
-
+        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+        return true;
+        //System.exit();
     }
 
     (:typecheck(false))
@@ -49,7 +49,7 @@ class AirExposureDelegate extends  WatchUi.BehaviorDelegate {
     function onAction() {
         WatchUi.switchToView(
             new UserPromptView(_personal_aqhi),
-            new BehaviorDelegate(),
+            self,
             WatchUi.SLIDE_UP
         );
     }

@@ -1,6 +1,7 @@
 using Toybox.FitContributor as Fit;
 using Toybox.ActivityRecording;
 using Toybox.WatchUi;
+using Toybox.Position;
 
 import Toybox.Graphics;
 
@@ -31,6 +32,12 @@ class AirSenseDataField extends WatchUi.DataField {
     var co2 = 0.0f;
     var hum = 0.0f;
 
+    function onPosition(info as Position.Info) as Void{
+        var myLocation = info.position.toDegrees();
+        System.println("Latitude: " + myLocation[0]); // e.g. 38.856147
+        System.println("Longitude: " + myLocation[1]); // e.g -94.800953
+    }
+
     // Initializes the new field in the activity file
     function initialize(dataModel as DeviceDataModel, session) {
         _session = session;
@@ -39,6 +46,7 @@ class AirSenseDataField extends WatchUi.DataField {
         DataField.initialize();
 
         setupField(_session);
+        Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));
     }
 
     function setupField(session) {

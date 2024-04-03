@@ -1153,216 +1153,223 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_s
         %tmp.8 = invoke %tmp.6 %tmp.7();
         lputv %numActivities.5 %tmp.8;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 307 8 ]
-        for @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_test @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_incr @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_init:
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_begin" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_end" ]
-        %i.6 = local;
-        %tmp.9 = 0;
-        lputv %i.6 %tmp.9;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_test:
-        %tmp.11 = lgetv %i.6;
+        %tmp.9 = getm $.Toybox.System;
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Number of activites";
         %tmp.13 = lgetv %numActivities.5;
-        %tmp.14 = lt %tmp.11 %tmp.13;
-        bf %tmp.14 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_begin:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_48_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 309 12 ]
-        %tmp.15 = lgetv %totalHr.1;
-        %tmp.17 = getv ? :activities;
-        %tmp.19 = lgetv %i.6;
-        %tmp.20 = agetv %tmp.17 %tmp.19;
-        %tmp.21 = "hr";
-        %tmp.22 = agetv %tmp.20 %tmp.21;
-        %tmp.23 = add %tmp.15 %tmp.22;
-        lputv %totalHr.1 %tmp.23;
+        %tmp.14 = add %tmp.11 %tmp.13;
+        invoke %tmp.9 %tmp.10(%tmp.14);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 308 8 ]
+        for @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_test @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_incr @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_init:
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_begin" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_end" ]
+        %i.6 = local;
+        %tmp.15 = 0;
+        lputv %i.6 %tmp.15;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_test:
+        %tmp.17 = lgetv %i.6;
+        %tmp.19 = lgetv %numActivities.5;
+        %tmp.20 = lt %tmp.17 %tmp.19;
+        bf %tmp.20 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_begin:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_48_start:
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 310 12 ]
-        %tmp.24 = lgetv %totalPM25.2;
-        %tmp.26 = getv ? :activities;
-        %tmp.28 = lgetv %i.6;
-        %tmp.29 = agetv %tmp.26 %tmp.28;
-        %tmp.30 = "PM2.5";
-        %tmp.31 = agetv %tmp.29 %tmp.30;
-        %tmp.32 = add %tmp.24 %tmp.31;
-        lputv %totalPM25.2 %tmp.32;
+        %tmp.21 = lgetv %totalHr.1;
+        %tmp.23 = getv ? :activities;
+        %tmp.25 = lgetv %i.6;
+        %tmp.26 = agetv %tmp.23 %tmp.25;
+        %tmp.27 = "hr";
+        %tmp.28 = agetv %tmp.26 %tmp.27;
+        %tmp.29 = add %tmp.21 %tmp.28;
+        lputv %totalHr.1 %tmp.29;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 311 12 ]
-        %tmp.33 = lgetv %totalCO2.3;
-        %tmp.35 = getv ? :activities;
-        %tmp.37 = lgetv %i.6;
-        %tmp.38 = agetv %tmp.35 %tmp.37;
-        %tmp.39 = "CO2";
-        %tmp.40 = agetv %tmp.38 %tmp.39;
-        %tmp.41 = add %tmp.33 %tmp.40;
-        lputv %totalCO2.3 %tmp.41;
+        %tmp.30 = lgetv %totalPM25.2;
+        %tmp.32 = getv ? :activities;
+        %tmp.34 = lgetv %i.6;
+        %tmp.35 = agetv %tmp.32 %tmp.34;
+        %tmp.36 = "PM2.5";
+        %tmp.37 = agetv %tmp.35 %tmp.36;
+        %tmp.38 = add %tmp.30 %tmp.37;
+        lputv %totalPM25.2 %tmp.38;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 312 12 ]
-        %tmp.42 = lgetv %totalIntakeRate.4;
-        %tmp.44 = getv ? :activities;
-        %tmp.46 = lgetv %i.6;
-        %tmp.47 = agetv %tmp.44 %tmp.46;
-        %tmp.48 = "intake_rate";
-        %tmp.49 = agetv %tmp.47 %tmp.48;
-        %tmp.50 = add %tmp.42 %tmp.49;
-        lputv %totalIntakeRate.4 %tmp.50;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_48_stop:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_incr:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 307 ]
-        %tmp.53 = lgetv %i.6;
-        %tmp.54 = add %tmp.53 1;
-        lputv %i.6 %tmp.54;
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_test;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_307_8_for_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 316 8 ]
+        %tmp.39 = lgetv %totalCO2.3;
+        %tmp.41 = getv ? :activities;
+        %tmp.43 = lgetv %i.6;
+        %tmp.44 = agetv %tmp.41 %tmp.43;
+        %tmp.45 = "CO2";
+        %tmp.46 = agetv %tmp.44 %tmp.45;
+        %tmp.47 = add %tmp.39 %tmp.46;
+        lputv %totalCO2.3 %tmp.47;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 313 12 ]
+        %tmp.48 = lgetv %totalIntakeRate.4;
+        %tmp.50 = getv ? :activities;
+        %tmp.52 = lgetv %i.6;
+        %tmp.53 = agetv %tmp.50 %tmp.52;
+        %tmp.54 = "intake_rate";
+        %tmp.55 = agetv %tmp.53 %tmp.54;
+        %tmp.56 = add %tmp.48 %tmp.55;
+        lputv %totalIntakeRate.4 %tmp.56;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_48_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_incr:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 308 ]
+        %tmp.59 = lgetv %i.6;
+        %tmp.60 = add %tmp.59 1;
+        lputv %i.6 %tmp.60;
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_test;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_308_8_for_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 317 8 ]
         [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
         %avgHr.7 = local;
-        %tmp.56 = lgetv %totalHr.1;
-        %tmp.58 = lgetv %numActivities.5;
-        %tmp.59 = div %tmp.56 %tmp.58;
-        lputv %avgHr.7 %tmp.59;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 317 8 ]
-        %tmp.61 = lgetv %totalPM25.2;
-        %tmp.63 = lgetv %numActivities.5;
-        %tmp.64 = div %tmp.61 %tmp.63;
-        putv self :avgPM25 %tmp.64;
+        %tmp.62 = lgetv %totalHr.1;
+        %tmp.64 = lgetv %numActivities.5;
+        %tmp.65 = div %tmp.62 %tmp.64;
+        lputv %avgHr.7 %tmp.65;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 318 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
-        %avgCO2.8 = local;
-        %tmp.66 = lgetv %totalCO2.3;
-        %tmp.68 = lgetv %numActivities.5;
-        %tmp.69 = div %tmp.66 %tmp.68;
-        lputv %avgCO2.8 %tmp.69;
+        %tmp.67 = lgetv %totalPM25.2;
+        %tmp.69 = lgetv %numActivities.5;
+        %tmp.70 = div %tmp.67 %tmp.69;
+        putv self :avgPM25 %tmp.70;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 319 8 ]
         [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
+        %avgCO2.8 = local;
+        %tmp.72 = lgetv %totalCO2.3;
+        %tmp.74 = lgetv %numActivities.5;
+        %tmp.75 = div %tmp.72 %tmp.74;
+        lputv %avgCO2.8 %tmp.75;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 320 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
         %avgIntakeRate.9 = local;
-        %tmp.71 = lgetv %totalIntakeRate.4;
-        %tmp.73 = lgetv %numActivities.5;
-        %tmp.74 = div %tmp.71 %tmp.73;
-        lputv %avgIntakeRate.9 %tmp.74;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 321 8 ]
+        %tmp.77 = lgetv %totalIntakeRate.4;
+        %tmp.79 = lgetv %numActivities.5;
+        %tmp.80 = div %tmp.77 %tmp.79;
+        lputv %avgIntakeRate.9 %tmp.80;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 322 8 ]
         [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
         %aqhi.10 = local;
-        %tmp.76 = getv ? :Math;
-        %tmp.77 = getv function %tmp.76 :floor;
-        %tmp.79 = getv ? :real_aqhi;
-        %tmp.80 = invoke %tmp.76 %tmp.77(%tmp.79);
-        lputv %aqhi.10 %tmp.80;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 322 8 ]
-        %tmp.81 = self;
-        %tmp.82 = getv function %tmp.81 :determineRelativeRisk;
-        %tmp.84 = lgetv %avgIntakeRate.9;
-        %tmp.86 = getv ? :risk_score;
-        %tmp.88 = lgetv %aqhi.10;
-        %tmp.89 = invoke %tmp.81 %tmp.82(%tmp.84, %tmp.86, %tmp.88);
-        putv self :airExposureScore %tmp.89;
+        %tmp.82 = getv ? :Math;
+        %tmp.83 = getv function %tmp.82 :floor;
+        %tmp.85 = getv ? :real_aqhi;
+        %tmp.86 = invoke %tmp.82 %tmp.83(%tmp.85);
+        lputv %aqhi.10 %tmp.86;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 323 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
-        %id.11 = local;
-        %tmp.90 = self;
-        %tmp.91 = getv function %tmp.90 :getId;
-        %tmp.92 = invoke %tmp.90 %tmp.91();
-        lputv %id.11 %tmp.92;
+        %tmp.87 = self;
+        %tmp.88 = getv function %tmp.87 :determineRelativeRisk;
+        %tmp.90 = lgetv %avgIntakeRate.9;
+        %tmp.92 = getv ? :risk_score;
+        %tmp.94 = lgetv %aqhi.10;
+        %tmp.95 = invoke %tmp.87 %tmp.88(%tmp.90, %tmp.92, %tmp.94);
+        putv self :airExposureScore %tmp.95;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 324 8 ]
         [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
-        %time.12 = local;
-        %tmp.93 = self;
-        %tmp.94 = getv function %tmp.93 :getDuration;
-        %tmp.95 = invoke %tmp.93 %tmp.94();
-        lputv %time.12 %tmp.95;
+        %id.11 = local;
+        %tmp.96 = self;
+        %tmp.97 = getv function %tmp.96 :getId;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
+        lputv %id.11 %tmp.98;
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 325 8 ]
         [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
+        %time.12 = local;
+        %tmp.99 = self;
+        %tmp.100 = getv function %tmp.99 :getDuration;
+        %tmp.101 = invoke %tmp.99 %tmp.100();
+        lputv %time.12 %tmp.101;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 326 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
         %start.13 = local;
-        %tmp.96 = self;
-        %tmp.97 = getv function %tmp.96 :getStartTime;
-        %tmp.98 = invoke %tmp.96 %tmp.97();
-        lputv %start.13 %tmp.98;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 327 8 ]
+        %tmp.102 = self;
+        %tmp.103 = getv function %tmp.102 :getStartTime;
+        %tmp.104 = invoke %tmp.102 %tmp.103();
+        lputv %start.13 %tmp.104;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 328 8 ]
         [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop" ]
         %body.14 = local;
-        %tmp.99 = newd 4;
-        %tmp.100 = "collection";
-        %tmp.101 = "score";
-        %tmp.102 = dup %tmp.99;
-        %tmp.103 = aputv %tmp.102 %tmp.100 %tmp.101;
-        %tmp.104 = "database";
-        %tmp.105 = "airsense";
-        %tmp.106 = dup %tmp.103;
-        %tmp.107 = aputv %tmp.106 %tmp.104 %tmp.105;
-        %tmp.108 = "dataSource";
-        %tmp.109 = "AirSense";
-        %tmp.110 = dup %tmp.107;
-        %tmp.111 = aputv %tmp.110 %tmp.108 %tmp.109;
-        %tmp.112 = "document";
-        %tmp.113 = newd 6;
-        %tmp.114 = "id";
-        %tmp.116 = lgetv %id.11;
-        %tmp.117 = dup %tmp.113;
-        %tmp.118 = aputv %tmp.117 %tmp.114 %tmp.116;
-        %tmp.119 = "activity_avg";
-        %tmp.120 = newd 4;
-        %tmp.121 = "hr";
-        %tmp.123 = lgetv %avgHr.7;
-        %tmp.124 = dup %tmp.120;
-        %tmp.125 = aputv %tmp.124 %tmp.121 %tmp.123;
-        %tmp.126 = "PM2.5";
-        %tmp.128 = getv ? :avgPM25;
-        %tmp.129 = dup %tmp.125;
-        %tmp.130 = aputv %tmp.129 %tmp.126 %tmp.128;
-        %tmp.131 = "CO2";
-        %tmp.133 = lgetv %avgCO2.8;
-        %tmp.134 = dup %tmp.130;
-        %tmp.135 = aputv %tmp.134 %tmp.131 %tmp.133;
-        %tmp.136 = "intake_rate";
-        %tmp.138 = lgetv %avgIntakeRate.9;
-        %tmp.139 = dup %tmp.135;
-        %tmp.140 = aputv %tmp.139 %tmp.136 %tmp.138;
-        %tmp.141 = dup %tmp.118;
-        %tmp.142 = aputv %tmp.141 %tmp.119 %tmp.140;
-        %tmp.143 = "AQHI";
-        %tmp.145 = getv ? :real_aqhi;
-        %tmp.146 = dup %tmp.142;
-        %tmp.147 = aputv %tmp.146 %tmp.143 %tmp.145;
-        %tmp.148 = "personal_AQHI";
-        %tmp.150 = getv ? :airExposureScore;
-        %tmp.151 = dup %tmp.147;
-        %tmp.152 = aputv %tmp.151 %tmp.148 %tmp.150;
-        %tmp.153 = "duration_ms";
-        %tmp.155 = lgetv %time.12;
-        %tmp.156 = dup %tmp.152;
-        %tmp.157 = aputv %tmp.156 %tmp.153 %tmp.155;
-        %tmp.158 = "start_time";
-        %tmp.160 = lgetv %start.13;
-        %tmp.161 = dup %tmp.157;
-        %tmp.162 = aputv %tmp.161 %tmp.158 %tmp.160;
-        %tmp.163 = dup %tmp.111;
-        %tmp.164 = aputv %tmp.163 %tmp.112 %tmp.162;
-        lputv %body.14 %tmp.164;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 345 8 ]
-        %tmp.165 = getm $.Toybox.System;
-        %tmp.166 = getv function %tmp.165 :println;
-        %tmp.167 = "Adding to database: ";
-        %tmp.169 = lgetv %body.14;
-        %tmp.170 = add %tmp.167 %tmp.169;
-        invoke %tmp.165 %tmp.166(%tmp.170);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 347 8 ]
-        %tmp.171 = self;
-        %tmp.172 = getv function %tmp.171 :makeRequest;
-        %tmp.174 = lgetv %body.14;
-        invoke %tmp.171 %tmp.172(%tmp.174);
+        %tmp.105 = newd 4;
+        %tmp.106 = "collection";
+        %tmp.107 = "score";
+        %tmp.108 = dup %tmp.105;
+        %tmp.109 = aputv %tmp.108 %tmp.106 %tmp.107;
+        %tmp.110 = "database";
+        %tmp.111 = "airsense";
+        %tmp.112 = dup %tmp.109;
+        %tmp.113 = aputv %tmp.112 %tmp.110 %tmp.111;
+        %tmp.114 = "dataSource";
+        %tmp.115 = "AirSense";
+        %tmp.116 = dup %tmp.113;
+        %tmp.117 = aputv %tmp.116 %tmp.114 %tmp.115;
+        %tmp.118 = "document";
+        %tmp.119 = newd 6;
+        %tmp.120 = "id";
+        %tmp.122 = lgetv %id.11;
+        %tmp.123 = dup %tmp.119;
+        %tmp.124 = aputv %tmp.123 %tmp.120 %tmp.122;
+        %tmp.125 = "activity_avg";
+        %tmp.126 = newd 4;
+        %tmp.127 = "hr";
+        %tmp.129 = lgetv %avgHr.7;
+        %tmp.130 = dup %tmp.126;
+        %tmp.131 = aputv %tmp.130 %tmp.127 %tmp.129;
+        %tmp.132 = "PM2.5";
+        %tmp.134 = getv ? :avgPM25;
+        %tmp.135 = dup %tmp.131;
+        %tmp.136 = aputv %tmp.135 %tmp.132 %tmp.134;
+        %tmp.137 = "CO2";
+        %tmp.139 = lgetv %avgCO2.8;
+        %tmp.140 = dup %tmp.136;
+        %tmp.141 = aputv %tmp.140 %tmp.137 %tmp.139;
+        %tmp.142 = "intake_rate";
+        %tmp.144 = lgetv %avgIntakeRate.9;
+        %tmp.145 = dup %tmp.141;
+        %tmp.146 = aputv %tmp.145 %tmp.142 %tmp.144;
+        %tmp.147 = dup %tmp.124;
+        %tmp.148 = aputv %tmp.147 %tmp.125 %tmp.146;
+        %tmp.149 = "AQHI";
+        %tmp.151 = getv ? :real_aqhi;
+        %tmp.152 = dup %tmp.148;
+        %tmp.153 = aputv %tmp.152 %tmp.149 %tmp.151;
+        %tmp.154 = "personal_AQHI";
+        %tmp.156 = getv ? :airExposureScore;
+        %tmp.157 = dup %tmp.153;
+        %tmp.158 = aputv %tmp.157 %tmp.154 %tmp.156;
+        %tmp.159 = "duration_ms";
+        %tmp.161 = lgetv %time.12;
+        %tmp.162 = dup %tmp.158;
+        %tmp.163 = aputv %tmp.162 %tmp.159 %tmp.161;
+        %tmp.164 = "start_time";
+        %tmp.166 = lgetv %start.13;
+        %tmp.167 = dup %tmp.163;
+        %tmp.168 = aputv %tmp.167 %tmp.164 %tmp.166;
+        %tmp.169 = dup %tmp.117;
+        %tmp.170 = aputv %tmp.169 %tmp.118 %tmp.168;
+        lputv %body.14 %tmp.170;
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 346 8 ]
+        %tmp.171 = getm $.Toybox.System;
+        %tmp.172 = getv function %tmp.171 :println;
+        %tmp.173 = "Adding to database: ";
+        %tmp.175 = lgetv %body.14;
+        %tmp.176 = add %tmp.173 %tmp.175;
+        invoke %tmp.171 %tmp.172(%tmp.176);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 348 8 ]
+        %tmp.177 = self;
+        %tmp.178 = getv function %tmp.177 :makeRequest;
+        %tmp.180 = lgetv %body.14;
+        invoke %tmp.177 %tmp.178(%tmp.180);
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_300_4_stop:
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 350; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 351; ]
     function makeRequest(body) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 351 7 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_stop" ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 352 7 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_stop" ]
         %url.1 = local;
         %tmp.1 = "https://us-west-2.aws.data.mongodb-api.com/app/data-nbfdj/endpoint/data/v1/action/insertOne";
         lputv %url.1 %tmp.1;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 353 7 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 354 7 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_stop" ]
         %params.2 = local;
         %tmp.3 = lgetv %body;
         lputv %params.2 %tmp.3;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 355 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 356 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_stop" ]
         %options.3 = local;
         %tmp.4 = newd 3;
         %tmp.6 = const :method;
@@ -1393,15 +1400,15 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_
         %tmp.33 = dup %tmp.28;
         %tmp.34 = aputv %tmp.33 %tmp.30 %tmp.32;
         lputv %options.3 %tmp.34;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 365 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 366 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_stop" ]
         %responseCallback.4 = local;
         %tmp.35 = self;
         %tmp.36 = getv function %tmp.35 :method;
         %tmp.38 = const :onReceive;
         %tmp.39 = invoke %tmp.35 %tmp.36(%tmp.38);
         lputv %responseCallback.4 %tmp.39;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 367 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 368 8 ]
         %tmp.40 = getm $.Toybox.Communications;
         %tmp.41 = getv function %tmp.40 :makeWebRequest;
         %tmp.43 = lgetv %url.1;
@@ -1409,73 +1416,73 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_
         %tmp.47 = lgetv %options.3;
         %tmp.49 = lgetv %responseCallback.4;
         invoke %tmp.40 %tmp.41(%tmp.43, %tmp.45, %tmp.47, %tmp.49);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_350_39_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_351_39_stop:
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 371; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 372; ]
     function onReceive(responseCode as Number, data as Dictionary or Null) as Void {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_371_76_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 372 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_8_if_stmt:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_12_begin:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_76_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 373 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_12_begin:
         %tmp.2 = lgetv %responseCode;
         %tmp.3 = 200;
         %tmp.4 = eq %tmp.2 %tmp.3;
         %tmp.5 = dup %tmp.4;
-        bt %tmp.5 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_35_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_35_false:
+        bt %tmp.5 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_35_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_35_false:
         %tmp.7 = lgetv %responseCode;
         %tmp.8 = 201;
         %tmp.9 = eq %tmp.7 %tmp.8;
         %tmp.10 = or %tmp.4 %tmp.9;
         push %tmp.10;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_35_end:
-        %tmp.11 = phi [%tmp.5 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_12_begin] [%tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_35_false] [%tmp.11 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_35_end];
-        bf %tmp.11 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_8_if_false;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 373 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_35_end:
+        %tmp.11 = phi [%tmp.5 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_12_begin] [%tmp.10 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_35_false] [%tmp.11 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_35_end];
+        bf %tmp.11 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_8_if_false;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_56_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 374 12 ]
         %tmp.12 = getm $.Toybox.System;
         %tmp.13 = getv function %tmp.12 :println;
         %tmp.14 = "Request Successful";
         invoke %tmp.12 %tmp.13(%tmp.14);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 374 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 375 12 ]
         %tmp.15 = getm $.Toybox.System;
         %tmp.16 = getv function %tmp.15 :println;
         %tmp.17 = "Data: ";
         %tmp.19 = lgetv %data;
         %tmp.20 = add %tmp.17 %tmp.19;
         invoke %tmp.15 %tmp.16(%tmp.20);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 375 12 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 376 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_56_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_56_stop" ]
         %actual_aqhi.1 = local;
         %tmp.22 = getv ? :Math;
         %tmp.23 = getv function %tmp.22 :floor;
         %tmp.25 = getv ? :real_aqhi;
         %tmp.26 = invoke %tmp.22 %tmp.23(%tmp.25);
         lputv %actual_aqhi.1 %tmp.26;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 376 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 377 12 ]
         %tmp.27 = self;
         %tmp.28 = getv function %tmp.27 :setPersonalAQHI;
         %tmp.30 = getv ? :airExposureScore;
         invoke %tmp.27 %tmp.28(%tmp.30);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 377 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 378 12 ]
         %tmp.31 = self;
         %tmp.32 = getv function %tmp.31 :setRealAQHI;
         %tmp.34 = lgetv %actual_aqhi.1;
         invoke %tmp.31 %tmp.32(%tmp.34);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 378 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 379 12 ]
         %tmp.36 = getv ? :_session;
         %tmp.37 = getv function %tmp.36 :stop;
         invoke %tmp.36 %tmp.37();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 379 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 380 12 ]
         %tmp.39 = getv ? :_session;
         %tmp.40 = getv function %tmp.39 :save;
         invoke %tmp.39 %tmp.40();
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 380 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 381 12 ]
         %tmp.41 = null;
         putv self :_session %tmp.41;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 381 12 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_stop" ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 382 12 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_56_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_56_stop" ]
         %v.2 = local;
         %tmp.45 = getm $;
         %tmp.46 = getv %tmp.45 :AirExposureScoreView;
@@ -1485,7 +1492,7 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_
         %tmp.54 = getv ? :avgPM25;
         %tmp.42 = newc %tmp.46 (%tmp.48, %tmp.50, %tmp.52, %tmp.54);
         lputv %v.2 %tmp.42;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 382 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 383 12 ]
         %tmp.55 = getm $.Toybox.WatchUi;
         %tmp.56 = getv function %tmp.55 :pushView;
         %tmp.58 = lgetv %v.2;
@@ -1496,34 +1503,34 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_
         %tmp.66 = getm $.Toybox.WatchUi;
         %tmp.67 = getv %tmp.66 :SLIDE_UP;
         invoke %tmp.55 %tmp.56(%tmp.58, %tmp.59, %tmp.67);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_56_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_8_if_false:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_383_15_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 384 12 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_56_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_8_if_false:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_384_15_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 385 12 ]
         %tmp.68 = getm $.Toybox.System;
         %tmp.69 = getv function %tmp.68 :println;
         %tmp.70 = "Response: ";
         %tmp.72 = lgetv %responseCode;
         %tmp.73 = add %tmp.70 %tmp.72;
         invoke %tmp.68 %tmp.69(%tmp.73);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_383_15_stop:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_8_if_end:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_371_76_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_384_15_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_373_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_372_76_stop:
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 388; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 389; ]
     public
     function setPersonalAQHI(airExposure) {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_388_48_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 389 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_48_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 390 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_390_8_if_stmt:
         %tmp.1 = null;
         %tmp.3 = getv ? :mAirExposureField;
         %tmp.4 = eq %tmp.1 %tmp.3;
-        bf %tmp.4 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_40_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 391 12 ]
+        bf %tmp.4 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_390_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_390_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_390_40_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 392 12 ]
         %tmp.6 = getv ? :_session;
         %tmp.7 = getv function %tmp.6 :createField;
         %tmp.8 = getm $.Toybox.WatchUi;
@@ -1552,16 +1559,16 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_40_
         %tmp.37 = aputv %tmp.36 %tmp.28 %tmp.35;
         %tmp.38 = invoke %tmp.6 %tmp.7(%tmp.14, %tmp.16, %tmp.19, %tmp.37);
         putv self :mAirExposureField %tmp.38;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 398 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 399 12 ]
         %tmp.40 = getv ? :mAirExposureField;
         %tmp.41 = getv function %tmp.40 :setData;
         %tmp.42 = 0.0;
         invoke %tmp.40 %tmp.41(%tmp.42);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_40_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_8_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 401 8 ]
-        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_388_48_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_388_48_stop" ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_390_40_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_390_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_390_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 402 8 ]
+        [ "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_48_start" "_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_48_stop" ]
         %personal_aqhi.1 = local;
         %tmp.43 = lgetv %airExposure;
         %tmp.44 = getv function %tmp.43 :format;
@@ -1570,44 +1577,44 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_8_i
         %tmp.47 = getv function %tmp.46 :toFloat;
         %tmp.48 = invoke %tmp.46 %tmp.47();
         lputv %personal_aqhi.1 %tmp.48;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 402 8 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 403 8 ]
         %tmp.49 = getm $.Toybox.System;
         %tmp.50 = getv function %tmp.49 :println;
         %tmp.51 = "Personal AQHI: ";
         %tmp.53 = lgetv %personal_aqhi.1;
         %tmp.54 = add %tmp.51 %tmp.53;
         invoke %tmp.49 %tmp.50(%tmp.54);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 404 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_404_8_if_stmt:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 405 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_405_8_if_stmt:
         %tmp.56 = lgetv %airExposure;
         %tmp.57 = null;
         %tmp.58 = ne %tmp.56 %tmp.57;
-        bf %tmp.58 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_404_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_404_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_404_31_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 405 12 ]
+        bf %tmp.58 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_405_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_405_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_405_31_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 406 12 ]
         %tmp.60 = getv ? :mAirExposureField;
         %tmp.61 = getv function %tmp.60 :setData;
         %tmp.63 = lgetv %personal_aqhi.1;
         invoke %tmp.60 %tmp.61(%tmp.63);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_404_31_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_404_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_404_8_if_end:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_388_48_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_405_31_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_405_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_405_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_389_48_stop:
     }
-    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 409; ]
+    [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 410; ]
     public
     function setRealAQHI(aqhi) {
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_409_37_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 410 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_8_if_stmt:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_37_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 411 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_411_8_if_stmt:
         %tmp.1 = null;
         %tmp.3 = getv ? :mAQHIField;
         %tmp.4 = eq %tmp.1 %tmp.3;
-        bf %tmp.4 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_33_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 412 12 ]
+        bf %tmp.4 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_411_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_411_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_411_33_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 413 12 ]
         %tmp.6 = getv ? :_session;
         %tmp.7 = getv function %tmp.6 :createField;
         %tmp.8 = getm $.Toybox.WatchUi;
@@ -1636,39 +1643,39 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_33_
         %tmp.37 = aputv %tmp.36 %tmp.28 %tmp.35;
         %tmp.38 = invoke %tmp.6 %tmp.7(%tmp.14, %tmp.16, %tmp.19, %tmp.37);
         putv self :mAQHIField %tmp.38;
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 419 12 ]
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 420 12 ]
         %tmp.40 = getv ? :mAQHIField;
         %tmp.41 = getv function %tmp.40 :setData;
         %tmp.42 = 0.0;
         invoke %tmp.40 %tmp.41(%tmp.42);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_33_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_8_if_end:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 422 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_411_33_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_411_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_411_8_if_end:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 423 8 ]
         %tmp.43 = getm $.Toybox.System;
         %tmp.44 = getv function %tmp.43 :println;
         %tmp.45 = "Real AQHI: ";
         %tmp.47 = lgetv %aqhi;
         %tmp.48 = add %tmp.45 %tmp.47;
         invoke %tmp.43 %tmp.44(%tmp.48);
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 424 8 ]
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_424_8_if_stmt:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 425 8 ]
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_425_8_if_stmt:
         %tmp.50 = lgetv %aqhi;
         %tmp.51 = null;
         %tmp.52 = ne %tmp.50 %tmp.51;
-        bf %tmp.52 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_424_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_424_8_if_true:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_424_24_start:
-[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 425 12 ]
+        bf %tmp.52 @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_425_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_425_8_if_true:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_425_24_start:
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc" 426 12 ]
         %tmp.54 = getv ? :mAQHIField;
         %tmp.55 = getv function %tmp.54 :setData;
         %tmp.57 = lgetv %aqhi;
         %tmp.58 = as %tmp.57 { (!Null) };
         invoke %tmp.54 %tmp.55(%tmp.58);
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_424_24_stop:
-        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_424_8_if_end;
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_424_8_if_end:
-_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_409_37_stop:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_425_24_stop:
+        goto @_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_425_8_if_end;
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_425_8_if_end:
+_Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirSenseDelegate_mc_410_37_stop:
     }
 }
 [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirSenseDelegate.mc"; @line = 1; ]

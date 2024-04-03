@@ -38,10 +38,15 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_16_4
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = "Exit app";
         invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc" 19 8 ]
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv function %tmp.4 :popView;
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv %tmp.6 :SLIDE_IMMEDIATE;
+        invoke %tmp.4 %tmp.5(%tmp.7);
 [ "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc" 20 8 ]
-        %tmp.4 = getm $.Toybox.System;
-        %tmp.5 = getv function %tmp.4 :exit;
-        invoke %tmp.4 %tmp.5();
+        %tmp.8 = true;
+        ret %tmp.8;
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_16_4_stop:
     }
     [ @file = "/Users/hudaabbas/Documents/GitHub/AirSenseBLE/source/AirExposureDelegate.mc"; @line = 24; typecheck = false; ]
@@ -146,11 +151,10 @@ _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_49_2
         %tmp.6 = getv ? :UserPromptView;
         %tmp.8 = getv ? :_personal_aqhi;
         %tmp.3 = newc %tmp.6 (%tmp.8);
-        %tmp.12 = getv ? :BehaviorDelegate;
-        %tmp.9 = newc %tmp.12 ();
-        %tmp.13 = getm $.Toybox.WatchUi;
-        %tmp.14 = getv %tmp.13 :SLIDE_UP;
-        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
+        %tmp.10 = lgetv %self;
+        %tmp.11 = getm $.Toybox.WatchUi;
+        %tmp.12 = getv %tmp.11 :SLIDE_UP;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.10, %tmp.12);
 _Users_hudaabbas_Documents_GitHub_AirSenseBLE_source_AirExposureDelegate_mc_49_24_stop:
     }
 }
