@@ -159,8 +159,10 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
         if (responseCode == 200) {
             System.println("Request Successful");                   // print success
             System.println("User Data: " + data);
-            if(data["document"] != null){ // user found
-                var risk = data["document"]["risk_score"];
+            System.println("size:" + data["documents"].size());
+            if(data["documents"].size() != 0){ // user found
+                var lastDocument = data["documents"][data["documents"].size() - 1]; // Get the last document
+                var risk = lastDocument["risk_score"]; // Extract risk score from the last document
                 if(risk != null){
                     risk_score = risk;
                 }
@@ -176,7 +178,7 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function getUserRiskScore() as Void {
-        var url = "https://us-west-2.aws.data.mongodb-api.com/app/data-nbfdj/endpoint/data/v1/action/findOne"; 
+        var url = "https://us-west-2.aws.data.mongodb-api.com/app/data-nbfdj/endpoint/data/v1/action/find"; 
         var id = getId();
     
         var params = { 
@@ -220,13 +222,10 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
                 }
                 System.println("Activity: " + activities);
             } else {
-                activities = [{ 
-                "hr" => 0,
-                "PM2.5" => 0,
-                "CO2" => 0,
-                "intake_rate"  => 0
-                }];
-                System.println("Activity not found");
+                //delay a little and try and search for activity again, has not been added yet
+                getActivity();
+                System.println("Search for activity again");
+                return;
             }
             saveScore(); // calculate risk, save in database and fit file
         } else {
@@ -339,7 +338,8 @@ class AirSenseDelegate extends WatchUi.BehaviorDelegate {
             "AQHI"  =>  real_aqhi,
             "personal_AQHI"  =>  airExposureScore,
             "duration_ms"  =>  time,
-            "start_time"  =>  start
+            "start_time"  =>  start,
+            "risk"  =>  risk_score
             }
         };
 
